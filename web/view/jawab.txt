@@ -1,0 +1,2 @@
+ubah halaman-utama.view.php jadi index.php
+Nggak usah hawatir, entar halaman utama it keinclude ke index.php yang ad di ../view nantinya :v
