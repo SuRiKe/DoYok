@@ -8,13 +8,9 @@
     <title>D  oYo  K</title>
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/doyok.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/doyok.css">
+    <link href="view/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="view/css/doyok.css">
+    <link rel="stylesheet" type="text/css" href="view/css/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,10 +34,10 @@
 	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    <div>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="halaman-utama.view.php">Home</a></li>
-	        <li><a href="halaman-register.view.php">Register</a></li>
-	        <li><a href="#">Login</a></li>
-	        <li><a href="#">About</a></li>
+	        <li><a href="?hal=home">Home</a></li>
+	        <li><a href="?hal=register">Register</a></li>
+	        <li><a href="">Login</a></li>
+	        <li><a href="?hal=about">About</a></li>
 	      </ul>
 	    </div>
 	  </div>

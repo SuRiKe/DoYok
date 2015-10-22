@@ -1,6 +1,3 @@
-<?php
-	include 'header.view.php';
-?>
 <div class="jumbotron" style="margin-top:100px;">
 	<center>
 	<h1>D  oYo  K</h1>
@@ -21,6 +18,7 @@
 	</div>
 </div>
 <div class="clearfix"></div>
+<div class="container">
 <div class="row">
 	<div class="form-control">
 		<p>K. Mis</p>
@@ -28,7 +26,7 @@
 	<div class="col-md-4">
 		<div class="row">
 			<a href="lanjut.php" class="thumbnail">
-				<img src="../img/thumb.png">
+				<img src="view/img/thumb.jpg">
 				<span>Lorem ipsum dolor sit amet</span>
 				<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, lorem.</p>
 				<div class="detail-donasi">
@@ -39,5 +37,4 @@
 		</div>
 	</div>
 </div>
-<?php
-	include 'footer.view.php';
+</div>

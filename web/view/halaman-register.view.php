@@ -1,6 +1,4 @@
-<?php
-	include 'header.view.php';
-?>
+	<div style="margin-top:175px">
 	<div class="col-md-offset-2 col-md-2">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -17,5 +15,4 @@
 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.l
 	</div>
-<?php
-	include 'footer.view.php';
+	</div>
