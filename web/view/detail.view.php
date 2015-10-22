@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>DoYok</title>
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -49,16 +49,16 @@
 	<div class="row">
 		<div class="col-lg-12 gallery">
 			<div class="col-lg-3">
-				<img class="img-responsive" src="../img/thumb.jpg" alt="thumbnail">
+				<img class="img-responsive" src="img/thumb.jpg" alt="thumbnail">
 			</div>
 			<div class="col-lg-3">
-				<img class="img-responsive" src="../img/thumb.jpg" alt="thumbnail">
+				<img class="img-responsive" src="img/thumb.jpg" alt="thumbnail">
 			</div>
 			<div class="col-lg-3">
-				<img class="img-responsive" src="../img/thumb.jpg" alt="thumbnail">
+				<img class="img-responsive" src="img/thumb.jpg" alt="thumbnail">
 			</div>
 			<div class="col-lg-3">
-				<img class="img-responsive" src="../img/thumb.jpg" alt="thumbnail">
+				<img class="img-responsive" src="img/thumb.jpg" alt="thumbnail">
 			</div>
 		</div>
 		<div class="col-lg-12 detail container">
@@ -82,16 +82,16 @@
 	<div class="credit container">
 		<div class="col-lg-6 partner">
 			<h3>Partner</h3>
-			<div class="col-md-4"><img src="../img/thumb.jpg" alt="" class="img-circle"></div>
-			<div class="col-md-4"><img src="../img/thumb.jpg" alt="" class="img-circle"></div>
-			<div class="col-md-4"><img src="../img/thumb.jpg" alt="" class="img-circle"></div>
+			<div class="col-md-4"><img src="img/thumb.jpg" alt="" class="img-circle"></div>
+			<div class="col-md-4"><img src="img/thumb.jpg" alt="" class="img-circle"></div>
+			<div class="col-md-4"><img src="img/thumb.jpg" alt="" class="img-circle"></div>
 		</div>
 		<div class="col-md-2"> </div>
 		<div class="col-lg-4">
 			<h3>Kontak</h3>
-			<div class="col-md-4"><img src="../img/thumb.jpg" alt="" class="img-circle"></div>
-			<div class="col-md-4"><img src="../img/thumb.jpg" alt="" class="img-circle"></div>
-			<div class="col-md-4"><img src="../img/thumb.jpg" alt="" class="img-circle"></div>
+			<div class="col-md-4"><img src="img/thumb.jpg" alt="" class="img-circle"></div>
+			<div class="col-md-4"><img src="img/thumb.jpg" alt="" class="img-circle"></div>
+			<div class="col-md-4"><img src="img/thumb.jpg" alt="" class="img-circle"></div>
 		</div>
 	</div>
 	<div class="col-lg-12 hak-cipta text-center">
