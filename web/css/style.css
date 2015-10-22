@@ -1,0 +1,58 @@
+hr{
+	border-top: 1px solid black;
+}
+img{
+	max-width: 100%;
+}
+.container{
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.container >h1{
+	margin-bottom: 20px;
+}
+.img-responsive{
+	min-width: 100%;
+}
+.konten{
+	max-width: 100%;
+	padding: 5px;
+}
+.isi{
+	background-color: aqua;
+	border-radius: 8px;
+	/*border: 1px solid rgba(10,10,10,0.8;)
+	opacity: 0.2*/
+	color: black;
+	min-height: 450px;
+}
+.spoiler{
+	padding: 5px;
+	line-height: 1.5rem;
+}
+.isi img{
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+.pilihan{
+	display: none;
+	z-index: 9999;
+	position: relative;
+	margin-top:-450px;
+	background-position: center;
+	min-height: 450px;
+	padding-top: 225px;
+	cursor: pointer;
+}
+.pilihan button{
+	margin: 0 auto;
+}
+.isi:hover + .pilihan{
+	background-color: rgba(255,255,255,0.7);
+	display: block;
+	transition: 1.3s all ease-in-out;
+}
+.hak-cipta{
+	background-color: black;
+	color: white;
+}
