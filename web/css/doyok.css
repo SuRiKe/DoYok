@@ -2,6 +2,21 @@
 	padding: 20px;
 	margin: 15px;
 }
+.thumbnail:hover {
+	background: rgba(0,0,0,0.5);
+	color: white;
+}
+.thumbnail:hover > .detail-donasi {
+	display: block;
+}
 a:hover {
 	text-decoration: none;
+}
+.detail-donasi {
+	position: absolute;
+	bottom: 150px;
+	left: 50px;
+	float: left;
+	max-width: 100%;
+	display: none;
 }

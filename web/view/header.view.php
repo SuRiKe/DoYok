@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/doyok.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,7 +29,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-      <a class="navbar-brand" href="#">Donasi!Yok</a>
+      <a class="navbar-brand" href="halaman-utama.view.php">Donasi!Yok</a>
     </div>
 	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    <div>

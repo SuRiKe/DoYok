@@ -8,6 +8,19 @@
 	<a href="donasi.php" class="btn btn-info">Donasi Sekarang</a>
 	</center>
 </div>
+<div class="col-lg-10">
+	<div class="form-group">
+		<label class="control-label col-sm-5 text-center" for="cover"><h4>Daerah</h4></label>
+		<div class="col-sm-7">
+			<select name="" id="daerah" class="form-control">
+				<option value="bali">bali</option>
+				<option value="bali">bali</option>
+				<option value="bali">bali</option>
+			</select>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
 <div class="row">
 	<div class="form-control">
 		<p>K. Mis</p>
@@ -15,11 +28,13 @@
 	<div class="col-md-4">
 		<div class="row">
 			<a href="lanjut.php" class="thumbnail">
-				<img src="img/houtarou.png">
+				<img src="../img/thumb.png">
 				<span>Lorem ipsum dolor sit amet</span>
 				<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, lorem.</p>
-				<button onclick="window.location.href = 'detail.php';" class="btn btn-info">Detail</button>
-				<button class="btn btn-info">Donasi!</button>
+				<div class="detail-donasi">
+					<button onclick="window.location.href='detail.php';" class="btn btn-info">Detail</button>
+					<button class="btn btn-info">Donasi!</button>
+				</div>
 			</a>
 		</div>
 	</div>

@@ -1,16 +1,26 @@
 <div class="clearfix"></div>
-<div class="row">
-	<h1>Footer</h1>
-	<div class="container">
-		<div class="col-md-6">
-			<p>Panel kategori</p>
+<div id="footer">
+	<div class="credit container">
+		<div class="col-lg-6 partner">
+			<h3>Partner</h3>
+			<div class="col-md-4"><img src="../img/thumb.png" alt="" class="img-circle"></div>
+			<div class="col-md-4"><img src="../img/thumb.png" alt="" class="img-circle"></div>
+			<div class="col-md-4"><img src="../img/thumb.png" alt="" class="img-circle"></div>
 		</div>
-		<div class="col-md-6">
-			<p>Created with love by Team Suriken</p>
+		<div class="col-md-2"> </div>
+		<div class="col-lg-4">
+			<h3>Kontak</h3>
+			<div class="col-md-4"><img src="../img/thumb.png" alt="" class="img-circle"></div>
+			<div class="col-md-4"><img src="../img/thumb.png" alt="" class="img-circle"></div>
+			<div class="col-md-4"><img src="../img/thumb.png" alt="" class="img-circle"></div>
 		</div>
 	</div>
+	<div class="col-lg-12 hak-cipta text-center">
+		Copyright 2015 Made with <span class="glyphicon glyphicon-heart"></span> in Denpasar
+	</div>
 </div>
-</div>
+</body>
+</html>
 <!-- Container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
