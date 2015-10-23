@@ -32,6 +32,7 @@ CREATE TABLE `tbl_aps` (
   `id_kebutuhan` char(5) DEFAULT NULL,
   `id_user` char(5) DEFAULT NULL,
   `foto` varchar(150) DEFAULT NULL,
+  `diskripsi` text,
   PRIMARY KEY (`id_aps`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -153,7 +154,7 @@ DROP TABLE IF EXISTS `tbl_donasi`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tbl_donasi` (
   `id_donasi` char(5) NOT NULL DEFAULT '',
-  `kebutuhan` double NOT NULL,
+  `keperluan` double DEFAULT NULL,
   `terkumpul` double DEFAULT '0',
   `status` tinyint(1) DEFAULT '0',
   `valid` tinyint(1) DEFAULT '0',
@@ -167,6 +168,7 @@ CREATE TABLE `tbl_donasi` (
 
 LOCK TABLES `tbl_donasi` WRITE;
 /*!40000 ALTER TABLE `tbl_donasi` DISABLE KEYS */;
+INSERT INTO `tbl_donasi` VALUES ('K0001',50000000,0,0,1),('K0002',50000000,0,0,1),('K0003',50000000,0,0,1);
 /*!40000 ALTER TABLE `tbl_donasi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -212,6 +214,7 @@ CREATE TABLE `tbl_kms` (
   `alamat` text NOT NULL,
   `id_user` char(5) DEFAULT NULL,
   `id_kebutuhan` char(5) DEFAULT NULL,
+  `diskripsi` text,
   PRIMARY KEY (`id_kms`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -222,6 +225,7 @@ CREATE TABLE `tbl_kms` (
 
 LOCK TABLES `tbl_kms` WRITE;
 /*!40000 ALTER TABLE `tbl_kms` DISABLE KEYS */;
+INSERT INTO `tbl_kms` VALUES ('K0001','Saitama',1,'Screenshot_1610.png','s012391230','D0002','P0001','Apartemen Lapuk','U0002','B0001','Apartemen tempat ia tinggal, baru saja dihancurkan, jadi dia sangat memerlukkan bantuan kita, mari ulurkan tangan anda untuk membantu Saitama, sang super hero ini.'),('K0002','Rich man',3,'11043239_874691655910439_1245374625428047305_n.jpg','asdasd213123','D0002','P0001','Atas Tanah Bawah Langit','U0002','B0001','Rumahnya Kebakar :v'),('K0003','MadDog',2,'Screenshot_1606.png','asd2342343','D0001','P0002','Gak Ada','U0002','B0001','Beliin Gue Rumah');
 /*!40000 ALTER TABLE `tbl_kms` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -265,6 +269,7 @@ CREATE TABLE `tbl_sekolah` (
   `alamat` text NOT NULL,
   `id_user` char(5) DEFAULT NULL,
   `foto` varchar(150) DEFAULT NULL,
+  `diskripsi` text,
   PRIMARY KEY (`id_sekolah`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -304,7 +309,7 @@ CREATE TABLE `tbl_user` (
 
 LOCK TABLES `tbl_user` WRITE;
 /*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
-INSERT INTO `tbl_user` VALUES ('U0001','Kancrink','kancrink','$2y$10$1PKEvfbWsLF/vkQfd2uawOsycpX.7XdOg.9xF0UM53J4OBkA.6Tqy','123456789012','kancrink@gmail.com','Screenshot_1616.png','D0002'),('U0002','Keramas Wiguna','keramas','$2y$10$lE9NZbCkdVp7MwelWMSrHOr4GMi7.Z9RSHsngXu0QdAIcAUVLLWU.','085237382986','keramaswiguna@gmail.com','gugure.png','D0001');
+INSERT INTO `tbl_user` VALUES ('U0001','Kancrink','kancrink','$2y$10$1PKEvfbWsLF/vkQfd2uawOsycpX.7XdOg.9xF0UM53J4OBkA.6Tqy','123456789012','kancrink@gmail.com','Screenshot_1616.png','D0002'),('U0002','Keramas Wiguna','keramas','$2y$10$lE9NZbCkdVp7MwelWMSrHOr4GMi7.Z9RSHsngXu0QdAIcAUVLLWU.','085237382986','keramaswiguna@gmail.com','gugure.png','D0001'),('U0003','Wiguna','Wiguna','$2y$10$r0.Rd5oD.s6hmoSdLEqCBunpBi2p44yp6GL57.hqGPU12hmmDlVdu','09812371239','wiguna@gmail.com','Yuko_rante.png','D0001');
 /*!40000 ALTER TABLE `tbl_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -355,4 +360,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-23 17:10:07
+-- Dump completed on 2015-10-23 23:36:09
