@@ -33,7 +33,7 @@ require 'footer.view.php';
           <span aria-hidden="true">&times;</span>
           <span class="sr-only">Close</span>
         </button>
-        <h4 class="modal-title" id="logout">Kategori Data</h4>
+        <h4 class="modal-title" id="logout">Logout</h4>
       </div>
       <div class="modal-body">
         <h3>Apa Anda Yakin ingin Logout ?</h3>
