@@ -16,7 +16,7 @@
 		</div>
 	</div>
 	<div class="col-lg-12 hak-cipta text-center">
-		Copyright 2015 Made with <span class="glyphicon glyphicon-heart"></span> in Denpasar
+		Copyright 2015 Made with <span style="color:red;" class="glyphicon glyphicon-heart"></span> in Denpasar
 	</div>
 </div>
 </body>
