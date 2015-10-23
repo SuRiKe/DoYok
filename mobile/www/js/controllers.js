@@ -57,11 +57,11 @@ angular.module('starter.controllers', [])
     $scope.statusnya = "GAGAL";
   });
 })
-.controller('PlaylistsCtrl', function($scope, datanya) {
-  $scope.playlists = [];
+.controller('SekolahCtrl', function($scope, datanya) {
+  $scope.sekolah = [];
   datanya.all().success(function (data) {
     $scope.statusnya = "BERHASIL";
-    $scope.playlists = data.data;
+    $scope.sekolah = data.data;
   }).error(function () {
     $scope.statusnya = "GAGAL";
   });

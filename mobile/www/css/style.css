@@ -1,6 +1,3 @@
-img{
-	max-width: 100%;
-}
 .judul{
 	color: blue;
 	white-space: normal;
@@ -13,6 +10,7 @@ div.ket{
 }
 .tombol span{
 	float: left;
+	font-size: 0.85rem;
 }
 .tombol > button{
 	width: 80px;

@@ -1,0 +1,16 @@
+<ion-view view-title="Keluarga Miskin">
+  <ion-content>
+    <span> {{statusnya}} </span>
+    <div class="list">
+	  	<a class="item item-thumbnail-left" href="#" ng-repeat="playlist in sekolah | limitTo: 10">
+	      <img src="img/thumb.jpg">
+	      <h2 class="judul">{{playlist['Nama Sekolah']}} {{playlist.Wilayah}}</h2>
+	      <div class="ket">{{playlist.Alamat}} {{playlist.Alamat}}</div>
+	      <div class="tombol">
+        	<span>Telp. {{playlist.Telepon}}</span>
+        	<button class="button button-small button-calm">Donasi</button>
+          </div>
+	    </a>
+	</div>
+  </ion-content>
+</ion-view>
