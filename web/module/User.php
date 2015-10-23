@@ -5,7 +5,7 @@ use app\module\Fungsi as Fung;
 class User{
 	
 	public static function verivikasiUser($username,$_conn){
-		$query = "SELECT * FROM view_user where username = :user";
+		$query = "SELECT tbl_user.* ,tbl_daerah.daerah FROM tbl_user natural join tbl_daerah where username = :user";
 		$res = Fung::eksekusi($query,array('user'=> $username),$_conn);
 		
 		return $res ? $res[0] : false;
