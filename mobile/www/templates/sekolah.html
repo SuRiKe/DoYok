@@ -2,12 +2,12 @@
   <ion-content>
     <span> {{statusnya}} </span>
     <div class="list">
-	  	<a class="item item-thumbnail-left" href="#" ng-repeat="playlist in sekolah | limitTo: 10">
+	  	<a class="item item-thumbnail-left" href="#" ng-repeat="as in sekolah | limitTo: 10">
 	      <img src="img/thumb.jpg">
-	      <h2 class="judul">{{playlist['Nama Sekolah']}} {{playlist.Wilayah}}</h2>
-	      <div class="ket">{{playlist.Alamat}} {{playlist.Alamat}}</div>
+	      <h2 class="judul">{{as.nis}} {{as.nama}}</h2>
+	      <div class="ket">{{as.kd_jurusan}} {{as.kd_jurusan}}</div>
 	      <div class="tombol">
-        	<span>Telp. {{playlist.Telepon}}</span>
+        	<span>Telp. {{as.kd_jurusan}}</span>
         	<button class="button button-small button-calm">Donasi</button>
           </div>
 	    </a>

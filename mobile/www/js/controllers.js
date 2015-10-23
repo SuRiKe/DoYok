@@ -43,7 +43,7 @@ angular.module('starter.controllers', [])
 .factory('datanya', function ($http) {
   var fun = {};
   fun.all = function () {
-    return $http.get('sekolah.json');
+    return $http.get('http://ngode.com/api/services/semuasiswa');
   };
 
   return fun;
@@ -52,7 +52,7 @@ angular.module('starter.controllers', [])
   $scope.playlists = [];
   datanya.all().success(function (data) {
     $scope.statusnya = "BERHASIL";
-    $scope.playlists = data.data;
+    $scope.playlists = data;
   }).error(function () {
     $scope.statusnya = "GAGAL";
   });
@@ -60,8 +60,9 @@ angular.module('starter.controllers', [])
 .controller('SekolahCtrl', function($scope, datanya) {
   $scope.sekolah = [];
   datanya.all().success(function (data) {
+    console.log($scope.sekolah);
     $scope.statusnya = "BERHASIL";
-    $scope.sekolah = data.data;
+    $scope.sekolah = data;
   }).error(function () {
     $scope.statusnya = "GAGAL";
   });
