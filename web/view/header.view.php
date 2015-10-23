@@ -9,8 +9,8 @@
 
     <!-- Bootstrap -->
     <link href="view/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="view/css/doyok.css">
     <link rel="stylesheet" type="text/css" href="view/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,7 +29,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-      <a class="navbar-brand" href="halaman-utama.view.php">Donasi!Yok</a>
+      <a class="navbar-brand" href="?hal=home">Donasi!Yok</a>
     </div>
 	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    <div>
@@ -43,4 +43,3 @@
   </div>
 </nav>
 <div class="container">
-  <div style="margin-top:100px;"></div>
