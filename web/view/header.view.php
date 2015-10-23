@@ -37,6 +37,8 @@
 			<?php foreach($menu as $menus):?>
 				<?php if($menus == 'tambah'):?>
 					<li><a href="" data-toggle="modal" data-target="#myModal"><?=$menus?></a></li>
+				<?php elseif($menus == 'logout'):?>
+					<li><a href="" data-toggle="modal" data-target="#logout"><?=$menus?></a></li>
 				<?php else:?>
 					<li><a href="?hal=<?=$menus?>"><?=$menus?></a></li>
 				<?php endif;?>

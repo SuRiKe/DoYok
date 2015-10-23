@@ -1,22 +1,22 @@
 	<div style="margin-top:175px;margin-bottom:175px;">
 	<div class="col-md-8 col-md-offset-2">
 		<h1>Tambah Keluarga Miskin</h1>
-		<?php echo isset($msg['register']) ? $msg['register'] : '';?>
+		<?php echo isset($msg['tambah_kms']) ? $msg['tambah_kms'] : '';?>
 		<form method="post" enctype="multipart/form-data">
 		  <fieldset class="form-group">
-			<label for="nama">Nama</label>
-			<input type="text" class="form-control" id="nama" name="nama" placeholder="Nama anda...">
-			<small class="text-muted"><?php echo isset($error['nama']) ? $error['nama'] : '';?></small>
+			<label for="kepala_keluarga">Kepala Keluarga</label>
+			<input type="text" class="form-control" id="kepala_keluarga" name="kepala_keluarga" placeholder="Nama Kepala Keluarga">
+			<small class="text-muted"><?php echo isset($error['kepala_keluarga']) ? $error['kepala_keluarga'] : '';?></small>
 		  </fieldset>
 		  <fieldset class="form-group">
-			<label for="username">Username</label>
-			<input type="username" class="form-control" id="username" name="username" placeholder="Username...">
-			<small class="text-muted"><?php echo isset($error['username']) ? $error['username'] : '';?></small>
+			<label for="jumlah_anggota_keluarga">Jumlah Anggota Keluarga</label>
+			<input type="number" class="form-control" id="jumlah_anggota_keluarga" name="jumlah_anggota_keluarga" maxlength=1 placeholder="Jumlah Anggota Keluarga">
+			<small class="text-muted"><?php echo isset($error['jumlah_anggota_keluarga']) ? $error['jumlah_anggota_keluarga'] : '';?></small>
 		  </fieldset>
 		  <fieldset class="form-group">
-			<label for="password">Password</label>
-			<input type="password" class="form-control" id="password" name="password" placeholder="Password...">
-			<small class="text-muted"><?php echo isset($error['password']) ? $error['password'] : '';?></small>
+			<label for="No KK">No KK</label>
+			<input type="no_kk" class="form-control" id="no_kk" name="no_kk" placeholder="No KK">
+			<small class="text-muted"><?php echo isset($error['no_kk']) ? $error['no_kk'] : '';?></small>
 		  </fieldset>
 		  <fieldset class="form-group">
 			<label for="no_hp">No. HP</label>
