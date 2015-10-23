@@ -20,9 +20,10 @@
 			$valid = Fung::passVer($pass,$data['password']);
 			
 			if($valid){
-				foreach($data as $user_data){
-					$_SESSION[$user_data] = $user_data;
-				}
+				$_SESSION['id_user'] = $data['id_user'];
+				$_SESSION['nama'] = $data['nama'];
+				$_SESSION['username'] = $data['username'];
+				$_SESSION['id_daerah'] = $data['id_daerah'];
 				
 				$_SESSION['login_client'] = true;
 				header('location:?hal=home');

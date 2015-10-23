@@ -9,21 +9,21 @@ class Kms{
 		return $res;
 	}
 	
-	public static function tambahKms($data,$_conn){
-		$kolom = array('id_kms','kepala_keluarga','jumlah_anggota_keluarga','foto','no_kk','id_daerah','id_pekerjaan','alamat','id_user','id_kebutuhan');
+	public static function tambah($data,$_conn){
+		$kolom = array('id_kms','kepala_keluarga','jumlah_anggota_keluarga','foto','no_kk','id_daerah','id_pekerjaan','alamat','id_user','id_kebutuhan','diskripsi');
 		$res = Fung::insert('tbl_kms',$data,$kolom,$_conn);
 		
 		return $res;
 	}
 	
-	public static function hapusKms($id_kms,$_conn){
+	public static function hapus($id_kms,$_conn){
 		$query = "delete from tbl_kms where id_kms = :id";
 		$res = Fung::eksekusi($query,array('id'=>$id_kms),$_conn);;
 		
 		return true;
 	}
 	
-	public static function editKms($id_kms,$data,$_conn){
+	public static function edit($id_kms,$data,$_conn){
 		$query = "update tbl_kms set ".$data." where id_kms = :id";
 		$res = Fung::eksekusi($query,array('id'=>$id_kms),$_conn);
 		

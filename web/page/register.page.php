@@ -9,7 +9,7 @@
 	use app\module\Fungsi as Fung;
 	
 	$conn = DB::connect();
-	$daerah = Daerah::ambilSemuaDaerah($conn);
+	$daerah = Daerah::ambilSemua($conn);
 	
 	if(isset($_POST['register'])){
 		$d_field = array('nama','username','no_hp','email');
