@@ -35,7 +35,11 @@
 	    <div>
 	      <ul class="nav navbar-nav navbar-right">
 			<?php foreach($menu as $menus):?>
-				<li><a href="?hal=<?=$menus?>"><?=$menus?></a></li>
+				<?php if($menus == 'tambah'):?>
+					<li><a href="" data-toggle="modal" data-target="#myModal"><?=$menus?></a></li>
+				<?php else:?>
+					<li><a href="?hal=<?=$menus?>"><?=$menus?></a></li>
+				<?php endif;?>
 			<?php endforeach;?>
 	      </ul>
 	    </div>
