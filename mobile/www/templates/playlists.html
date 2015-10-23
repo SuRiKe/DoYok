@@ -1,0 +1,10 @@
+<ion-view view-title="Sekolah">
+  <ion-content>
+    <span> {{statusnya}} </span>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists | limitTo: 100 " href="#/app/playlists/{{playlist.id}}">
+        {{playlist['Nama Sekolah']}} {{playlist.Wilayah}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

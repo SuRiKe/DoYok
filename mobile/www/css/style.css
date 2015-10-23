@@ -1,0 +1,26 @@
+img{
+	max-width: 100%;
+}
+.judul{
+	color: blue;
+	white-space: normal;
+}
+div.ket{
+	white-space: normal;
+	text-transform: lowercase;
+	font-size: 0.9rem;
+	margin-bottom: 10px;
+}
+.tombol span{
+	float: left;
+}
+.tombol > button{
+	width: 80px;
+	float: right;
+}
+h2.kategori{
+	text-align: center;
+}
+a{
+	text-decoration: none;
+}

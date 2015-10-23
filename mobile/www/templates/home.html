@@ -1,0 +1,76 @@
+<ion-view view-title="DoYok">
+  <ion-content>
+    <span> {{statusnya}} </span>
+
+    <h2 class="kategori">Prihatin</h2>
+    <ion-list>
+      <ion-item class="item-thumbnail-left" ng-repeat="playlist in playlists | limitTo: 3">
+      	<a  href="#/app/playlists/{{playlist.id}}">
+	      	<img ng-src="img/thumb.jpg" ng-if="playlist.Alamat.startsWith('http')" alt="">
+	        <h2 class="judul">{{playlist['Nama Sekolah']}} {{playlist.Wilayah}}</h2>
+	        <div class="ket">
+	        	{{playlist.Alamat}} {{playlist.Alamat}}
+	        </div>
+      	</a>
+      	
+        <div class="tombol">
+        	<span>{{playlist.Telepon}}</span>
+        	<button class="button button-small button-calm">Donasi</button>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <h2 class="kategori">Sekolah</h2>
+    <ion-list>
+      <ion-item class="item-thumbnail-left" ng-repeat="playlist in playlists | limitTo: 3">
+      	<a  href="#/app/playlists/{{playlist.id}}">
+	      	<img ng-src="playlist.Alamat" ng-if="playlist.Alamat.startsWith('http')" alt="">
+	        <h2 class="judul">{{playlist['Nama Sekolah']}} {{playlist.Wilayah}}</h2>
+	        <div class="ket">
+	        	{{playlist.Alamat}} {{playlist.Alamat}}
+	        </div>
+      	</a>
+      	
+        <div class="tombol">
+        	<span>{{playlist.Telepon}}</span>
+        	<button class="button button-small button-calm">Donasi</button>
+        </div>
+      </ion-item>
+    </ion-list>
+
+	<h2 class="kategori">Anak Putus Sekolah</h2>
+    <ion-list>
+      <ion-item class="item-thumbnail-left" ng-repeat="playlist in playlists | limitTo: 3">
+      	<a  href="#/app/playlists/{{playlist.id}}">
+	      	<img ng-src="playlist.Alamat" ng-if="playlist.Alamat.startsWith('http')" alt="">
+	        <h2 class="judul">{{playlist['Nama Sekolah']}} {{playlist.Wilayah}}</h2>
+	        <div class="ket">
+	        	{{playlist.Alamat}} {{playlist.Alamat}}
+	        </div>
+      	</a>
+      	
+        <div class="tombol">
+        	<span>{{playlist.Telepon}}</span>
+        	<button class="button button-small button-calm">Donasi</button>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <h2 class="kategori">Keluarga Miskin</h2>
+    <ion-list>
+      <ion-item class="item-thumbnail-left" ng-repeat="playlist in playlists | limitTo: 3">
+      	<a  href="#/app/playlists/{{playlist.id}}">
+	      	<img ng-src="playlist.Alamat" ng-if="playlist.Alamat.startsWith('http')" alt="">
+	        <h2 class="judul">{{playlist['Nama Sekolah']}} {{playlist.Wilayah}}</h2>
+	        <div class="ket">
+	        	{{playlist.Alamat}} {{playlist.Alamat}}
+	        </div>
+      	</a>
+      	
+        <div class="tombol">
+        	<span>{{playlist.Telepon}}</span>
+        	<button class="button button-small button-calm">Donasi</button>
+        </div>
+      </ion-item>
+    </ion-list>
+</ion-view>
