@@ -31,6 +31,7 @@ CREATE TABLE `tbl_aps` (
   `id_daerah` char(5) DEFAULT NULL,
   `id_kebutuhan` char(5) DEFAULT NULL,
   `id_user` char(5) DEFAULT NULL,
+  `foto` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id_aps`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -139,7 +140,34 @@ CREATE TABLE `tbl_daerah` (
 
 LOCK TABLES `tbl_daerah` WRITE;
 /*!40000 ALTER TABLE `tbl_daerah` DISABLE KEYS */;
+INSERT INTO `tbl_daerah` VALUES ('D0001','Bali'),('D0002','DKI Jakarta');
 /*!40000 ALTER TABLE `tbl_daerah` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_donasi`
+--
+
+DROP TABLE IF EXISTS `tbl_donasi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_donasi` (
+  `id_donasi` char(5) NOT NULL DEFAULT '',
+  `kebutuhan` double NOT NULL,
+  `terkumpul` double DEFAULT '0',
+  `status` tinyint(1) DEFAULT '0',
+  `valid` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`id_donasi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_donasi`
+--
+
+LOCK TABLES `tbl_donasi` WRITE;
+/*!40000 ALTER TABLE `tbl_donasi` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_donasi` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -162,6 +190,7 @@ CREATE TABLE `tbl_kebutuhan` (
 
 LOCK TABLES `tbl_kebutuhan` WRITE;
 /*!40000 ALTER TABLE `tbl_kebutuhan` DISABLE KEYS */;
+INSERT INTO `tbl_kebutuhan` VALUES ('B0001','Renovasi Rumah'),('B0002','Biaya Sekolah'),('B0003','Renovasi Sekolah');
 /*!40000 ALTER TABLE `tbl_kebutuhan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,6 +211,7 @@ CREATE TABLE `tbl_kms` (
   `id_pekerjaan` char(5) NOT NULL,
   `alamat` text NOT NULL,
   `id_user` char(5) DEFAULT NULL,
+  `id_kebutuhan` char(5) DEFAULT NULL,
   PRIMARY KEY (`id_kms`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -215,6 +245,7 @@ CREATE TABLE `tbl_pekerjaan` (
 
 LOCK TABLES `tbl_pekerjaan` WRITE;
 /*!40000 ALTER TABLE `tbl_pekerjaan` DISABLE KEYS */;
+INSERT INTO `tbl_pekerjaan` VALUES ('P0001','Buruh'),('P0002','Petani');
 /*!40000 ALTER TABLE `tbl_pekerjaan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -233,6 +264,7 @@ CREATE TABLE `tbl_sekolah` (
   `id_daerah` char(5) DEFAULT NULL,
   `alamat` text NOT NULL,
   `id_user` char(5) DEFAULT NULL,
+  `foto` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id_sekolah`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -244,31 +276,6 @@ CREATE TABLE `tbl_sekolah` (
 LOCK TABLES `tbl_sekolah` WRITE;
 /*!40000 ALTER TABLE `tbl_sekolah` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tbl_sekolah` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tbl_status`
---
-
-DROP TABLE IF EXISTS `tbl_status`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_status` (
-  `id_status` char(5) NOT NULL,
-  `kebutuhan` double NOT NULL,
-  `terkumpul` double NOT NULL,
-  `status` tinyint(1) DEFAULT '0',
-  PRIMARY KEY (`id_status`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tbl_status`
---
-
-LOCK TABLES `tbl_status` WRITE;
-/*!40000 ALTER TABLE `tbl_status` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tbl_status` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -297,6 +304,7 @@ CREATE TABLE `tbl_user` (
 
 LOCK TABLES `tbl_user` WRITE;
 /*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
+INSERT INTO `tbl_user` VALUES ('U0001','Kancrink','kancrink','$2y$10$1PKEvfbWsLF/vkQfd2uawOsycpX.7XdOg.9xF0UM53J4OBkA.6Tqy','123456789012','kancrink@gmail.com','Screenshot_1616.png','D0002'),('U0002','Keramas Wiguna','keramas','$2y$10$lE9NZbCkdVp7MwelWMSrHOr4GMi7.Z9RSHsngXu0QdAIcAUVLLWU.','085237382986','keramaswiguna@gmail.com','gugure.png','D0001');
 /*!40000 ALTER TABLE `tbl_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -347,4 +355,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-22 18:06:11
+-- Dump completed on 2015-10-23 17:10:07
