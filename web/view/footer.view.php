@@ -1,14 +1,13 @@
 </div>
 <div id="footer">
 	<div class="credit container">
-		<div class="col-lg-6 partner">
+		<div class="col-lg-6">
 			<h3>Partner</h3>
 			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>
 			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>
 			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>
 		</div>
-		<div class="col-md-2"> </div>
-		<div class="col-lg-4">
+		<div class="col-lg-offset-2 col-lg-4 partner">
 			<h3>Kontak</h3>
 			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>
 			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>

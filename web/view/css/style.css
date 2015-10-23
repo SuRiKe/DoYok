@@ -4,20 +4,22 @@ a {
 a:hover {
 	text-decoration: none;
 }
-hr{
-	border-top: 1px solid black;
+hr {
+	border-top: 3px solid white;
+	width: 150px;
+	margin-left: 0;
 }
-img{
+img {
 	max-width: 100%;
 }
-.img-responsive{
+.img-responsive {
 	min-width: 100%;
 }
-.konten{
+.konten {
 	max-width: 100%;
 	padding: 5px;
 }
-.isi{
+.isi {
 	background-color: aqua;
 	border-radius: 8px;
 	/*border: 1px solid rgba(10,10,10,0.8;)
@@ -25,17 +27,18 @@ img{
 	color: black;
 	min-height: 450px;
 }
-.spoiler{
+.spoiler {
 	padding: 5px;
 	line-height: 1.5rem;
 }
-.isi img{
+.isi img {
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 }
 .hak-cipta{
 	background-color: black;
 	color: white;
+	padding: 25px;
 }
 .thumbnail {
 	padding: 20px;
@@ -44,6 +47,10 @@ img{
 .thumbnail:hover {
 	background: rgba(0,0,0,0.5);
 	color: white;
+}
+.thumbnail:hover img {
+	border-radius: 50%;
+	transition: 0.5s all;
 }
 .thumbnail:hover + .detail-donasi,
 .detail-donasi:hover {
@@ -63,7 +70,6 @@ img{
 	color: white;
 	transition: 0.5s all;
 }
-	
 .navbar>.container .navbar-brand:hover {
 	color: #555;
 }
@@ -97,6 +103,25 @@ img{
 	border-color: transparent;
 	background-color: rgba(65, 131, 215,0.8);
 }
-.text-muted{
-	color: red;
+
+.credit {
+	background: #34495E;
+	color: white;
+	padding: 20px;
+}
+.credit img {
+	height: 150px;
+	width: 250px;
+}
+.credit .kontak {
+	height: 100px;
+}
+.kata-kedua {
+	color: #6BB9F0;
+}
+.title {
+	font-size: 20px;
+}
+.partner img {
+	height: 100px;
 }
