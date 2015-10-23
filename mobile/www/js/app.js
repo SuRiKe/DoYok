@@ -60,15 +60,33 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-    .state('app.sekolah', {
-      url: '/sekolah',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
+  .state('app.sekolah', {
+    url: '/sekolah',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/sekolah.html',
+        controller: 'SekolahCtrl'
       }
-    })
+    }
+  })
+  .state('app.anak-putus-sekolah', {
+    url: '/anak-putus-sekolah',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/anak-putus-sekolah.html',
+        controller: 'SekolahCtrl'
+      }
+    }
+  })
+  .state('app.keluarga-miskin', {
+    url: '/keluarga-miskin',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/keluarga-miskin.html',
+        controller: 'SekolahCtrl'
+      }
+    }
+  })
 
   .state('app.single', {
     url: '/playlists/:playlistId',
