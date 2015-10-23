@@ -39,6 +39,14 @@ class Fungsi{
 		return $result ? 1 : 0; 
 	}
 	
+	public static function passGen($password){
+		return password_hash($password, PASSWORD_DEFAULT);
+	}
+	
+	public static function passVer($password,$hash){
+		return password_verify($password, $hash);
+	}
+	
 	public static function page($page_name){
 		$page =  htmlentities($_GET[$page_name]);
 		$halaman = "page/{$page}.page.php";
@@ -49,6 +57,33 @@ class Fungsi{
 		else{
 			include "$halaman";
 		}
+	}
+	
+	public static function menuClient($login){
+		if($login == true){
+			$data = array('home','about','logout');
+			
+		}else{
+			$data = array('home','register','login','about');
+		}
+		return $data;
+	}
+
+	public static function autoId($table,$field,$panjang,$inis,$conn){
+		$qry = $conn->query("SELECT ($field) FROM $table");
+		foreach($qry as $data){
+			if($data[0] == ""){ $angka=0;}
+			else{
+				$angka = substr($data[0], strlen($inis));
+			}
+		}
+		$angka++;
+		$angka = strval($angka);
+		$tmp = "";
+		for($i=1;$i<=($panjang-strlen($inis)-strlen($angka));$i++){
+			$tmp=$tmp."0";
+		}
+		return ($inis.$tmp.$angka);
 	}
 }
 ?>

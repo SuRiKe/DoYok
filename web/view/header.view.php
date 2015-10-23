@@ -34,10 +34,9 @@
 	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    <div>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="?hal=home">Home</a></li>
-	        <li><a href="?hal=register">Register</a></li>
-	        <li><a href="">Login</a></li>
-	        <li><a href="?hal=about">About</a></li>
+			<?php foreach($menu as $menus):?>
+				<li><a href="?hal=<?=$menus?>"><?=$menus?></a></li>
+			<?php endforeach;?>
 	      </ul>
 	    </div>
 	  </div>

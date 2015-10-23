@@ -6,7 +6,7 @@
 	//memulai session
 	session_start();
 	
-	//fungsi page pada module/fungsi.php
+	$menu = Fung::menuClient($_SESSION['login_client']);
 	$halaman = Fung::page('hal');
 	require('view/main.view.php');
 ?>
