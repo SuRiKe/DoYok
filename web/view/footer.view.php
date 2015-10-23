@@ -2,13 +2,15 @@
 <div id="footer">
 	<div class="credit container">
 		<div class="col-lg-6">
-			<h3>Partner</h3>
+			<h3>Partner <span class="kata-kedua">Kami</span></h3>
+			<hr>
 			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>
 			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>
 			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>
 		</div>
 		<div class="col-lg-offset-2 col-lg-4 partner">
-			<h3>Kontak</h3>
+			<h3>Kontak <span class="kata-kedua">Kami</span></h3>
+			<hr>
 			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>
 			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>
 			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>
