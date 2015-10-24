@@ -19,7 +19,6 @@
 				<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, lorem.</p>
 			</a>
 			<div class="detail-donasi">
-				<button onclick="window.location.href='detail.php';" class="btn btn-info">Detail</button>
 				<button onclick="window.location.href='donasi.php';" class="btn btn-info">Donasi!</button>
 			</div>
 		</div>

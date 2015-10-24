@@ -37,7 +37,7 @@
 	      <ul class="nav navbar-nav navbar-right">
 			<?php foreach($menu as $menus):?>
 				<?php if($menus == 'tambah'):?>
-					<li><a href="" data-toggle="modal" data-target="#myModal"><?=$menus?></a></li>
+					<li><a href="?hal=tambah-kms"><?=$menus?></a></li>
 				<?php elseif($menus == 'logout'):?>
 					<li><a href="" data-toggle="modal" data-target="#logout"><?=$menus?></a></li>
 				<?php else:?>

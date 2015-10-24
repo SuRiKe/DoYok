@@ -50,7 +50,6 @@ img {
 	color: white;
 }
 .thumbnail:hover img {
-	border-radius: 50%;
 	transition: 0.5s all;
 }
 .thumbnail:hover + .detail-donasi,
@@ -58,13 +57,19 @@ img {
 	display: block;
 	z-index: 99;
 }
+.detail-donasi button {
+	width: 100px;
+}
+.thumbnail:hover > .detail-donasi button {
+	width: 150px;
+	transition: 1s linear;
+}
 .detail-donasi {
 	position: absolute;
 	bottom: 150px;
-	left: 50px;
-	float: left;
-	max-width: 100%;
+	left: 140px;
 	display: none;
+	transition: 1s linear;
 }
 .navbar>.container .navbar-brand {
 	font-size: 30px;
@@ -133,7 +138,6 @@ img {
 	margin-top: 180px;
 	margin-bottom: 150px;
 }
-
 .buttoninput img {
 	border-radius: 50%;
 	border: 3px solid black;
