@@ -1,9 +1,5 @@
-<?php
-include_once 'header.view.php';
-
+<?php 
 $halaman;
-
-include_once 'footer.view.php';
 ?>
 <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="logout" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -18,9 +14,9 @@ include_once 'footer.view.php';
       <div class="modal-body">
         <h3>Apa Anda Yakin ingin Logout ?</h3>
       </div>
-	  <div class="modal-footer">
+    <div class="modal-footer">
         <a href="?hal=logout" class="btn btn-primary">Ya</a>
-		<a href="" data-dismiss="modal" class="btn btn-primary">Tidak</a>
+    <a href="" data-dismiss="modal" class="btn btn-primary">Tidak</a>
       </div>
     </div>
   </div>
