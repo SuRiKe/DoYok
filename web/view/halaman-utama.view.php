@@ -8,12 +8,11 @@
 </div>
 <div class="clearfix"></div>
 <div class="container">
-<<<<<<< HEAD
 	<div class="row">
 		<?php foreach ($k_miskin as $data): ?>
 			<div class="col-md-4">
 				<div class="row">
-					<a href="?hal=detail&rumah=<?=$data['id_kms']?>" class="thumbnail">
+					<a href="?hal=detail&rumah='<?=$data['id_kms']?>'" class="thumbnail">
 						<img src="img/rumah_kmiskin/<?=$data['foto']?>" width="300px" style="max-height:300px;">
 						<strong class="title">Rumah <?=$data['nama']?></strong>
 						<p><?=substr($data['diskripsi'], 0,100)?></p>

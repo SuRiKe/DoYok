@@ -32,6 +32,23 @@
 				$this->response('',404);
 		}
 
+		private function kms(){	
+			if($this->get_request_method() != "GET"){
+				$this->response('',406);
+			}
+			$query="SELECT * FROM tbl_kms where status = 1";
+			$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
+
+			if($r->num_rows > 0){
+				$result = array();
+				while($row = $r->fetch_assoc()){
+					$result[] = $row;
+				}
+				$this->response($this->json($result), 200);
+			}
+			$this->response('',204);
+		}
+
 		private function login(){
 
 			if($this->get_request_method() != "GET"){

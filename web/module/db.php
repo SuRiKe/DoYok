@@ -3,11 +3,10 @@
 class DB{
 	
 	public static function connect(){
-		$user = 'ngodecom';
-		$pass = 'asdjkl123';
-		$dbname = 'ngodecom_db_doyok';
-		$host = '192.185.79.227';
-		MySQL Connection Port = 3306
+		$user = 'maskera';
+		$pass = 'maskera';
+		$dbname = 'db_doyok';
+		$host = 'localhost';
 		
 		try {
 			$conn = new \PDO('mysql:host='.$host.';dbname='.$dbname, $user, $pass);
