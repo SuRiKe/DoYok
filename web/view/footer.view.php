@@ -6,10 +6,10 @@
 			<center>
 			<h3>Partner <span class="kata-kedua">Kami</span></h3>
 			<hr class="hr-putih">
+			<div class="col-md-4 col-sm-6 col-xs-12"><img src="img/logo1.jpg" alt="" class="img-circle"></div>
+			<div class="col-md-4 col-sm-6 col-xs-12"><img src="img/logo1.jpg" alt="" class="img-circle"></div>
+			<div class="col-md-4 col-sm-12 col-xs-12"><img src="img/logo1.jpg" alt="" class="img-circle"></div>
 			</center>
-			<div class="col-md-4"><img src="img/logo1.png" alt="" class="img-circle"></div>
-			<div class="col-md-4"><img src="img/logo2.png" alt="" class="img-circle"></div>
-			<div class="col-md-4"><img src="img/logo3.png" alt="" class="img-circle"></div>
 		</div>
 		<div class="col-lg-offset-2 col-lg-4 partner">
 			<center>

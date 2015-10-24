@@ -44,31 +44,32 @@ img {
 .thumbnail {
 	padding: 20px;
 	margin: 15px;
+	background: #ECECEC;
+	border: none;
 }
 .thumbnail:hover {
-	background: rgba(0,0,0,0.5);
+	background: #333;
 	color: white;
 }
 .thumbnail:hover img {
 	transition: 0.5s all;
 }
-.thumbnail:hover + .detail-donasi,
-.detail-donasi:hover {
-	display: block;
-	z-index: 99;
-}
 .detail-donasi button {
-	width: 100px;
-}
-.thumbnail:hover > .detail-donasi button {
 	width: 150px;
-	transition: 1s linear;
+	border-radius: 0;
+	color: white;
+	font-weight: bold;
+	background: #428BCA;
+	border: 2px solid white;
+	transition: 0.5s all;
+}
+.detail-donasi button:hover {
+	background: white;
+	color: #428BCA;
 }
 .detail-donasi {
-	position: absolute;
-	bottom: 150px;
-	left: 140px;
-	display: none;
+	position: inherit;
+	float: right;
 	transition: 1s linear;
 }
 .navbar>.container .navbar-brand {
@@ -87,6 +88,7 @@ img {
 }
 .navbar-inverse .navbar-nav>li>a {
 	color: #E4F1FE;
+    text-transform: capitalize;
 }
 .navbar-inverse .navbar-nav>li>a:hover {
 	color: #22313F;
@@ -167,4 +169,12 @@ img {
 	background-attachment: fixed;
 	height: 100vh;
 	padding: 30px 0 30px 0;
+}
+.img-circle {
+    margin: 15px;
+}
+@media (max-width: 768px) {
+	.navbar-header {
+		padding-bottom: 15px;
+	}
 }
