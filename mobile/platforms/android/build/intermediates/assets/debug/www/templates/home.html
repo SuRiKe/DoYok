@@ -1,0 +1,18 @@
+<ion-view view-title="DoYok">
+  <ion-content>
+    <span> {{statusnya}} </span>
+
+    <h2 class="kategori">Prihatin</h2>
+    <div class="list">
+	  	<a class="item item-body" href="#" ng-repeat="playlist in playlists | limitTo: 3">
+	      <img class="full-image" src="img/thumb.jpg">
+	      <h2 class="judul">{{playlist.nis}} {{playlist.nama}}</h2>
+	      <div class="ket">{{playlist.kd_jurusan}} {{playlist.kd_jurusan}}</div>
+	      <div class="tombol">
+        	<span>Telp. {{playlist.kd_jurusan}}</span>
+        	<button class="button button-small button-calm">Donasi</button>
+          </div>
+	    </a>
+	</div>
+
+</ion-view>

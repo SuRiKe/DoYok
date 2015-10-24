@@ -1,0 +1,27 @@
+.judul{
+	color: blue;
+	white-space: normal;
+}
+div.ket{
+	white-space: normal;
+	text-transform: lowercase;
+	font-size: 0.9rem;
+	margin-bottom: 10px;
+}
+.tombol span{
+	float: left;
+	font-size: 0.85rem;
+}
+.tombol > button{
+	width: 80px;
+	float: right;
+}
+h2.kategori{
+	text-align: center;
+}
+a{
+	text-decoration: none;
+}
+span.respon{
+	text-align: center;
+}

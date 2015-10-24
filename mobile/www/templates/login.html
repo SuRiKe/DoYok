@@ -6,6 +6,9 @@
     </div>
   </ion-header-bar>
   <ion-content>
+    <div class="respon" style="color:{{hasil.color}};">
+    <img src="img/loading.gif" alt="" ng-show="loading">
+    {{hasil.pesan}}</div>
     <form ng-submit="doLogin(loginData)">
       <div class="list">
         <label class="item item-input">
@@ -19,7 +22,6 @@
         <label class="item">
           <button class="button button-block button-positive" type="submit">Log in</button>
         </label>
-        <span class="respon">{{respon.nama}}</span>
       </div>
     </form>
   </ion-content>

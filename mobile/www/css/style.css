@@ -22,6 +22,16 @@ h2.kategori{
 a{
 	text-decoration: none;
 }
-span.respon{
+.respon{
+	margin:0 auto;
+	padding: 10px;
 	text-align: center;
+}
+.respon img{
+	max-height: 20px;
+	margin-top: -10px;
+	margin-bottom: -10px;
+}
+.modal{
+	min-height: 250px
 }
