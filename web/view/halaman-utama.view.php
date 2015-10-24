@@ -14,7 +14,7 @@
 				<div class="row">
 					<a href="?hal=detail&rumah='<?=$data['id_kms']?>'" class="thumbnail">
 						<img src="img/rumah_kmiskin/<?=$data['foto']?>" width="300px" style="max-height:300px;">
-						<strong class="title">Rumah <?=$data['nama']?></strong>
+						<strong class="title"><center>Rumah <?=$data['nama']?></center></strong>
 						<p><?=substr($data['diskripsi'], 0,100)?></p>
 						<div class="detail-donasi">
 							<button class="btn btn-info">Donasi!</button>
