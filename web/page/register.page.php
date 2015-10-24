@@ -12,9 +12,8 @@
 	$daerah = Daerah::ambilSemua($conn);
 	
 	if(isset($_POST['register'])){
-		$d_field = array('nama','username','no_hp','email');
+		$d_field = array('nama','username','no_hp','email','tingkat','no_ktp','jenis_kelamin');
 		$id_user = User::autoId($conn);
-		$id_daerah = $_POST['id_daerah'];
 		$foto = $_FILES['foto']['name'];
 		$password = Fung::passGen($_POST['password']);
 		if(empty($foto)){  
@@ -22,9 +21,6 @@
 		}
 		if(empty($password)){  
 			$error['password'] = 'password tidak boleh kosong';  
-		}
-		if($id_daerah == 'none'){  
-			$error['id_daerah'] = 'daerah tidak boleh kosong';  
 		}
 		foreach($d_field as $field){
 			$$field = $_POST[$field];
@@ -43,7 +39,10 @@
 					'no_hp'=>$no_hp,
 					'email'=>$email,
 					'foto'=>$foto,
-					'id_daerah'=>$id_daerah),$conn);
+					'id_daerah'=>$id_daerah,
+					'tingkat'=>$tingkat,
+					'no_ktp'=>$no_ktp,
+					'jenis_kelamin'),$conn);
 			if($insert){
 				$msg['register'] = '
 					<div class="alert alert-success" role="alert">

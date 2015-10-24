@@ -15,7 +15,7 @@
 		  </fieldset>
 		  <fieldset class="form-group">
 			<label for="foto">Foto</label><br />
-			<img id="image" src="img/qweasdadead.jpg"  width="350px" height="350px" /><br />
+			<img id="image" src="img/qweasdadead3.jpg"  width="350px" height="350px" /><br />
 			<div class="buttoninput">
 				<input onchange="readURL(this);" type="file" name="foto" id="foto" accept="image/*">
 			</div>

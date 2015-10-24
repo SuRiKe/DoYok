@@ -5,7 +5,7 @@ use app\module\Fungsi as Fung;
 class User{
 	
 	public static function verivikasiUser($username,$_conn){
-		$query = "SELECT tbl_user.* ,tbl_daerah.daerah FROM tbl_user natural join tbl_daerah where username = :user";
+		$query = "SELECT * FROM tbl_user where username = :user";
 		$res = Fung::eksekusi($query,array('user'=> $username),$_conn);
 		
 		return $res ? $res[0] : false;
@@ -18,14 +18,14 @@ class User{
 	}
 	
 	public static function ambilSemuaUser($_conn){
-		$query = "SELECT * FROM view_user";
+		$query = "SELECT * FROM tbl_user natural join tbl_daerah";
 		$res = Fung::query($query,$_conn);
 		
 		return $res;
 	}
 	
 	public static function tambahUser($data,$_conn){
-		$kolom = array('id_user','nama','username','password','no_hp','email','foto','id_daerah');
+		$kolom = array('id_user','nama','username','password','no_hp','email','foto','tingkat','no_ktp','jenis_kelamin');
 		$res = Fung::insert('tbl_user',$data,$kolom,$_conn);
 		
 		return $res;

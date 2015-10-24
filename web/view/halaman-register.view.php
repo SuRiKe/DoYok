@@ -7,8 +7,8 @@
 		<div class="col-md-5 col-md-offset-1">
 		  <fieldset class="form-group">
 			<label for="ktp">No KTP</label>
-			<input type="ktp" class="form-control" id="ktp" name="ktp" placeholder="Nomer KTP anda..." required autofocus>
-			<small class="text-muted"><?php echo isset($error['ktp']) ? $error['ktp'] : '';?></small>
+			<input type="number" class="form-control" id="ktp" name="no_ktp" placeholder="Nomor KTP anda..." required autofocus>
+			<small class="text-muted"><?php echo isset($error['no_ktp']) ? $error['no_ktp'] : '';?></small>
 		  </fieldset>
 		  <fieldset class="form-group">
 			<label for="nama">Nama</label>
@@ -44,7 +44,7 @@
 					<option value="donatur">Donatur</option>
 					<option value="pelapor">Pelapor</option>
 			</select>
-			<small class="text-muted"><?php echo isset($error['id_daerah']) ? $error['id_daerah'] : '';?></small>
+			<small class="text-muted"><?php echo isset($error['tingkat']) ? $error['tingkat'] : '';?></small>
 		  </fieldset>
 		  <fieldset class="form-group">
 		  <label for="jenis_kelamin">Jenis Kelamin</label>

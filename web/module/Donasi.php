@@ -24,6 +24,10 @@ class Donasi{
 		
 		return true;
 	}
+
+	public static function tampilkanDonasiKms($limit = 10,$_conn){
+		$query = "SELECT ";
+	}
 	
 }
 ?>
