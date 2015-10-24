@@ -21,7 +21,20 @@ class Kms{
 
 		return $res;
 	}
-	
+
+	public static function tampilKms($id_kms,$_conn){
+		$res = Fung::query("SELECT * FROM tbl_kms where id_kms = $id_kms",$_conn);
+
+		return $res;
+	}
+
+	public static function persentase($id_kms,$_conn){
+		$res = Fung::eksekusi("SELECT id_kms,dana,terkumpul FROM tbl_kms where id_kms = :id",array('id'=>$id_kms),$_conn)[0];
+
+		$persentase = ($res['terkumpul']/$res['dana'])*100;
+		return $persentase;
+	}
+
 	public static function hapus($id_kms,$_conn){
 		$query = "delete from tbl_kms where id_kms = :id";
 		$res = Fung::eksekusi($query,array('id'=>$id_kms),$_conn);;

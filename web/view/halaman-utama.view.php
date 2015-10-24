@@ -8,6 +8,7 @@
 </div>
 <div class="clearfix"></div>
 <div class="container">
+<<<<<<< HEAD
 	<div class="row">
 		<?php foreach ($k_miskin as $data): ?>
 			<div class="col-md-4">
