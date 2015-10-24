@@ -35,6 +35,7 @@ CREATE TABLE `tbl_daerah` (
 
 LOCK TABLES `tbl_daerah` WRITE;
 /*!40000 ALTER TABLE `tbl_daerah` DISABLE KEYS */;
+INSERT INTO `tbl_daerah` VALUES ('D0001','Bali'),('D0002','DKI Jakarta'),('D0003','Semarang');
 /*!40000 ALTER TABLE `tbl_daerah` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -177,7 +178,7 @@ CREATE TABLE `tbl_user` (
 
 LOCK TABLES `tbl_user` WRITE;
 /*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
-INSERT INTO `tbl_user` VALUES ('U0001','Suci Sukawana','Suci','$2y$10$zauDGyzb7bnf7ZilY/tCT.1V/uQYP4jLWZkcg4jVEzqIg9rFk5grO','081234567125','sucisukawana@gmail.com','Screenshot_1610.png',NULL,'pelapor','51030022812970006','');
+INSERT INTO `tbl_user` VALUES ('U0001','Suci Sukawana','Suci','$2y$10$zauDGyzb7bnf7ZilY/tCT.1V/uQYP4jLWZkcg4jVEzqIg9rFk5grO','081234567125','sucisukawana@gmail.com','Screenshot_1610.png',NULL,'pelapor','51030022812970006',''),('U0002','Keramas Wiguna','keramas','$2y$10$3b6AbMDIfXKrR8GKaXaSgO/Zt8hTBSNgyT0f4RL/GAu0fvNbOVTje','085237382986','keramaswiguna@gmail.com','qweasdadead3.jpg',NULL,'pelapor','1234567890098765',''),('U0003','Rizal Nasrulloh','rizal','$2y$10$/20Si1jYI7Q9SVOOQe8I1.TySazwoDKDwtnfk1/DS28gHpt5FBChe','08512345678','rizalaja@emailan.com','thumb.png',NULL,'donatur','12375126123123123','');
 /*!40000 ALTER TABLE `tbl_user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -190,4 +191,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-24 19:20:49
+-- Dump completed on 2015-10-24 23:13:32

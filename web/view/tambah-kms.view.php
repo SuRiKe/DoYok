@@ -7,7 +7,7 @@
 			<div class="col-md-5 col-md-offset-1">
 			  <fieldset class="form-group">
 				<label for="nama">Nama</label>
-				<input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Anda" autofocus required>
+				<input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" autofocus required>
 				<small class="text-muted"><?php echo isset($error['nama']) ? $error['nama'] : '';?></small>
 			  </fieldset>
 			  <fieldset class="form-group">
@@ -51,18 +51,13 @@
 				<small class="text-muted"><?php echo isset($error['luas_tanah']) ? $error['luas_tanah'] : '';?></small>
 			  </fieldset>
 			  <fieldset class="form-group">
-				<label for="dana">Dana</label>
-  				<input type="text" class="form-control" id="dana" name="dana">
-				<small class="text-muted"><?php echo isset($error['dana']) ? $error['dana'] : '';?></small>
-			  </fieldset>
-			  <fieldset class="form-group">
 				<label for="diskripsi">Diskripsi</label>
-				<textarea class="form-control" id="diskripsi" name="diskripsi" rows="15"></textarea>
+				<textarea class="form-control" id="diskripsi" name="diskripsi" rows="18"></textarea>
 				<small class="text-muted"><?php echo isset($error['diskripsi']) ? $error['diskripsi'] : '';?></small>
 			  </fieldset>
 			</div>
 			<div class="clearfix"></div>
-			<center><button type="submit" class="btn btn-primary" name="register">Register</button></center>
+			<center><button type="submit" class="btn btn-primary" name="tambah_kms">Tambah</button></center>
 		</form>
 	</div>
 </div>

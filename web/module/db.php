@@ -3,8 +3,8 @@
 class DB{
 	
 	public static function connect(){
-		$user = 'root';
-		$pass = 'root';
+		$user = 'maskera';
+		$pass = 'maskera';
 		$dbname = 'db_doyok';
 		$host = 'localhost';
 		

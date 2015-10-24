@@ -5,10 +5,19 @@ use app\module\Fungsi as Fung;
 class Donasi{
 	
 	public static function tambah($data,$_conn){
-		$kolom = array('id_donasi','keperluan','terkumpul','status','valid');
+		$kolom = array('id_donasi','jumlah','id_user','id_kms');
 		$res = Fung::insert('tbl_donasi',$data,$kolom,$_conn);
 		
 		return $res;
+	}
+	
+	public static function donasi($id_kms,$donasi,$_conn){
+		$query = "SELECT terkumpul from tbl_kms where id_kms = :id";
+		$beff = Fung::eksekusi($query,array('id'=>$id_kms),$_conn)[0];
+		$terkumpul = $beff['terkumpul'] + $donasi;
+		$after = Fung::query("Insert into tbl_kms (terkumpul) value($terkumpul) where id_kms = $id_kms");
+		
+		return true ? true : false;
 	}
 	
 	public static function hapus($id_donasi,$_conn){
@@ -23,10 +32,6 @@ class Donasi{
 		$res = Fung::eksekusi($query,array('id'=>$id_donasi),$_conn);
 		
 		return true;
-	}
-
-	public static function tampilkanDonasiKms($limit = 10,$_conn){
-		$query = "SELECT ";
 	}
 	
 }

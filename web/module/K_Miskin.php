@@ -10,10 +10,14 @@ class Kms{
 	}
 	
 	public static function tambah($data,$_conn){
-		$kolom = array('id_kms','kepala_keluarga','jumlah_anggota_keluarga','foto','no_kk','id_daerah','id_pekerjaan','alamat','id_user','id_kebutuhan','diskripsi');
+		$kolom = array('id_kms','nama','jumlah_anggota_keluarga','foto','no_kk','id_daerah','alamat','id_user','diskripsi','luas_tanah','status','dana','terkumpul');
 		$res = Fung::insert('tbl_kms',$data,$kolom,$_conn);
 		
 		return $res;
+	}
+	
+	public static function tampil($limit=10,$_conn){
+		$res = Fung::query("SELECT * FROM tbl_kms where status = 1 limit $limit");
 	}
 	
 	public static function hapus($id_kms,$_conn){
