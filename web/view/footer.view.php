@@ -1,3 +1,5 @@
+
+<div class="clearfix"></div>
 <div id="footer" class="footer-bawah">
 	<div class="credit container">
 		<div class="col-lg-6">
@@ -5,20 +7,20 @@
 			<h3>Partner <span class="kata-kedua">Kami</span></h3>
 			<hr class="hr-putih">
 			</center>
-			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>
-			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>
-			<div class="col-md-4"><img src="view/img/thumb.jpg" alt="" class="img-circle"></div>
+			<div class="col-md-4"><img src="img/logo1.png" alt="" class="img-circle"></div>
+			<div class="col-md-4"><img src="img/logo2.png" alt="" class="img-circle"></div>
+			<div class="col-md-4"><img src="img/logo3.png" alt="" class="img-circle"></div>
 		</div>
 		<div class="col-lg-offset-2 col-lg-4 partner">
 			<center>
 			<h3>Kontak <span class="kata-kedua">Kami</span></h3>
 			</center>
 			<hr class="hr-putih">
-			<div style="font-size:72px;">
+			<div class="social-media">
 				<center>
-				<i class="fa fa-facebook-square"></i>
-				<i class="fa fa-twitter-square"></i>
-				<i class="fa fa-google-plus-square"></i>
+					<a href="https://facebook.com"><i class="fa fa-facebook-square"></i></a>
+					<a href="https://twitter.com"><i class="fa fa-twitter-square"></i></a>
+					<a href="https://google.com"><i class="fa fa-google-plus-square"></i></a>
 				</center>
 			</div>
 		</div>

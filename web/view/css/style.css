@@ -94,7 +94,8 @@ img {
 }
 .navbar-nav>li:hover{
 	background: white;
-	transition: 0.5s ease-out;
+	transition: 0.5s all;
+	height: 100%;
 }
 .navbar-nav>li:hover>a {
 	padding-top: 25px;
@@ -141,4 +142,15 @@ img {
 .buttoninput img {
 	border-radius: 50%;
 	border: 3px solid black;
+}
+
+.social-media a {
+	font-size: 72px;
+	color: white;
+	transition: 0.5s all;
+}
+.social-media a:hover {
+	color: #22313F;
+	margin-right: 20px;
+	margin-left: 20px;
 }
