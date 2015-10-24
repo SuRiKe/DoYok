@@ -29,54 +29,48 @@ angular.module('doyok.controllers', [])
     $scope.modal.show();
   };
 
+  $scope.logout = function(){
+    $scope.loginData = "";
+    $scope.hasil = "";
+    $scope.konten= "";
+  };
   // Perform the login action when the user submits the login form
   $scope.doLogin = function(user) {
-  //$scope.respon = [];
-  datanya.login(user.username, user.password).then(function(respon){
-    //console.log(respon.data.tingkat);
-      $scope.respon = respon.data;
+    $scope.loading = true;
+    datanya.login(user.username, user.password).then(function(respon){
+      console.log(respon);
+      $scope.tingkat = respon.data.tingkat;
+      if (typeof(respon.data) == 'object' ) {
+        $scope.loading = false;
+        $scope.hasil = {"loged":true, "pesan":"Berhasil Login", "color" : "green"};
+        $timeout(function() {
+          $scope.closeLogin();
+        }, 500);
+      }else{
+        $scope.loading = false;
+        $scope.hasil = {"loged":false, "pesan":"Gagal Login : Username atau Password salah", "color" : "red"};
+      }
+
+      var pelapor = [
+        {"item": "Lapor", "root": "lapor"},
+        {"item": "Laporan", "root": "laporan"}
+      ];
+
+      var donatur = [
+        {"item": "Lihat Rumah", "root": "lihat-rumah"},
+        {"item": "Donasi", "root": "donasi"}
+      ];
+
+      if ($scope.tingkat == 'pelapor') {
+        $scope.konten = pelapor;
+      }else if($scope.tingkat == 'donatur'){
+        $scope.konten = donatur;
+      }else{
+        $scope.konten = [{"item": "Lihat Permintaan", "root": "lapor"}];
+      }
     });
   };
-  // $scope.respon = 'pelapor';
-  // var pelapor = [{"item": "Lapor", "root": "lapor"},
-  //     {"item": "Laporan", "root": "laporan"}];
-  // var donatur = 
-  //     [{"item": "Lihat Rumah", "root": "lihat-rumah"},
-  //     {"item": "Donasi", "root": "donasi"}]
-  // ;
 
-  // if ($scope.respon == 'pelapor') {
-  //   $scope.$apply(function () {
-  //       $scope.konten = pelapor;
-  //   });
-  //   //$scope.konten = pelapor;
-  // }else if($scope.respon == 'donatur'){
-  //   $scope.konten = donatur;
-  // }
-  //console.log($scope.konten);
-    // function parsing(a) {
-    //   return JSON.stringify(a);
-    // }
-    // $scope.masuk = [];
-
-    // datanya.login().success(function (data) {
-    //   $scope.masuk = data;
-    // });
-
-    // //$scope.masuk = {"username" : "admin", "password": "admin"};
-    
-    // if (parsing($scope.loginData) == parsing($scope.masuk)) {
-    //   console.log('berhasil login');
-    // }else{
-    //   console.log('gagal login');
-    // }
-    //console.log('Doing login', $scope.loginData);
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    // $timeout(function() {
-    //   $scope.closeLogin();
-    // }, 1000);
 })
 .controller('HomeCtrl', function($scope, datanya) {
   $scope.playlists = [];

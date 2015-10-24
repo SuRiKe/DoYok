@@ -1,0 +1,2 @@
+D:\zzzzz\ionic\hackathon\mobile\DoYok\platforms\android\build\intermediates\classes\debug
+D:\zzzzz\ionic\hackathon\mobile\DoYok\platforms\android\build\intermediates\pre-dexed\debug\classes-158d52cecf6673a0cab716988395f4d31ccbd64d.jar

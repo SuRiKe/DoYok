@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\zzzzz\ionic\hackathon\mobile\DoYok\platforms\android\build\intermediates\exploded-aar\android\CordovaLib\unspecified\debug\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="25ddce16c7b4eb9d613bf3fccfb34b4f9371e04c">
+        <dex dex="D:\zzzzz\ionic\hackathon\mobile\DoYok\platforms\android\build\intermediates\pre-dexed\debug\classes-158d52cecf6673a0cab716988395f4d31ccbd64d.jar" />
+    </item>
+
+</items>
