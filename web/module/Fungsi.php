@@ -52,10 +52,10 @@ class Fungsi{
 		$halaman = "page/{$page}.page.php";
 
 		if (!file_exists($halaman)||empty($page)) {
-			include "page/home.page.php";
+			include_once "page/home.page.php";
 		}
 		else{
-			include "$halaman";
+			include_once "$halaman";
 		}
 	}
 	

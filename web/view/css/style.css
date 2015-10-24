@@ -4,10 +4,10 @@ a {
 a:hover {
 	text-decoration: none;
 }
-hr {
+.hr-putih {
 	border-top: 3px solid white;
 	width: 150px;
-	margin-left: 0;
+	margin: 0 auto 20px;
 }
 img {
 	max-width: 100%;
@@ -36,9 +36,10 @@ img {
 	border-top-right-radius: 8px;
 }
 .hak-cipta{
-	background-color: black;
-	color: white;
+	background-color: #E4F1FE;
+	color: #333;
 	padding: 25px;
+	font-weight: bold;
 }
 .thumbnail {
 	padding: 20px;
@@ -68,7 +69,7 @@ img {
 .navbar>.container .navbar-brand {
 	font-size: 30px;
 	color: white;
-	transition: 0.5s all;
+	transition: 0.5s ease-out;
 }
 .navbar>.container .navbar-brand:hover {
 	color: #555;
@@ -78,7 +79,7 @@ img {
 	width: 90px;
 	padding-top: 50px;
 	text-align: center;
-	transition: 0.5s all;
+	transition: 0.5s ease-out;
 }
 .navbar-inverse .navbar-nav>li>a {
 	color: #E4F1FE;
@@ -88,7 +89,7 @@ img {
 }
 .navbar-nav>li:hover{
 	background: white;
-	transition: 0.5s all;
+	transition: 0.5s ease-out;
 }
 .navbar-nav>li:hover>a {
 	padding-top: 25px;
@@ -105,9 +106,9 @@ img {
 }
 
 .credit {
-	background: #34495E;
 	color: white;
-	padding: 20px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 .credit img {
 	height: 150px;
@@ -124,4 +125,16 @@ img {
 }
 .partner img {
 	height: 100px;
+}
+.footer-bawah {
+	background: #446CB3;
+}
+.login-form {
+	margin-top: 180px;
+	margin-bottom: 150px;
+}
+
+.buttoninput img {
+	border-radius: 50%;
+	border: 3px solid black;
 }

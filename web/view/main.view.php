@@ -1,9 +1,9 @@
 <?php
-require 'header.view.php';
+include_once 'header.view.php';
 
 $halaman;
 
-require 'footer.view.php';
+include_once 'footer.view.php';
 ?>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

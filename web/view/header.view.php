@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="view/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="view/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="view/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 
@@ -48,4 +49,4 @@
 	  </div>
   </div>
 </nav>
-<div class="container">
+<div class="clearfix"></div>
