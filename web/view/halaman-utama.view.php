@@ -1,9 +1,11 @@
-<div class="jumbotron" style="margin-top:100px;">
-	<center>
-	<h1>D  oYo  K</h1>
-	<p>Doyok adalah aplikasi yang dikembangkan untuk mempermudah anda dalam melakukan ajang pendonasian</p>
-	<a href="donasi.php" class="btn btn-info">Donasi Sekarang</a>
-	</center>
+<div class="jumbotron judul-utama" style="margin-top:100px;">
+	<div class="judul-utama-kata">
+		<center>
+		<img id="logo" src="img/doyok-pagi.png" width="20%" height="20%">
+		<p>Donasi Yok!</p>
+		<a href="donasi.php" class="btn btn-info">Donasi Sekarang</a>
+		</center>
+	</div>
 </div>
 <div class="clearfix"></div>
 <div class="container">
