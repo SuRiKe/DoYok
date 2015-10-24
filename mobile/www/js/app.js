@@ -42,12 +42,12 @@ angular.module('doyok', ['ionic', 'doyok.controllers','doyok.services'])
     }
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.lapor', {
+    url: '/lapor',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html',
-        controller: 'PlaylistsCtrl'
+        templateUrl: 'templates/lapor.html',
+        controller: 'LaporCtrl'
       }
     }
   })
@@ -59,41 +59,14 @@ angular.module('doyok', ['ionic', 'doyok.controllers','doyok.services'])
           templateUrl: 'templates/browse.html'
         }
       }
-    })
-  .state('app.sekolah', {
-    url: '/sekolah',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/sekolah.html',
-        controller: 'SekolahCtrl'
-      }
-    }
-  })
-  .state('app.anak-putus-sekolah', {
-    url: '/anak-putus-sekolah',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/anak-putus-sekolah.html',
-        controller: 'SekolahCtrl'
-      }
-    }
-  })
-  .state('app.keluarga-miskin', {
-    url: '/keluarga-miskin',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/keluarga-miskin.html',
-        controller: 'SekolahCtrl'
-      }
-    }
   })
 
   .state('app.single', {
-    url: '/playlists/:playlistId',
+    url: '/rumah/:rumahId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+        templateUrl: 'templates/detail.html',
+        controller: 'DetailCtrl'
       }
     }
   });

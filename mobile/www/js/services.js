@@ -3,7 +3,7 @@ angular.module('doyok.services', [])
 .factory('datanya', function ($http) {
   var fun = {};
   fun.all = function () {
-    return $http.get('http://ngode.com/api/services/semuasiswa');
+    return $http.get('http://36.86.242.167/doyok/web/services/kms');
   };
   fun.login = function (username, password) {
   	return $http.get("http://ngode.com/doyok/services/login?username='"+ username +  "'&password=" + password);//, user).then(function (status) {
@@ -15,6 +15,5 @@ angular.module('doyok.services', [])
       // }
     //});
   };
-
   return fun;
 });

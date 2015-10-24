@@ -28,10 +28,11 @@ a{
 	text-align: center;
 }
 .respon img{
+	position: relative;
 	max-height: 20px;
 	margin-top: -10px;
 	margin-bottom: -10px;
 }
 .modal{
-	min-height: 250px
+	height: 270px
 }

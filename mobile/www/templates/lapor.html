@@ -1,0 +1,47 @@
+<ion-view view-title="DoYok">
+  <ion-content>
+    <span> {{statusnya}} </span>
+
+    <h2 class="kategori">Lapor Rumah</h2>
+    <form ng-submit="laporRumah(laporan)">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Nama Keluarga</span>
+          <input type="text" ng-model="laporan.nama" />
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Jumlah A. Keluarga</span>
+          <input type="number" ng-model="laporan.jumlah" />
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" ng-click="getPhoto()">Ambil Foto</button>
+          <img ng-src="{{lastPhoto}}" alt="">
+          <input type="hidden" value="{{lastPhoto}}">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">No KK.</span>
+          <input type="text" ng-model="laporan.no_kk" />
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Alamat</span>
+          <input type="text" ng-model="laporan.alamat" />
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Deskripsi</span>
+          <input type="text" ng-model="laporan.deskripsi" />
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Luas Tanah</span>
+          <input type="number" ng-model="laporan.luad" />
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Dana</span>
+          <input type="number" ng-model="laporan.dana" />
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Lapor</button>
+        </label>
+      </div>
+    </form>
+
+</ion-view>
