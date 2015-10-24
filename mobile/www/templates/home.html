@@ -4,8 +4,8 @@
 
     <h2 class="kategori">Prihatin</h2>
     <div class="list">
-	  	<a class="item item-thumbnail-left" href="#" ng-repeat="playlist in playlists | limitTo: 3">
-	      <img src="img/thumb.jpg">
+	  	<a class="item item-body" href="#" ng-repeat="playlist in playlists | limitTo: 3">
+	      <img class="full-image" src="img/thumb.jpg">
 	      <h2 class="judul">{{playlist.nis}} {{playlist.nama}}</h2>
 	      <div class="ket">{{playlist.kd_jurusan}} {{playlist.kd_jurusan}}</div>
 	      <div class="tombol">
@@ -15,42 +15,4 @@
 	    </a>
 	</div>
 
-    <h2 class="kategori">Sekolah</h2>
-    <div class="list">
-	  	<a class="item item-thumbnail-left" href="#" ng-repeat="playlist in playlists | limitTo: 3">
-	      <img src="img/thumb.jpg">
-	      <h2 class="judul">{{playlist.nis}} {{playlist.nama}}</h2>
-	      <div class="ket">{{playlist.kd_jurusan}} {{playlist.kd_jurusan}}</div>
-	      <div class="tombol">
-        	<span>Telp. {{playlist.kd_jurusan}}</span>
-        	<button class="button button-small button-calm">Donasi</button>
-          </div>
-	    </a>
-	</div>
-
-	<h2 class="kategori">Anak Putus Sekolah</h2>
-    <div class="list">
-	  	<a class="item item-thumbnail-left" href="#" ng-repeat="playlist in playlists | limitTo: 3">
-	      <img src="img/thumb.jpg">
-	      <h2 class="judul">{{playlist.nis}} {{playlist.nama}}</h2>
-	      <div class="ket">{{playlist.kd_jurusan}} {{playlist.kd_jurusan}}</div>
-	      <div class="tombol">
-        	<span>Telp. {{playlist.kd_jurusan}}</span>
-        	<button class="button button-small button-calm">Donasi</button>
-          </div>
-	    </a>
-	</div>
-
-    <h2 class="kategori">Keluarga Miskin</h2>
-    <div class="list">
-	  	<a class="item item-thumbnail-left" href="#" ng-repeat="playlist in playlists | limitTo: 3">
-	      <img src="img/thumb.jpg">
-	      <h2 class="judul">{{playlist.nis}} {{playlist.nama}}</h2>
-	      <div class="ket">{{playlist.kd_jurusan}} {{playlist.kd_jurusan}}</div>
-	      <div class="tombol">
-        	<span>Telp. {{playlist.kd_jurusan}}</span>
-        	<button class="button button-small button-calm">Donasi</button>
-          </div>
-	    </a>
-	</div>
 </ion-view>
