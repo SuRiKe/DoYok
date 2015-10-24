@@ -18,7 +18,7 @@
 			  <fieldset class="form-group">
 				<label for="foto">Foto</label><br />
 				<div class="buttoninput">
-				<img id="image" src="img/anon.gif"  width="200px" height="200px" /><br />
+				<img id="image" src="img/anon.png"  width="200px" height="200px" /><br />
 					<input onchange="readURL(this);" type="file" name="foto" id="foto" accept="image/*">
 				</div>
 				<small class="text-muted"><?php echo isset($error['foto']) ? $error['foto'] : '';?></small>
