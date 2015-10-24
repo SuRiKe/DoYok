@@ -16,8 +16,10 @@ class Kms{
 		return $res;
 	}
 	
-	public static function tampil($limit=10,$_conn){
-		$res = Fung::query("SELECT * FROM tbl_kms where status = 1 limit $limit");
+	public static function tampil($limit,$_conn){
+		$res = Fung::query("SELECT * FROM tbl_kms where status = 1 limit $limit",$_conn);
+
+		return $res;
 	}
 	
 	public static function hapus($id_kms,$_conn){

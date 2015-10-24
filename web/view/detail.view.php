@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>DoYok</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-
 <div id="header">
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
@@ -78,25 +67,3 @@
 		</div>
 	</div>
 </div>
-<div id="footer">
-	<div class="credit container">
-		<div class="col-lg-6 partner">
-			<h3>Partner</h3>
-			<div class="col-md-4"><img src="img/thumb.jpg" alt="" class="img-circle"></div>
-			<div class="col-md-4"><img src="img/thumb.jpg" alt="" class="img-circle"></div>
-			<div class="col-md-4"><img src="img/thumb.jpg" alt="" class="img-circle"></div>
-		</div>
-		<div class="col-md-2"> </div>
-		<div class="col-lg-4">
-			<h3>Kontak</h3>
-			<div class="col-md-4"><img src="img/thumb.jpg" alt="" class="img-circle"></div>
-			<div class="col-md-4"><img src="img/thumb.jpg" alt="" class="img-circle"></div>
-			<div class="col-md-4"><img src="img/thumb.jpg" alt="" class="img-circle"></div>
-		</div>
-	</div>
-	<div class="col-lg-12 hak-cipta text-center">
-		Copyright 2015 Made with <span class="glyphicon glyphicon-heart"></span> in Denpasar
-	</div>
-</div>
-</body>
-</html>

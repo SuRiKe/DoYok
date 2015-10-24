@@ -11,17 +11,19 @@
 	<div class="form-control">
 		<p>K. Mis <a style="float:right;" href="lengkap.php">Selengkapnya</a></p>
 	</div>
-	<div class="col-md-4">
-		<div class="row">
-			<a href="lanjut.php" class="thumbnail">
-				<img src="view/img/thumb.jpg">
-				<strong class="title">Lorem ipsum dolor sit amet</strong>
-				<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, lorem.</p>
-			</a>
-			<div class="detail-donasi">
-				<button onclick="window.location.href='donasi.php';" class="btn btn-info">Donasi!</button>
+	<?php foreach ($k_miskin as $data): ?>
+		<div class="col-md-4">
+			<div class="row">
+				<a href="?hal=detail&rumah=<?=$data['id_kms']?>" class="thumbnail">
+					<img src="img/rumah_kmiskin/<?=$data['foto']?>">
+					<strong class="title">Rumah <?=$data['nama']?></strong>
+					<p><?=substr($data['diskripsi'], 0,255)?></p>
+				</a>
+				<div class="detail-donasi">
+					<button class="btn btn-info">Donasi!</button>
+				</div>
 			</div>
 		</div>
-	</div>
+	<?php endforeach ?>
 </div>
 </div>

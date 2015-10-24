@@ -1,24 +1,15 @@
 <?php
 	require 'module/daerah.php';
 	require 'module/k_miskin.php';
-	require 'module/pekerjaan.php';
-	require 'module/kebutuhan.php';
-	require 'module/donasi.php';
-	require 'module/user.php';
 	require 'module/db.php';
 
 	use app\module\DB;
 	use app\module\Daerah;
-	use app\module\Pekerjaan;
-	use app\module\Kebutuhan;
-	use app\module\Donasi;
 	use app\module\Kms;
 	use app\module\Fungsi as Fung;
 	
 	$conn = DB::connect();
 	$daerah = Daerah::ambilSemua($conn);
-	$pekerjaan = Pekerjaan::ambilSemua($conn);
-	$kebutuhan = Kebutuhan::ambilSemua($conn);
 	
 	if(isset($_POST['tambah_kms'])){
 		$d_field = array('nama','jumlah_anggota_keluarga','no_kk','id_daerah','alamat','diskripsi','luas_tanah');
@@ -35,7 +26,7 @@
 			}
 		}
 		if(empty($error)){
-			move_uploaded_file($_FILES['foto']['tmp_name'], "img/profil/".$foto);
+			move_uploaded_file($_FILES['foto']['tmp_name'], "img/rumah_kmiskin/".$foto);
 			$insert = Kms::tambah(
 				array(
 					'id_kms'=>$id_kms,
