@@ -27,8 +27,6 @@
 		Copyright 2015 Made with <span style="color:red;" class="glyphicon glyphicon-heart"></span> in Denpasar
 	</div>
 </div>
-</body>
-</html>
 <!-- Container -->
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/functions.js"></script>
