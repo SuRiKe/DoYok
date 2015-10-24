@@ -4,6 +4,12 @@ use app\module\Fungsi as Fung;
 
 class Donasi{
 	
+	public static function autoId($_conn){
+		$res = Fung::autoId("tbl_donasi","id_donasi",5,"D",$_conn);
+		
+		return $res;
+	}
+
 	public static function tambah($data,$_conn){
 		$kolom = array('id_donasi','jumlah','id_user','id_kms');
 		$res = Fung::insert('tbl_donasi',$data,$kolom,$_conn);
@@ -15,9 +21,9 @@ class Donasi{
 		$query = "SELECT terkumpul from tbl_kms where id_kms = :id";
 		$beff = Fung::eksekusi($query,array('id'=>$id_kms),$_conn)[0];
 		$terkumpul = $beff['terkumpul'] + $donasi;
-		$after = Fung::query("Insert into tbl_kms (terkumpul) value($terkumpul) where id_kms = $id_kms");
+		$after = Fung::eksekusi("Update tbl_kms set terkumpul = $terkumpul where id_kms = :id",array('id'=>$id_kms),$_conn)[0];
 		
-		return true ? true : false;
+		return $after ? true : false;
 	}
 	
 	public static function hapus($id_donasi,$_conn){

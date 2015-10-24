@@ -1,18 +1,13 @@
 <div class="col-md-4 col-md-offset-4 login-form">
-	<h1><center>Halaman Login</center></h1>
+	<h1><center>Donasi Anda</center></h1>
 	<hr>
-	<?php echo isset($msg['login']) ? $msg['login'] : '';?>
+	<?php echo isset($msg['donasi']) ? $msg['donasi'] : '';?>
 	<form method="post">
 	  <fieldset class="form-group">
-		<label for="username">Username</label>
-		<input type="username" class="form-control" id="username" name="username" placeholder="Username" required autofocus>
-		<small class="text-muted"><?php echo isset($error['username']) ? $error['username'] : '';?></small>
+		<label for="jumlah">Jumlah</label>
+		RP<input type="number" class="form-control" id="jumlah" name="jumlah" placeholder="Jumlah Donasi" required autofocus>
+		<small class="text-muted"><?php echo isset($error['jumlah']) ? $error['username'] : '';?></small>
 	  </fieldset>
-	  <fieldset class="form-group">
-		<label for="password">Password</label>
-		<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-		<small class="text-muted"><?php echo isset($error['password']) ? $error['password'] : '';?></small>
-	  </fieldset>
-	  <button type="submit" class="btn btn-primary" name="login">Login</button>
+	  <button type="submit" class="btn btn-primary" name="donasi">donasi</button>
 	</form>
 </div>

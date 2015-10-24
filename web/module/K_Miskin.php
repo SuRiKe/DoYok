@@ -29,9 +29,14 @@ class Kms{
 	}
 
 	public static function persentase($id_kms,$_conn){
-		$res = Fung::eksekusi("SELECT id_kms,dana,terkumpul FROM tbl_kms where id_kms = :id",array('id'=>$id_kms),$_conn)[0];
+		$query = "SELECT id_kms,dana,terkumpul FROM tbl_kms where id_kms = $id_kms";
+		$res = Fung::query($query,$_conn);
+		foreach ($res as $data) {
+			$terkumpul = $data['terkumpul'];
+			$dana = $data['dana'];
+		}
 
-		$persentase = ($res['terkumpul']/$res['dana'])*100;
+		$persentase = $terkumpul/$dana*100;
 		return $persentase;
 	}
 

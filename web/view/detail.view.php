@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			<div class="col-md-2 tengah">
-				<button type="button" class="btn btn-default dropdown-toggle">Donasi</button>
+				<a href="?hal=donasi&rumah=<?=$kms['id_kms']?>" class="btn btn-primary dropdown-toggle">Donasi</a>
 			</div>
 		</div>
 	</div>
