@@ -24,6 +24,7 @@
 				$_SESSION['nama'] = $data['nama'];
 				$_SESSION['username'] = $data['username'];
 				$_SESSION['id_daerah'] = $data['id_daerah'];
+				$_SESSION['tingkat'] = $data['tingkat'];
 				
 				$_SESSION['login_client'] = true;
 				header('location:?hal=home');
