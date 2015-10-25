@@ -38,7 +38,7 @@ angular.module('doyok.controllers', [])
   $scope.doLogin = function(user) {
     $scope.loading = true;
     datanya.login(user.username, user.password).then(function(respon){
-      console.log(respon);
+      //console.log(respon);
       $scope.tingkat = respon.data.tingkat;
       if (typeof(respon.data) == 'object' ) {
         $scope.loading = false;
@@ -93,4 +93,49 @@ angular.module('doyok.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+.controller('DetailCtrl', function($scope, $stateParams, datanya) {
+  // $ionicModal.fromTemplateUrl('templates/detail.html', {
+  //   scope: $scope
+  // }).then(function(modal) {
+  //   $scope.model = modal;
+  // });
+
+  // $scope.openDetail = function () {
+  //   $scope.modal.show();
+  // };
+
+  $scope.detail = [];
+  datanya.all().success(function (data) {
+    $scope.detail = data;
+    //console.log(data);
+  function getDet(rumahId) {
+    for (var i = 0; i < $scope.detail.length; i++) {
+      //console.log($scope.detail[i].id_kms);
+      if ($scope.detail[i].id_kms == rumahId) {
+        //console.log($scope.detail[i]);
+        return $scope.detail[i];
+      }    
+    }
+    //return null;
+  }
+  $scope.deskripsi = getDet($stateParams.rumahId);
+  });
+})
+
+.controller('LaporCtrl', function($scope, Camera){
+  $scope.getPhoto = function() {
+    Camera.getPicture().then(function(imageURI) {
+      console.log(imageURI);
+      $scope.lastPhoto = imageURI;
+    }, function(err) {
+      console.err(err);
+    }, {
+      quality: 75,
+      targetWidth: 320,
+      targetHeight: 320,
+      saveToPhotoAlbum: false
+    });
+  };
 });

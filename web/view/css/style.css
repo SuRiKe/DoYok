@@ -1,4 +1,5 @@
-a {
+a, strong, label, h1, p {
+	color: #333;
 	font-family: 'Raleway', sans-serif;
 }
 a:hover {
@@ -8,6 +9,12 @@ a:hover {
 	border-top: 3px solid white;
 	width: 150px;
 	margin: 0 auto 20px;
+}
+.hr-biru {
+	border-top: 3px solid #446CB3;
+	width: 150px;
+	margin: 0 auto 20px;
+	padding-bottom: 50px;
 }
 img {
 	max-width: 100%;
@@ -51,8 +58,8 @@ img {
 	background: #333;
 	color: white;
 }
-.thumbnail:hover img {
-	transition: 0.5s all;
+.thumbnail:hover p, .thumbnail:hover strong {
+	color: white;
 }
 .detail-donasi button {
 	width: 150px;
@@ -113,9 +120,9 @@ img {
 }
 
 .credit {
-	color: white;
-  padding-bottom: 50px;
-  padding-top: 50px;
+	color: white;	
+  	padding-bottom: 50px;
+  	padding-top: 50px;
 }
 .credit img {
 	height: 150px;
@@ -172,6 +179,25 @@ img {
 }
 .img-circle {
     margin: 15px;
+}
+.progress {
+	height: 30px;
+	background: rgba(86, 98, 249, 0.1);
+}
+.detail {
+	text-align: justify;
+}
+.sidebar-detail {
+	background:#F2F3F4;
+	max-height: 100%;
+	padding-bottom: 50px;
+	padding-top: 30px;
+}
+.detail p {
+	margin-top: 50px;	
+	font-size: 1.2em;
+	line-height: 1.5em;
+    text-indent: 50px;
 }
 @media (max-width: 768px) {
 	.navbar-header {

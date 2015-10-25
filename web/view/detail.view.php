@@ -1,37 +1,39 @@
+<?php use app\module\Fungsi as Fung; ?>
+<div style="margin-top:150px;margin-bottom:100px;">
 <div id="content" class="container">
 	<?php foreach ($kmiskin as $kms): ?>
-	<h1 class="text-center">Rumah <?=$kms['nama']?></h1>
-	<hr>
+	<h1 class="text-center"><span class="kata-kedua">Rumah</span> <?=$kms['nama']?></h1>
+	<hr class="hr-biru">
 	<div class="row">
-		<div class="col-lg-12 gallery">
-			<div class="col-lg-3">
-				<img class="img-responsive" src="img/rumah_kmiskin/<?=$kms['foto']?>" alt="thumbnail">
+		<div class="col-lg-8 gallery">
+			<div class="col-lg-12">
+				<center><img width="80%" height="" src="img/rumah_kmiskin/<?=$kms['foto']?>" alt="thumbnail"></center>
 			</div>
-			<div class="col-lg-3">
-				<img class="img-responsive" src="img/rumah_kmiskin/<?=$kms['foto']?>" alt="thumbnail">
-			</div>
-			<div class="col-lg-3">
-				<img class="img-responsive" src="img/rumah_kmiskin/<?=$kms['foto']?>" alt="thumbnail">
-			</div>
-			<div class="col-lg-3">
-				<img class="img-responsive" src="img/rumah_kmiskin/<?=$kms['foto']?>" alt="thumbnail">
+			<div class="col-lg-12 detail">
+				<p><?=$kms['diskripsi']; ?></p>
 			</div>
 		</div>
-		<div class="col-lg-12 detail container">
-			<?=$kms['diskripsi']; ?>
-		</div>
-		<div class="col-lg-12">
-			<div class="col-md-10">
-				<div class="progress">
-					<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="<?=$persentase?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=$persentase?>%;">
-						<?=$persentase;?>% Complete
-					</div>
-				</div>
+		<div class="col-lg-4 sidebar-detail">
+			<div>
+				<h4><strong>Dana Terkumpul Rp. <?=Fung::uang($kms['terkumpul']);?></strong></h4>
+				<small>Dari total dibutuhkan Rp. <?=Fung::uang($kms['dana']);?></small>
 			</div>
-			<div class="col-md-2 tengah">
-				<a href="?hal=donasi&rumah=<?=$kms['id_kms']?>" class="btn btn-primary dropdown-toggle">Donasi</a>
+			<br>
+			<hr class="hr-biru">
+			<div class="progress">
+				<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="<?=$persentase?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=$persentase?>%;"></div>	
+			</div>
+			<strong><center><a><?=$persentase;?>% Dana Terkumpul</a></center></strong>
+			<br>
+			<div class="detail-donasi">
+				<?php if (!$_SESSION['login_client']): ?>
+					<a href="?hal=login" class="form-control donasi-detail">Beri Donasi!</a>
+				<?php else: ?>
+					<a href="?hal=donasi&rumah=<?=$kms['id_kms']?>" class="form-control donasi-detail">Beri Donasi!</a>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
 <?php endforeach ?>
+</div>
 </div>

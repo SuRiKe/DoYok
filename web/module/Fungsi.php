@@ -85,5 +85,21 @@ class Fungsi{
 		}
 		return ($inis.$tmp.$angka);
 	}
+
+	public static function uang($angka){
+	$jumlah_desimal ="0";
+	$pemisah_desimal=",";
+	$pemisah_ribuan =".";
+	$h = number_format($angka, $jumlah_desimal, $pemisah_desimal, $pemisah_ribuan).",-";
+	 return $h;
+	}
+	function rekap($angka){
+		$jumlah_desimal ="0";
+		$pemisah_desimal=",";
+		$pemisah_ribuan =".";
+
+		$h = number_format($angka,$jumlah_desimal,$pemisah_desimal,$pemisah_ribuan);
+		return $h;
+	}
 }
 ?>

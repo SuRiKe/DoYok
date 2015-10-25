@@ -49,6 +49,8 @@
 			$this->response('',204);
 		}
 
+		private function 
+
 		private function login(){
 
 			if($this->get_request_method() != "GET"){

@@ -9,7 +9,7 @@
 	use app\module\Fungsi as Fung;
 
 	$conn = DB::connect();
-	$k_miskin = Kms::tampil(3,$conn);
+	$k_miskin = Kms::tampil(6,$conn);
 
 	require 'view/halaman-utama.view.php';
 ?>
