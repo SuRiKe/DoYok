@@ -204,3 +204,15 @@ img {
 		padding-bottom: 15px;
 	}
 }
+.rounded-image {
+	border-radius: 50%;
+	border: 3px solid black;
+}
+.icon img {
+	width: 100px;
+	height: 90px;
+}
+.icon p {
+	font-size: 20px;
+	text-align: center;
+}

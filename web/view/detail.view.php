@@ -32,6 +32,21 @@
 					<a href="?hal=donasi&rumah=<?=$kms['id_kms']?>" class="form-control donasi-detail">Beri Donasi!</a>
 				<?php endif; ?>
 			</div>
+			<div class="clearfix"></div><br>
+			<div class="row">
+				<div class="col-md-6">
+					<a href="#" class="icon thumbnail">
+						<center><img src="img/thumb.png" class="rounded-image icon"></center>
+						<p>Kontraktor</p>
+					</a>
+				</div>
+				<div class="col-md-6">
+					<a href="#" class="icon thumbnail">
+						<center><img src="img/thumb.png" class="rounded-image icon"></center>
+						<p>Pelapor</p>
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 <?php endforeach ?>
