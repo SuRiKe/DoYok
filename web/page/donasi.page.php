@@ -25,6 +25,7 @@
 				'jumlah' => $jumlah,
 				'id_donasi' => $id_donasi,
 				'id_kms' => $id_kms),$conn);
+			header('location:?hal=detail&rumah=%27'.$id_kms.'%27');
 			if($insert){
 				$insertDonasi = Donasi::donasi($id_kms,$jumlah,$conn);
 				$msg['donasi'] = '
@@ -40,7 +41,6 @@
 				';
 			}
 		}
-
 	}
 
 	require 'view/donasi.view.php';

@@ -1,7 +1,6 @@
 <div class="col-md-4 col-md-offset-4 login-form">
 	<h1><center>Donasi Anda</center></h1>
 	<hr>
-	<?php echo isset($msg['donasi']) ? $msg['donasi'] : '';?>
 	<form method="post">
 	  <fieldset class="form-group">
 		<label for="jumlah">Jumlah</label>

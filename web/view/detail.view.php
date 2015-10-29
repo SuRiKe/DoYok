@@ -2,6 +2,7 @@
 <div style="margin-top:150px;margin-bottom:100px;">
 <div id="content" class="container">
 	<?php foreach ($kmiskin as $kms): ?>
+	<?php echo isset($msg['donasi']) ? $msg['donasi'] : '';?>
 	<h1 class="text-center"><span class="kata-kedua">Rumah</span> <?=$kms['nama']?></h1>
 	<hr class="hr-biru">
 	<div class="row">

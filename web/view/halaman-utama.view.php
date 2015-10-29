@@ -17,7 +17,7 @@
 						<strong class="title"><center>Rumah <?=$data['nama']?></center></strong>
 						<p><?=substr($data['diskripsi'], 0,100)?></p>
 						<div class="detail-donasi">
-							<button class="btn btn-info">Donasi!</button>
+							<button class="btn btn-info" onclick="newDoc()">Donasi!</button>
 						</div>
 					</a>
 				</div>
