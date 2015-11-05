@@ -49,8 +49,6 @@
 			$this->response('',204);
 		}
 
-		private function 
-
 		private function login(){
 
 			if($this->get_request_method() != "GET"){
@@ -72,6 +70,33 @@
 				}
 			}
 			$this->response('',204);
+		}
+
+		private function donasi(){
+			if($this->get_request_method() != "POST"){
+				$this->response('',406);
+			}
+			$kms = json_decode(file_get_contents("php://input"),true);
+			$id = $customer['id'];
+			$column_names = array('', 'email', 'city', 'address', 'country');
+			$keys = array_keys($customer['customer']);
+			$columns = '';
+			$values = '';
+			foreach($column_names as $desired_key){ // Check the customer received. If key does not exist, insert blank into the array.
+			   if(!in_array($desired_key, $keys)) {
+			   		$$desired_key = '';
+				}else{
+					$$desired_key = $customer['customer'][$desired_key];
+				}
+				$columns = $columns.$desired_key."='".$$desired_key."',";
+			}
+			$query = "UPDATE angularcode_customers SET ".trim($columns,',')." WHERE customerNumber=$id";
+			if(!empty($customer)){
+				$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
+				$success = array('status' => "Success", "msg" => "Customer ".$id." Updated Successfully.", "data" => $customer);
+				$this->response($this->json($success),200);
+			}else
+				$this->response('',204);	// "No Content" status
 		}
 
 		private function json($data){
