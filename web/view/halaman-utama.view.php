@@ -1,4 +1,4 @@
-<div class="jumbotron judul-utama" style="margin-top:100px;">
+<div class="jumbotron judul-utama">
 	<div class="judul-utama-kata">
 		<center>
 		<img id="logo" src="img/doyok-pagi.png" width="30%" height="30%">
@@ -25,4 +25,25 @@
 		<?php endforeach ?>
 	</div>
 </div>
+<center>
+	<nav>
+	  <ul class="pagination">
+	    <li>
+	      <a href="#" aria-label="Previous">
+	        <span aria-hidden="true">&laquo;</span>
+	      </a>
+	    </li>
+	    <li><a href="#">1</a></li>
+	    <li><a href="#">2</a></li>
+	    <li><a href="#">3</a></li>
+	    <li><a href="#">4</a></li>
+	    <li><a href="#">5</a></li>
+	    <li>
+	      <a href="#" aria-label="Next">
+	        <span aria-hidden="true">&raquo;</span>
+	      </a>
+	    </li>
+	  </ul>
+	</nav>
+</center>
 <div style="margin-bottom:100px;"></div>

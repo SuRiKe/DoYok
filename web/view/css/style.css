@@ -80,7 +80,8 @@ img {
 	transition: 1s linear;
 }
 .navbar>.container .navbar-brand {
-	height: 70px;
+    height: 50px;
+	padding: 10px;
 	transition: 0.5s ease-out;
 }
 .navbar>.container .navbar-brand:hover {
@@ -89,7 +90,6 @@ img {
 .navbar-nav>li a {
 	height: 100%;
 	width: 90px;
-	padding-top: 50px;
 	text-align: center;
 	transition: 0.5s ease-out;
 }
@@ -105,18 +105,9 @@ img {
 	transition: 0.5s all;
 	height: 100%;
 }
-.navbar-nav>li:hover>a {
-	padding-top: 25px;
-}
-.navbar-nav.navbar-right:last-child {
-	height: 100px;
-}
-.navbar-header {
-	padding-top: 15px;
-}
 .navbar-inverse {
 	border-color: transparent;
-	background-color: rgba(65, 131, 215,0.8);
+	background-color: rgb(65, 131, 215);
 }
 
 .credit {
@@ -172,8 +163,9 @@ img {
 	margin-left: 0;
 }
 .judul-utama {
-	background: url('../../img/breeze.png');
+	background: url('../../img/umah-benyah/rumah-runtuh.jpg') no-repeat;
 	background-attachment: fixed;
+	background-size: 100%;
 	height: 100vh;
 	padding: 30px 0 30px 0;
 }
@@ -215,4 +207,10 @@ img {
 .icon p {
 	font-size: 20px;
 	text-align: center;
+}
+
+/* DAFTAR */
+.daftar {
+	background: #999;
+	padding: 25px 100px 25px 100px;
 }
