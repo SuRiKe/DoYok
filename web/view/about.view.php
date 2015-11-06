@@ -1,8 +1,7 @@
-<div style="margin-top:175px;">
-	<div class="container">
-		<center><img src="img/doyok-malam.png" width="300" height="200"></center>
-		<div class="col-md-4">
-			<h1>D oYo K</h1>
-		</div>
+<div class="container"  style="margin-top:150px;">
+	<div class="jumbotron">
+	  <h1>Hello, world!</h1>
+	  <p>...</p>
+	  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
 	</div>
 </div>
