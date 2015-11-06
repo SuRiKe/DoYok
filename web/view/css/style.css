@@ -16,6 +16,24 @@ a:hover {
 	margin: 0 auto 20px;
 	padding-bottom: 50px;
 }
+.thumb .thumbnail{
+	height: 350px;
+}
+.thumb img{
+	height: 180px;
+}
+.thumb strong.title{
+	background-color: red;
+	height: 40px;
+}
+.thumb p{
+	height: 86px;
+}
+.thumb button{
+	height: 36px;
+	margin-top: -33px;
+	margin-right: 25%;
+}
 img {
 	max-width: 100%;
 }
@@ -70,17 +88,23 @@ img {
 	border: 2px solid white;
 	transition: 0.5s all;
 }
-.detail-donasi button:hover {
+.thumb a:hover + .detail-donasi button {
 	background: white;
 	color: #428BCA;
+	border: 2px solid #428BCA;
 }
+/*.detail-donasi button:hover {
+	background: white;
+	color: #428BCA;
+}*/
 .detail-donasi {
 	position: inherit;
 	float: right;
 	transition: 1s linear;
 }
 .navbar>.container .navbar-brand {
-	height: 70px;
+    height: 50px;
+	padding: 10px;
 	transition: 0.5s ease-out;
 }
 .navbar>.container .navbar-brand:hover {
@@ -89,7 +113,6 @@ img {
 .navbar-nav>li a {
 	height: 100%;
 	width: 90px;
-	padding-top: 50px;
 	text-align: center;
 	transition: 0.5s ease-out;
 }
@@ -105,18 +128,9 @@ img {
 	transition: 0.5s all;
 	height: 100%;
 }
-.navbar-nav>li:hover>a {
-	padding-top: 25px;
-}
-.navbar-nav.navbar-right:last-child {
-	height: 100px;
-}
-.navbar-header {
-	padding-top: 15px;
-}
 .navbar-inverse {
 	border-color: transparent;
-	background-color: rgba(65, 131, 215,0.8);
+	background-color: rgb(65, 131, 215);
 }
 
 .credit {
@@ -172,8 +186,9 @@ img {
 	margin-left: 0;
 }
 .judul-utama {
-	background: url('../../img/breeze.png');
+	background: url('../../img/umah-benyah/rumah-runtuh.jpg') no-repeat;
 	background-attachment: fixed;
+	background-size: 100%;
 	height: 100vh;
 	padding: 30px 0 30px 0;
 }
@@ -199,7 +214,50 @@ img {
 	line-height: 1.5em;
     text-indent: 50px;
 }
+.kanan{
+	text-align: left;
+	float: right;
+	padding-left: 10%;
+	border-left: 1px solid #333;
+	margin-right: 1px;
+}
+.kiri{
+	text-align: right;
+	float: left;
+	padding-right: 10%;
+	border-right: 1px solid #333;
+}
+.asdf{
+	width: 35%;
+	height: 10px;
+	border-top: 1px solid #333;
+}
+.kanan .asdf{
+	float: left;
+	margin-left: -26%;
+	border-right: 1px solid #333;
+}
+.kiri .asdf{
+	float: right;
+	margin-right: -26%;
+	border-left: 1px solid #333;
+}
+@media (max-width: 1200px){
+	.kiri .asdf{
+		float: right;
+		margin-right: -26.5%;
+	}
+}
 @media (max-width: 768px) {
+	.kanan, .kiri, .asdf{
+		text-align: center;
+		border: none;
+		padding: 0px;
+	}
+	.col-sm-6{
+		width: 100%;
+	}
+
 	.navbar-header {
 		padding-bottom: 15px;
 	}
@@ -215,4 +273,19 @@ img {
 .icon p {
 	font-size: 20px;
 	text-align: center;
+}
+
+/* DAFTAR */
+.daftar {
+	background: #999;
+	padding: 25px 100px 25px 100px;
+}
+
+@media (max-width: 500px){
+	.col-xs-6{
+		width: 100%;
+	}
+	.judul-utama {
+		height: 50vh;
+	}
 }
