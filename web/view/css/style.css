@@ -2,6 +2,9 @@ a, strong, label, h1, p {
 	color: #333;
 	font-family: 'Raleway', sans-serif;
 }
+.form-control {
+	height: 50px;
+}
 a:hover {
 	text-decoration: none;
 }
@@ -277,9 +280,10 @@ img {
 
 /* DAFTAR */
 .daftar {
-	background: #999;
+	background: rgba(49, 112, 143, 0.32);
 	padding: 25px 100px 25px 100px;
 }
+<<<<<<< HEAD
 
 @media (max-width: 500px){
 	.col-xs-6{
@@ -288,4 +292,46 @@ img {
 	.judul-utama {
 		height: 50vh;
 	}
+=======
+.daftar-background {
+	background: url('../../img/hancur.jpg') no-repeat;
+	padding: 100px 0 100px;
+}
+.garis-header {
+    border-top: 1px solid #DDDDDD;
+    margin: 20px 0;
+    position: relative;
+}
+.kata-header {
+	margin-top: 10px;
+	padding: 0px;
+}
+.kata-header p {
+	text-align: center;
+	width: 100%;
+	font-size: 18px;
+}
+/* SOCIAL LOGIN */
+.btn-facebook, .btn-google {
+	height:50px; 
+	padding:15px;
+	color: white;
+	margin-bottom: 10px;
+	transition: 0.5s all;
+}
+.btn-facebook {
+	background: #3b5998;
+}
+.btn-google {
+	background: #cd201f;
+}
+.btn-facebook:hover, .btn-google:hover {
+	color: white;
+}
+.btn-facebook:hover {
+	background: #263961;
+}
+.btn-google:hover {
+	background: #741212;
+>>>>>>> 9fc194cef1f5ed235027a4ad844c4756645d43db
 }
