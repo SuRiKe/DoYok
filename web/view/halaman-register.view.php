@@ -3,8 +3,7 @@
 		<form method="post">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="daftar">
-					<h3><center>Belajarlah jadi bijaksana!</center></h3>
-					<hr>
+					<h3><center>Dimulai Dengan Kesederhanaan!</center></h3>
 					<?php echo isset($msg['daftar']) ? $msg['daftar'] : '';?>
 					<fieldset class="form-group">
 						<input type="email" class="form-control" name="email" placeholder="Email Anda" required autofocus>
