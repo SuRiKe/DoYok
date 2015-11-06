@@ -62,7 +62,6 @@ class Fungsi{
 	public static function menuClient($login){
 		if($login == true){
 			$data = array('home','about','tambah','logout');
-			
 		}else{
 			$data = array('home','register','login','about');
 		}
