@@ -212,12 +212,12 @@ img {
 	text-align: center;
 }
 
-/* DAFTAR */
-.daftar {
+/* daftar-login */
+.daftar-login {
 	background: rgba(49, 112, 143, 0.32);
 	padding: 25px 100px 25px 100px;
 }
-.daftar-background {
+.daftar-login-background {
 	background: url('../../img/hancur.jpg') no-repeat;
 	padding: 100px 0 100px;
 }
