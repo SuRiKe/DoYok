@@ -1,3 +1,4 @@
+/*SIDEBAR NAVBAR */
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
@@ -148,4 +149,31 @@ body {
 .navbar-inverse {
   background: #23282e;
   border-bottom: none;
+}
+
+/* LOGIN ADMIN PANEL */
+.login-admin-body {
+  background: url('../../img/hancur.jpg');
+}
+.login-admin-body .jumbotron {
+  margin-top: 100px;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  color: #ccc;
+}
+.login-admin-body .btn {
+  padding: 20px 0;
+  height: 60px;
+  font-size: 18px;
+}
+.form-login-admin {
+  margin-top: 100px;
+  padding: 30px 50px 50px 50px;
+  background: rgba(0, 1, 33, 0.4);
+}
+.form-login-admin input {
+  height: 50px;
+}
+.form-login-admin h1 {
+  color: white;
 }

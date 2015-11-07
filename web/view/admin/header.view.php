@@ -20,7 +20,7 @@
     <![endif]-->
   </head>
   <body>
-<div class="nav-side-menu">
+<div class="nav-side-menu" style="z-index:9999;">
     <div class="brand">Admin Panel - DoYok</div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
   
@@ -28,7 +28,7 @@
   
             <ul id="menu-content" class="menu-content collapse out">
                 <li class="active">
-                  <a href="#">
+                  <a href="index.view.php">
                   <i class="fa fa-dashboard fa-lg"></i> Dashboard
                   </a>
                 </li>
@@ -48,14 +48,14 @@
                   </li>
 
                  <li>
-                  <a href="#">
+                  <a href="tambah-kontraktor.view.php">
                   <i class="fa fa-users fa-lg"></i> Tambah Kontraktor
                   </a>
                 </li>
             </ul>
      </div>
 </div>
-<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" style="z-index:-1;">
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
 	<div class="row">
 	  	<div class="col-md-11">
 	    <!-- Brand and toggle get grouped for better mobile display -->
@@ -78,7 +78,7 @@
 	            <li><a href="#">Pengaturan</a></li>
 	            <li><a href="#">Bantuan</a></li>
 	            <li role="separator" class="divider"></li>
-	            <li><a href="#">Logout</a></li>
+	            <li><a href="login.view.php">Logout</a></li>
 	          </ul>
 	        </li>
 	      </ul>

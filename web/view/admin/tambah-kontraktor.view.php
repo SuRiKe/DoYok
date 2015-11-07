@@ -1,7 +1,7 @@
 <?php
 	include 'header.view.php';
 ?>
-<h1>Tambahkan Editor</h1>
+<h1>Tambahkan Kontraktor</h1>
 <form action="" method="post">
 	<div class="col-md-5">
 		<label for="nama">Nama</label>
