@@ -10,23 +10,22 @@
 <div class="container">
 	<div class="row">
 		<?php foreach ($k_miskin as $data): ?>
-			<div class="col-md-4">
-				<div class="row">
+			<div class="col-md-4 col-sm-6 col-xs-6">
+				<div class="row thumb">
 					<a href="?hal=detail&rumah='<?=$data['id_kms']?>'" class="thumbnail">
 						<img src="img/rumah_kmiskin/<?=$data['foto']?>" width="300px" style="max-height:300px;">
 						<strong class="title"><center>Rumah <?=$data['nama']?></center></strong>
 						<p><?=substr($data['diskripsi'], 0,100)?></p>
-						<div class="detail-donasi">
-							<button class="btn btn-info" onclick="newDoc()">Donasi!</button>
-						</div>
+						
 					</a>
+					<a class="detail-donasi" href="asdf"><button class="btn btn-info" onclick="">Donasi!</button></a>
 				</div>
 			</div>
 		<?php endforeach ?>
 	</div>
 </div>
 <center>
-	<nav>
+	<nav style="margin-top:25px;">
 	  <ul class="pagination">
 	    <li>
 	      <a href="#" aria-label="Previous">
