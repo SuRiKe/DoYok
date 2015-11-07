@@ -10,9 +10,50 @@
 			<div class="col-lg-12">
 				<center><img width="80%" height="" src="img/rumah_kmiskin/<?=$kms['foto']?>" alt="thumbnail"></center>
 			</div>
-			<div class="col-lg-12 detail">
-				<p><?=$kms['diskripsi']; ?></p>
-			</div>
+			
+			  <ul class="nav nav-tabs">
+			    <li class="active"><a data-toggle="tab" href="#detail">Detail</a></li>
+			    <li><a data-toggle="tab" href="#perkembangan">Perkembangan</a></li>
+			    <li><a data-toggle="tab" href="#komentar">Komentar</a></li>
+			  </ul>
+
+			  <div class="tab-content">
+			    <div id="detail" class="tab-pane fade in active">
+				    <h3>Detail</h3>
+				    <p><?=$kms['diskripsi']; ?></p>
+				</div>
+				<div id="perkembangan" class="tab-pane fade">
+				    <h3>Perkembangan</h3>
+				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium dolorum enim nulla aspernatur debitis sint eveniet sapiente voluptatem dolores, rerum, sunt magni reprehenderit delectus. Saepe minima dolorem impedit ratione.</p>
+				</div>
+				<div id="komentar" class="tab-pane fade">
+				    <h3>Komentar</h3>
+				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium dolorum enim nulla aspernatur debitis sint eveniet sapiente voluptatem dolores, rerum, sunt magni reprehenderit delectus. Saepe minima dolorem impedit ratione.</p>
+				</div>
+			  </div>
+
+
+			<!-- <ul class="nav nav-tabs">
+			  <li class="active"><a data-toggle="tab" href="#detail">Detail</a></li>
+			  <li><a data-toggle="tab" href="#perkembangan">Perkembangan</a></li>
+			  <li><a data-toggle="tab" href="#komentar">Komentar</a></li>
+			</ul>
+
+			<div class="tab-content">
+			  <div id="detail" class="tab-pane fade in active">
+				<div class="col-lg-12 detail">
+					<p><?=$kms['diskripsi']; ?></p>
+				</div>
+			  </div>
+			  <div id="perkembangan" class="tab-pane fade in active">
+			    <h3>Perkembangan</h3>
+			    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium dolorum enim nulla aspernatur debitis sint eveniet sapiente voluptatem dolores, rerum, sunt magni reprehenderit delectus. Saepe minima dolorem impedit ratione.</p>
+			  </div>
+			  <div id="komentar" class="tab-pane fade in active">
+			    <h3>Komentar</h3>
+			    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium dolorum enim nulla aspernatur debitis sint eveniet sapiente voluptatem dolores, rerum, sunt magni reprehenderit delectus. Saepe minima dolorem impedit ratione.</p>
+			  </div>
+			</div> -->
 		</div>
 		<div class="col-lg-4 sidebar-detail">
 			<div>
