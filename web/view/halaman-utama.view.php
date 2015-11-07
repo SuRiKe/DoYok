@@ -7,7 +7,7 @@
 	</div>
 </div>
 <div class="clearfix"></div>
-<div class="container">
+<div class="container" id="data-rumah">
 	<div class="row">
 		<?php foreach ($k_miskin as $data): ?>
 			<div class="col-md-4 col-sm-6 col-xs-6">

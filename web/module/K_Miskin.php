@@ -37,7 +37,12 @@ class Kms{
 		}
 
 		$persentase = $terkumpul/$dana*100;
-		return $persentase;
+		if ($persentase >= 100) {
+			$hasil = 100;
+		}else{
+			$hasil = round($persentase,2);
+		}
+		return $hasil;
 	}
 
 	public static function hapus($id_kms,$_conn){
