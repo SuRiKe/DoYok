@@ -1,6 +1,6 @@
 <?php use app\module\Fungsi as Fung; ?>
 <?php $_SESSION['login_client'] = "suci"; ?>
-<div style="margin-top:80px;margin-bottom:100px;">
+<div style="margin-top:150px;margin-bottom:100px;">
 <div id="content" class="container">
 	<?php foreach ($kmiskin as $kms): ?>
 	<?php echo isset($msg['donasi']) ? $msg['donasi'] : '';?>
@@ -8,14 +8,10 @@
 	<hr class="hr-biru">
 	<div class="row">
 		<div class="col-lg-8 gallery">
-<<<<<<< HEAD
-			<div class="row">
 			<div class="col-lg-12" style="margin-bottom:50px;">
 				<center><img width="80%" height="" src="img/rumah_kmiskin/<?=$kms['foto']?>" alt="thumbnail"></center>
 			</div>
-			</div>
-			<br>
-			<div class="row">
+			
 			  <ul class="nav nav-tabs">
 			    <li class="active"><a data-toggle="tab" href="#detail">Detail</a></li>
 			    <li><a data-toggle="tab" href="#perkembangan">Perkembangan</a></li>
@@ -36,28 +32,6 @@
 				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium dolorum enim nulla aspernatur debitis sint eveniet sapiente voluptatem dolores, rerum, sunt magni reprehenderit delectus. Saepe minima dolorem impedit ratione.</p>
 				</div>
 			  </div>
-
-			<!-- <ul class="nav nav-tabs">
-			  <li class="active"><a data-toggle="tab" href="#detail">Detail</a></li>
-			  <li><a data-toggle="tab" href="#perkembangan">Perkembangan</a></li>
-			  <li><a data-toggle="tab" href="#komentar">Komentar</a></li>
-			</ul>
-
-			<div class="tab-content">
-			  <div id="detail" class="tab-pane fade in active">
-				<div class="col-lg-12 detail">
-					<p><?=$kms['diskripsi']; ?></p>
-				</div>
-			  </div>
-			  <div id="perkembangan" class="tab-pane fade in active">
-			    <h3>Perkembangan</h3>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium dolorum enim nulla aspernatur debitis sint eveniet sapiente voluptatem dolores, rerum, sunt magni reprehenderit delectus. Saepe minima dolorem impedit ratione.</p>
-			  </div>
-			  <div id="komentar" class="tab-pane fade in active">
-			    <h3>Komentar</h3>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium dolorum enim nulla aspernatur debitis sint eveniet sapiente voluptatem dolores, rerum, sunt magni reprehenderit delectus. Saepe minima dolorem impedit ratione.</p>
-			  </div>
-			</div> -->
 		</div>
 		<div class="col-lg-4 sidebar-detail">
 			<div>
@@ -74,7 +48,7 @@
 			<div class="rumah">
 				<a href="?hal=home#data-rumah" class="btn btn-info">Kembali</a>
 				<?php if (!$_SESSION['login_client']): ?>
-					<a href="?hal=login" class="form-control donasi-detail btn btn-primary">Beri Donasi!</a>
+					<a href="?hal=login" class="btn btn-info">Beri Donasi!</a>
 				<?php else: ?>
 					<a href="?hal=donasi&rumah=<?=$kms['id_kms']?>" class="btn btn-info">Beri Donasi!</a>
 				<?php endif; ?>
@@ -97,6 +71,5 @@
 		</div>
 	</div>
 <?php endforeach ?>
-</div>
 </div>
 </div>
