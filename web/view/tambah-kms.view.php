@@ -16,7 +16,7 @@
 				<small class="text-muted"><?php echo isset($error['jumlah_anggota_keluarga']) ? $error['jumlah_anggota_keluarga'] : '';?></small>
 			  </fieldset>
 			  <fieldset class="form-group">
-				<label for="foto">Foto</label><br />
+				<label for="foto">Gambar Rumah</label><br />
 				<div>
 				<img id="image" src="img/anon.png"  width="200px" height="200px" /><br />
 					<input onchange="readURL(this);" type="file" name="foto" id="foto" accept="image/*">
