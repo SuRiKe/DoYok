@@ -36,11 +36,7 @@
 	    <div>
 	      <ul class="nav navbar-nav navbar-right">
 			<?php foreach($menu as $menus):?>
-				<?php if($menus == 'tambah'):?>
-            <?php if ($_SESSION['tingkat'] == 'pelapor'): ?>
-              <li><a href="?hal=tambah-kms"><?=$menus?></a></li>
-            <?php endif; ?>
-				<?php elseif($menus == 'logout'):?>
+				<?php if($menus == 'keluar'):?>
 					<li><a href="" data-toggle="modal" data-target="#logout"><?=$menus?></a></li>
 				<?php else:?>
 					<li><a href="?hal=<?=$menus?>"><?=$menus?></a></li>

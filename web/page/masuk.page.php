@@ -8,26 +8,37 @@
 	
 	$conn = DB::connect();
 	
-	if(isset($_POST['login'])){
-		$user = $_POST['username'];
-		$pass = $_POST['password'];
-		if(empty($user)){  
-			$error['username'] = 'username tidak boleh kosong';  
+	if(isset($_POST['masuk'])){
+		$regex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/';
+		if (preg_match($regex, $_POST['emus'])) {
+			$email = $_POST['emus'];
+			if(empty($email)){  
+				$error['emus'] = 'email tidak boleh kosong';  
+			}
+		}else{
+			$user = $_POST['emus'];
+			if(empty($user)){  
+				$error['emus'] = 'username tidak boleh kosong';  
+			}
 		}
+		$pass = $_POST['password'];
 		
 		if(empty($error)){
-			$data = User::verivikasiUser($user,$conn);
+			if (preg_match($regex, $_POST['emus'])) {
+				$data = User::userEmail($email,$conn);
+			}else{
+				$data = User::verivikasiUser($user,$conn);
+			}
+			
 			$valid = Fung::passVer($pass,$data['password']);
 			
 			if($valid){
 				$_SESSION['id_user'] = $data['id_user'];
 				$_SESSION['nama'] = $data['nama'];
 				$_SESSION['username'] = $data['username'];
-				$_SESSION['id_daerah'] = $data['id_daerah'];
-				$_SESSION['tingkat'] = $data['tingkat'];
 				
 				$_SESSION['login_client'] = true;
-				header('location:?hal=home');
+				header('location:?hal=beranda');
 			}else{
 				$msg['login'] = '
 					<div class="alert alert-danger" role="alert">
@@ -39,5 +50,5 @@
 	}
 	
 
-	require 'view/login.view.php';
+	require 'view/masuk.view.php';
 ?>
