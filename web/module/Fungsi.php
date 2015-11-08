@@ -52,7 +52,7 @@ class Fungsi{
 		$halaman = "page/{$page}.page.php";
 
 		if (!file_exists($halaman)||empty($page)) {
-			include_once "page/home.page.php";
+			include_once "page/beranda.page.php";
 		}
 		else{
 			include_once "$halaman";
@@ -61,9 +61,9 @@ class Fungsi{
 	
 	public static function menuClient($login){
 		if($login == true){
-			$data = array('home','about','tambah','logout');
+			$data = array('beranda','tentang','lapor','keluar');
 		}else{
-			$data = array('home','register','login','about');
+			$data = array('beranda','daftar','masuk','tentang');
 		}
 		return $data;
 	}

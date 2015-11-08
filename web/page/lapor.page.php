@@ -58,5 +58,5 @@
 		}
 	}
 
-	require 'view/tambah-kms.view.php';
+	require 'view/lapor.view.php';
 ?>

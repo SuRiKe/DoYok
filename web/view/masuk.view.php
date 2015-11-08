@@ -3,21 +3,17 @@
 		<form method="post">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="daftar-login">
-					<h3><center>Dimulai Dengan Kesederhanaan!</center></h3>
-					<?php echo isset($msg['daftar-login']) ? $msg['daftar-login'] : '';?>
+					<h3><center>Selamat Datang</center></h3>
+					<?php echo isset($msg['masuk']) ? $msg['masuk'] : '';?>
 					<fieldset class="form-group">
-						<input type="email" class="form-control" name="email" placeholder="Email Anda" required autofocus>
-						<small class="text-muted"><?php echo isset($error['email']) ? $error['email'] : '';?></small>
+						<input type="text" class="form-control" name="emus" placeholder="Email/Username Anda" required autofocus>
+						<small class="text-muted"><?php echo isset($error['emus']) ? $error['emus'] : '';?></small>
 					</fieldset>
 					<fieldset class="form-group">
 						<input type="password" class="form-control" name="password" placeholder="Password Anda" required>
 						<small class="text-muted"><?php echo isset($error['password']) ? $error['password'] : '';?></small>
 					</fieldset>
-					<fieldset class="form-group">
-						<input type="konfirm-password" class="form-control" name="konfirm-password" placeholder="Masukkan Password Sekali Lagi" required>
-						<small class="text-muted"><?php echo isset($error['konfirm-password']) ? $error['konfirm-password'] : '';?></small>
-					</fieldset>
-					<button type="submit" class="btn btn-primary form-control" name="daftar-login">DAFTAR</button>
+					<button type="submit" class="btn btn-primary form-control" name="masuk">MASUK</button>
 					<div class="col-md-5 garis-header"></div>
 					<div class="col-md-2 kata-header"><p><span>ATAU</span></p></div>
 					<div class="col-md-5 garis-header"></div>
@@ -28,4 +24,3 @@
 		</form>
 	</div>
 </div>
-<script type="text/javascript" src="view/js/fungsi.js"></script>
