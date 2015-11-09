@@ -50,6 +50,23 @@
 				<input type="text" class="form-control" name="telp" placeholder="No Telepon">
 			</fieldset>
 			<fieldset class="form-group">
+				<label for="alamat">Alamat</label>
+				<textarea class="form-control" name="alamat" id="alamat" cols="30" rows="5" placeholder="Alamat"></textarea>
+			 </fieldset>
+			<fieldset class="form-group">
+				<label for="provinsi">Provinsi</label>
+				<select name="provinsi" id="provinsi" class="form-control">
+					<option value="">-- Pilih Provinsi --</option>
+					<option value="">Bali</option>
+					<option value="">Jawa Barat</option>
+					<option value="">Papua Barat</option>
+				</select>
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="kota">Kota</label>
+				<input type="text" class="form-control" name="kota" placeholder="Kota">
+			</fieldset>
+			<fieldset class="form-group">
 			<center style="padding:10px;">
 				<button type="submit" class="btn btn-primary" name="simpan" style="margin-right:10px;">Simpan</button>
 				<button type="reset" class="btn btn-primary" name="batal">Batal</button>
