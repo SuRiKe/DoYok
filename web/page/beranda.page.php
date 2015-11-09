@@ -8,8 +8,6 @@
 	use app\module\Rumah;
 	use app\module\Fungsi as Fung;
 
-	$_SESSION['login_client'] = false;
-
 	$conn = DB::connect();
 	$rumah = Rumah::tampil(3,$conn);
 
