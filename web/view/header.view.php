@@ -41,7 +41,7 @@
 				<?php else:?>
 					<li><a href="?hal=<?=$menus?>"><?=$menus?></a></li>
 				<?php endif;?>
-			<?php endforeach;?>
+			  <?php endforeach;?>
 	      </ul>
 	    </div>
 	  </div>

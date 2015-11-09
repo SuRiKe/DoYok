@@ -16,7 +16,7 @@
 				$dana = $data['dana'];
 				$persentase = $terkumpul/$dana*100;
 
-				$query = "SELECT count(id_dana) as jumlah from tbl_dana where id_rumah=:id";
+				$query = "SELECT count(id_user) as jumlah from tbl_donasi where id_rumah=:id";
 				$resah = Fung::eksekusi($query,array('id'=>$data['id_rumah']),$conn);
 				$jumlah_donatur = $resah[0]['jumlah'];
 			?>
