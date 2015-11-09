@@ -20,7 +20,7 @@ a:hover {
 	padding-bottom: 50px;
 }
 .thumb .thumbnail{
-	height: 350px;
+	height: 450px;
 }
 .thumb img{
 	height: 180px;
@@ -30,11 +30,23 @@ a:hover {
 	height: 40px;
 }
 .thumb p{
-	height: 86px;
+	height: 80px;
+	margin-bottom: 20px;
+}
+.thumb .progress{
+	height: 8px;
+}
+.thumb .bawah-progress{
+	margin-top: -10px;
+	font-size: 1.2rem;
+}
+.bawah-progress h6{
+	margin-bottom: 2px;
 }
 .thumb button{
 	height: 36px;
-	margin-top: -33px;
+	margin-left: 10px;
+	margin-top: -53px;
 }
 img {
 	max-width: 100%;
@@ -78,8 +90,10 @@ img {
 	background: #333;
 	color: white;
 }
-.thumbnail:hover p, .thumbnail:hover strong {
+.thumbnail:hover p, .thumbnail:hover strong,.thumbnail:hover label{
 	color: white;
+}.thumbnail:hover img {
+	filter: sepia(70%);
 }
 .detail-donasi button {
 	width: 150px;
@@ -95,16 +109,66 @@ img {
 	color: #428BCA;
 	border: 2px solid #428BCA;
 }
+.tab-content p{
+	text-indent: 50px;
+}
+
 /*.detail-donasi button:hover {
 	background: white;
 	color: #428BCA;
 }*/
+.edit-profile{
+	background-color: white;
+	border-radius: 10px;
+	padding: 25px;
+}
 .detail-donasi {
 	width: 100%;
 	position: inherit;
 	transition: 1s linear;
     margin: 0 110px;
 }
+.about{
+	padding-top:10px;
+	background: url(../../img/hancur.jpg) center 100% fixed no-repeat;
+}
+.about h1, .about h2, .about p{
+	color: ;
+}
+.tentang{
+	background-color: rgba(250,250,250,0.5);
+	margin: 80px auto;
+	padding: 10px;
+	border-radius: 10px;
+}
+.tentang-tim{
+	background-color: rgba(250,250,250,0.5);
+	padding: 10px;
+	border-radius: 10px;
+}
+.lebih{
+	background-color:  #E4F1FE;
+	padding-top: 25px;
+	padding-bottom: 50px;
+	margin: 0;
+}
+
+@media (max-width: 800px){
+	.tentang{
+		width: 90%;
+	}
+	.asdf{
+		display: none;
+	}
+	.lebih *{
+		margin: 0 auto;
+		width: 95%;
+	}
+	.tentang-tim{
+		display: none;
+	}
+}
+
 /*.gallery img{
 	filter: grayscale(0%);
 	transition: filter 2s;
@@ -113,6 +177,13 @@ img {
 	filter: grayscale(100%);
 	transition: filter 2s;
 }*/
+.team{
+	padding: 0 150px;
+}
+.team img{
+	width: 50px;
+	height: 50%;
+}
 .rumah{
 	padding-left: 25%;
 	float: left;
@@ -270,6 +341,7 @@ img {
 		margin-right: -26.5%;
 	}
 }
+
 @media (max-width: 768px) {
 	.kanan, .kiri, .asdf{
 		text-align: center;

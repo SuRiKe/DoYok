@@ -1,8 +1,7 @@
 <?php use app\module\Fungsi as Fung; ?>
-<?php $_SESSION['login_client'] = "suci"; ?>
 <div style="margin-top:150px;margin-bottom:100px;">
 <div id="content" class="container">
-	<?php foreach ($kmiskin as $kms): ?>
+	<?php foreach ($rumah as $kms): ?>
 	<?php echo isset($msg['donasi']) ? $msg['donasi'] : '';?>
 	<h1 class="text-center"><span class="kata-kedua">Rumah</span> <?=$kms['nama']?></h1>
 	<hr class="hr-biru">
@@ -14,8 +13,8 @@
 			
 			  <ul class="nav nav-tabs">
 			    <li class="active"><a data-toggle="tab" href="#detail">Detail</a></li>
+			    <li><a data-toggle="tab" href="#keperluan">Keperluan</a></li>
 			    <li><a data-toggle="tab" href="#perkembangan">Perkembangan</a></li>
-			    <li><a data-toggle="tab" href="#komentar">Komentar</a></li>
 			  </ul>
 
 			  <div class="tab-content">
@@ -23,12 +22,12 @@
 				    <h3>Detail</h3>
 				    <p><?=$kms['diskripsi']; ?></p>
 				</div>
-				<div id="perkembangan" class="tab-pane fade">
-				    <h3>Perkembangan</h3>
+				<div id="keperluan" class="tab-pane fade">
+				    <h3>Keperluan</h3>
 				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium dolorum enim nulla aspernatur debitis sint eveniet sapiente voluptatem dolores, rerum, sunt magni reprehenderit delectus. Saepe minima dolorem impedit ratione.</p>
 				</div>
-				<div id="komentar" class="tab-pane fade">
-				    <h3>Komentar</h3>
+				<div id="perkembangan" class="tab-pane fade">
+				    <h3>Perkembangan</h3>
 				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium dolorum enim nulla aspernatur debitis sint eveniet sapiente voluptatem dolores, rerum, sunt magni reprehenderit delectus. Saepe minima dolorem impedit ratione.</p>
 				</div>
 			  </div>
@@ -47,10 +46,10 @@
 			<br>
 			<div class="rumah">
 				<a href="?hal=home#data-rumah" class="btn btn-info">Kembali</a>
-				<?php if (!$_SESSION['login_client']): ?>
+				<?php if ($_SESSION['login_client']==false): ?>
 					<a href="?hal=login" class="btn btn-info">Beri Donasi!</a>
 				<?php else: ?>
-					<a href="?hal=donasi&rumah=<?=$kms['id_kms']?>" class="btn btn-info">Beri Donasi!</a>
+					<a href="?hal=donasi&rumah=<?=$kms['id_rumah']?>" class="btn btn-info">Beri Donasi!</a>
 				<?php endif; ?>
 			</div>
 			<div class="clearfix"></div><br>

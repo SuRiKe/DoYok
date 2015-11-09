@@ -9,13 +9,13 @@ $halaman;
           <span aria-hidden="true">&times;</span>
           <span class="sr-only">Close</span>
         </button>
-        <h4 class="modal-title" id="logout">Logout</h4>
+        <h4 class="modal-title" id="logout">Keluar</h4>
       </div>
       <div class="modal-body">
-        <h3>Apa Anda Yakin ingin Logout ?</h3>
+        <h3>Apa Anda Yakin ingin Keluar ?</h3>
       </div>
     <div class="modal-footer">
-        <a href="?hal=logout" class="btn btn-primary">Ya</a>
+        <a href="?hal=keluar" class="btn btn-primary">Ya</a>
     <a href="" data-dismiss="modal" class="btn btn-primary">Tidak</a>
       </div>
     </div>

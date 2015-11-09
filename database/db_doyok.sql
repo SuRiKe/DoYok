@@ -16,50 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_daerah`
+-- Table structure for table `tbl_dana`
 --
 
-DROP TABLE IF EXISTS `tbl_daerah`;
+DROP TABLE IF EXISTS `tbl_dana`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_daerah` (
-  `id_daerah` char(5) NOT NULL,
-  `daerah` varchar(25) NOT NULL,
-  PRIMARY KEY (`id_daerah`)
+CREATE TABLE `tbl_dana` (
+  `id_dana` char(5) NOT NULL,
+  `dana_diperlukan` double DEFAULT NULL,
+  `dana_terkumpul` double DEFAULT NULL,
+  `id_rumah` char(5) DEFAULT NULL,
+  PRIMARY KEY (`id_dana`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_daerah`
+-- Dumping data for table `tbl_dana`
 --
 
-LOCK TABLES `tbl_daerah` WRITE;
-/*!40000 ALTER TABLE `tbl_daerah` DISABLE KEYS */;
-INSERT INTO `tbl_daerah` VALUES ('D0001','Bali'),('D0002','DKI Jakarta'),('D0003','Semarang');
-/*!40000 ALTER TABLE `tbl_daerah` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tbl_design`
---
-
-DROP TABLE IF EXISTS `tbl_design`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_design` (
-  `id_design` char(5) NOT NULL,
-  `design` varchar(150) DEFAULT NULL,
-  PRIMARY KEY (`id_design`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tbl_design`
---
-
-LOCK TABLES `tbl_design` WRITE;
-/*!40000 ALTER TABLE `tbl_design` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tbl_design` ENABLE KEYS */;
+LOCK TABLES `tbl_dana` WRITE;
+/*!40000 ALTER TABLE `tbl_dana` DISABLE KEYS */;
+INSERT INTO `tbl_dana` VALUES ('D0001',20000000,0,'R0001'),('D0002',25000000,0,'R0002');
+/*!40000 ALTER TABLE `tbl_dana` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -71,9 +50,10 @@ DROP TABLE IF EXISTS `tbl_donasi`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tbl_donasi` (
   `id_donasi` char(5) NOT NULL,
-  `jumlah` double DEFAULT NULL,
   `id_user` char(5) DEFAULT NULL,
-  `id_kms` char(5) DEFAULT NULL,
+  `id_rumah` char(5) DEFAULT NULL,
+  `tgl_donasi` date DEFAULT '0000-00-00',
+  `jumlah_donasi` double DEFAULT NULL,
   PRIMARY KEY (`id_donasi`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -84,71 +64,168 @@ CREATE TABLE `tbl_donasi` (
 
 LOCK TABLES `tbl_donasi` WRITE;
 /*!40000 ALTER TABLE `tbl_donasi` DISABLE KEYS */;
-INSERT INTO `tbl_donasi` VALUES ('D0001',20000000,'U0002','K0002'),('D0002',200000000,'U0003','K0001'),('D0003',50000000,'U0005','K0002'),('D0004',1000000,'U0001','K0001'),('D0005',1000000,'U0005','K0002'),('D0006',200000000,'U0006','K0004'),('D0007',30000,'U0006','K0004'),('D0008',80000,'U0001','K0001'),('D0009',12392,'U0001','K0002'),('D0010',1000,'U0001','K0001'),('D0011',1234567,'U0001','K0006'),('D0012',500000000000,'U0007','K0006');
 /*!40000 ALTER TABLE `tbl_donasi` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tbl_kms`
+-- Table structure for table `tbl_kabkota`
 --
 
-DROP TABLE IF EXISTS `tbl_kms`;
+DROP TABLE IF EXISTS `tbl_kabkota`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_kms` (
-  `id_kms` char(5) NOT NULL,
+CREATE TABLE `tbl_kabkota` (
+  `id_kota` char(5) NOT NULL DEFAULT '',
+  `kabkota` varchar(35) DEFAULT NULL,
+  PRIMARY KEY (`id_kota`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_kabkota`
+--
+
+LOCK TABLES `tbl_kabkota` WRITE;
+/*!40000 ALTER TABLE `tbl_kabkota` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_kabkota` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_kelamin`
+--
+
+DROP TABLE IF EXISTS `tbl_kelamin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_kelamin` (
+  `id_kelamin` char(5) NOT NULL,
+  `jenis_kelamin` varchar(10) NOT NULL,
+  PRIMARY KEY (`id_kelamin`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_kelamin`
+--
+
+LOCK TABLES `tbl_kelamin` WRITE;
+/*!40000 ALTER TABLE `tbl_kelamin` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_kelamin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_keperluan`
+--
+
+DROP TABLE IF EXISTS `tbl_keperluan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_keperluan` (
+  `id_keperluan` char(5) NOT NULL,
+  `keperluan` varchar(35) NOT NULL,
+  `jumlah` int(4) NOT NULL,
+  `satuan` varchar(35) NOT NULL,
+  `id_rumah` char(5) NOT NULL,
+  `harga_satuan` double NOT NULL,
+  `total_harga` double NOT NULL,
+  PRIMARY KEY (`id_keperluan`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_keperluan`
+--
+
+LOCK TABLES `tbl_keperluan` WRITE;
+/*!40000 ALTER TABLE `tbl_keperluan` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_keperluan` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_lapor`
+--
+
+DROP TABLE IF EXISTS `tbl_lapor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_lapor` (
+  `id_lapor` char(5) NOT NULL,
+  `id_rumah` char(5) NOT NULL,
+  `id_user` char(5) NOT NULL,
+  `tgl_lapor` date NOT NULL,
+  PRIMARY KEY (`id_lapor`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_lapor`
+--
+
+LOCK TABLES `tbl_lapor` WRITE;
+/*!40000 ALTER TABLE `tbl_lapor` DISABLE KEYS */;
+INSERT INTO `tbl_lapor` VALUES ('L0001','R0001','U0001','2014-12-23'),('L0002','R0002','U0001','2014-12-25');
+/*!40000 ALTER TABLE `tbl_lapor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_provinsi`
+--
+
+DROP TABLE IF EXISTS `tbl_provinsi`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_provinsi` (
+  `id_provinsi` char(5) NOT NULL DEFAULT '',
+  `provinsi` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`id_provinsi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_provinsi`
+--
+
+LOCK TABLES `tbl_provinsi` WRITE;
+/*!40000 ALTER TABLE `tbl_provinsi` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_provinsi` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_rumah`
+--
+
+DROP TABLE IF EXISTS `tbl_rumah`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_rumah` (
+  `id_rumah` char(5) NOT NULL DEFAULT '',
   `nama` varchar(35) DEFAULT NULL,
   `jumlah_anggota_keluarga` int(2) NOT NULL,
   `foto` varchar(150) NOT NULL,
   `no_kk` char(35) NOT NULL,
-  `id_daerah` char(5) NOT NULL,
+  `id_provinsi` char(5) DEFAULT NULL,
   `alamat` text NOT NULL,
-  `id_user` char(5) DEFAULT NULL,
   `diskripsi` text,
   `luas_tanah` char(1) DEFAULT NULL,
   `status` tinyint(1) DEFAULT '0',
-  `dana` double DEFAULT NULL,
-  `terkumpul` double DEFAULT NULL,
-  `id_design` char(5) DEFAULT NULL,
-  PRIMARY KEY (`id_kms`)
+  `valid` tinyint(1) DEFAULT '0',
+  `nama_rt` varchar(35) NOT NULL,
+  `nama_kades` varchar(35) NOT NULL,
+  `no_hp_rt` char(12) NOT NULL,
+  `no_hp_kades` char(12) NOT NULL,
+  `id_kota` char(5) DEFAULT NULL,
+  PRIMARY KEY (`id_rumah`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_kms`
+-- Dumping data for table `tbl_rumah`
 --
 
-LOCK TABLES `tbl_kms` WRITE;
-/*!40000 ALTER TABLE `tbl_kms` DISABLE KEYS */;
-INSERT INTO `tbl_kms` VALUES ('K0001','Pak A',4,'Arti Mimpi Rumah Ambruk Roboh.jpg','123123123324324','D0001','Atas Tanah Bawah Langit','U0002','Ayam Enak Sedap Dimakan, Ayam Enak Sedap di Makan..','1',1,500000000,201081000,NULL),('K0002','Pak B',3,'wonoginten.jpg','123345123345','D0002','Atas ','U0002','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.','2',1,500000000,71012392,NULL),('K0003','Pak C',3,'ILUSTRASI-FROM-GOOGLE-OMAH-AMBRUK1.jpg','73458737345','D0003','Atas Tanah Bawah Langit','U0002','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.','1',1,500000000,0,NULL),('K0004','Pak D',3,'wonoginten.jpg','324234','D0002','Atas Tanah Bawah Langit','U0002','asdasdasd','1',1,500000000,200030000,NULL),('K0005','Pak E',3,'Arti Mimpi Rumah Ambruk Roboh.jpg','7878766744543442342','D0002','JL. Khayalan No 100','U0006','Lorem Ipsum Dolor','2',1,500000000,0,NULL),('K0006','rani',10,'rumah runtuh.jpg','123567890','D0001','Jalan menuju kemenangan','U0001','Rumah yang butuh direnofasi yang bertanggung jawab adalah : IGN Lala.\r\n','1',1,500000000,500001234567,NULL);
-/*!40000 ALTER TABLE `tbl_kms` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tbl_kontraktor`
---
-
-DROP TABLE IF EXISTS `tbl_kontraktor`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_kontraktor` (
-  `id_kontraktor` char(5) NOT NULL,
-  `nama_kontraktor` varchar(35) DEFAULT NULL,
-  `telp_kontraktor` char(12) DEFAULT NULL,
-  `id_daerah` char(5) DEFAULT NULL,
-  `alamat` text,
-  `email` varchar(30) DEFAULT NULL,
-  PRIMARY KEY (`id_kontraktor`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tbl_kontraktor`
---
-
-LOCK TABLES `tbl_kontraktor` WRITE;
-/*!40000 ALTER TABLE `tbl_kontraktor` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tbl_kontraktor` ENABLE KEYS */;
+LOCK TABLES `tbl_rumah` WRITE;
+/*!40000 ALTER TABLE `tbl_rumah` DISABLE KEYS */;
+INSERT INTO `tbl_rumah` VALUES ('R0001','Made Biasa',3,'rumah runtuh.jpg','1234567890','P0001','JL.Kanan Kiri no. 20','Rumah keluarga pak Made Biasa ini memerlukan donasi untuk memperbaiki rumahnya.','1',0,1,'Wayan Suardana','Putu Locong','085123847382','081984738293','K0002'),('R0002','Putu Adnyana',2,'rumah runtuh.jpg','1234567890','P0001','JL Khayalan Semata no.30','Rumah pak Putu ini, sudah hancur sekian 5 tahun yg lalu, jadi dia sangat membutuhkan bantuan','3',0,1,'Wayan Hanahana','Putu Subagia','087829182918','081928389232','K0001');
+/*!40000 ALTER TABLE `tbl_rumah` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -166,10 +243,12 @@ CREATE TABLE `tbl_user` (
   `no_hp` char(12) NOT NULL,
   `email` varchar(50) NOT NULL,
   `foto` varchar(150) NOT NULL,
-  `id_daerah` char(5) DEFAULT NULL,
-  `tingkat` varchar(15) DEFAULT NULL,
-  `no_ktp` varchar(20) DEFAULT NULL,
-  `jenis_kelamin` varchar(10) DEFAULT NULL,
+  `id_kelamin` char(1) DEFAULT NULL,
+  `id_provinsi` char(5) DEFAULT NULL,
+  `id_kota` char(5) DEFAULT NULL,
+  `alamat` text,
+  `aktiv` enum('0','1') DEFAULT '0',
+  `aktivasi` varchar(35) DEFAULT NULL,
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -180,8 +259,37 @@ CREATE TABLE `tbl_user` (
 
 LOCK TABLES `tbl_user` WRITE;
 /*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
-INSERT INTO `tbl_user` VALUES ('U0001','Suci Sukawana','Suci','$2y$10$zauDGyzb7bnf7ZilY/tCT.1V/uQYP4jLWZkcg4jVEzqIg9rFk5grO','081234567125','sucisukawana@gmail.com','Screenshot_1610.png',NULL,'pelapor','51030022812970006',''),('U0002','Keramas Wiguna','keramas','$2y$10$3b6AbMDIfXKrR8GKaXaSgO/Zt8hTBSNgyT0f4RL/GAu0fvNbOVTje','085237382986','keramaswiguna@gmail.com','qweasdadead3.jpg',NULL,'pelapor','1234567890098765',''),('U0003','Rizal Nasrulloh','rizal','$2y$10$/20Si1jYI7Q9SVOOQe8I1.TySazwoDKDwtnfk1/DS28gHpt5FBChe','08512345678','rizalaja@emailan.com','thumb.png',NULL,'donatur','12375126123123123',''),('U0004','josua','josua','$2y$10$7Br.psQUsjHiAlwvy6kjNOP3hv6k5rTgdmfpMlStxDPOA0vZQ/gbq','092834092348','josua@gmai.com','logo1.png',NULL,'donatur','435345345',''),('U0005','akjl','akjl','$2y$10$Iy0F8f.MTOdQrKP7NMEL/Ow1MSQCx/fW7nT2NWVDq2Ir2lpnzUgNC','281903812093','akjl@gamil.com','qweasdadead3.jpg',NULL,'donatur','12389012832398409',''),('U0006','suriken','suriken','$2y$10$V62UzNl7AeOGlmnUScGVy.kfMhDg6PqCX1dOPWdctMAA0DXVH77/i','808976343434','suriken@ayam.com','logo1.jpg',NULL,'pelapor','24242286776546543',''),('U0007','Redy','Ry','$2y$10$rchDpVfUTbkzJdXOY4KNTeJHs.2AbNB0IcycNICFApsFFRx.LB0KS','089657053460','nekoyukihime@gmail.com','linux-kernel-map.jpg',NULL,'donatur','980816260012','');
+INSERT INTO `tbl_user` VALUES ('U0001','Keramas Wiguna','keramas','$2y$10$i4uen023b1oUhoGgMRUu4Oq6NLmjlkjHNuFWz4bKG5e3qmeb3TQlK','','keramaswiguna@gmail.com','',NULL,NULL,NULL,NULL,'1','c7b9fdb01f74d02d97f6ab2bc836b211');
 /*!40000 ALTER TABLE `tbl_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(300) NOT NULL,
+  `password` varchar(300) NOT NULL,
+  `activation` varchar(300) NOT NULL,
+  `status` enum('0','1') NOT NULL DEFAULT '0',
+  PRIMARY KEY (`uid`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `activation` (`activation`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'keramaswiguna@yahoo.co.id','f9b1cd9622e5d48774d666ed3627446d','d1e21baa8ff25669e6e7cb26524a0d0b','0');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -193,4 +301,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-05 17:56:22
+-- Dump completed on 2015-11-09 15:58:41

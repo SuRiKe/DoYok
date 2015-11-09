@@ -17,4 +17,7 @@
 	$kolom = array('id_user','nama','username','password','no_hp','email','foto','id_daerah');
 	$id = User::tambahUser(array( 'id_user'=>'U0001','nama'=>'Keramas','username'=>'Keramas','password'=>'$2y$10$YLbWpg1kXYNlZBVT5xtxUeK/zzLuumjAmPthwxOY46UcruK4wF2Ae','no_hp'=>'123456789012','email'=>'keramaswiguna@gmail.com','foto'=>'Screenshot_1503.png','id_daerah'=>'D0001'),$con);
 	echo $id;
+
+	//contoh link aktivasi
+	//doyok/web/?hal=aktivasi&kode='e623f12005acf89e5bfd08c41d89b2b6';
 ?>

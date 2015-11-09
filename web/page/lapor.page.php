@@ -1,6 +1,6 @@
 <?php
 	require 'module/daerah.php';
-	require 'module/k_miskin.php';
+	require 'module/rumah.php';
 	require 'module/db.php';
 
 	use app\module\DB;
@@ -58,5 +58,5 @@
 		}
 	}
 
-	require 'view/tambah-kms.view.php';
+	require 'view/lapor.view.php';
 ?>
