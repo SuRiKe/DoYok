@@ -1,6 +1,6 @@
 <?php use app\module\Fungsi as Fung; ?>
-<?php $_SESSION['login_client'] = "suci"; ?>
-<div style="margin-top:150px;margin-bottom:100px;">
+<?php #$_SESSION['login_client'] = "suci"; ?>
+<div style="margin-top:150px;margin-bottom:100px;background-color:red;">
 <div id="content" class="container">
 	<?php foreach ($kmiskin as $kms): ?>
 	<?php echo isset($msg['donasi']) ? $msg['donasi'] : '';?>
