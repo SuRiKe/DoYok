@@ -283,6 +283,11 @@ img {
 	.navbar-header {
 		padding-bottom: 15px;
 	}
+	.daftar-login {
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+	}
 }
 .rounded-image {
 	border-radius: 50%;

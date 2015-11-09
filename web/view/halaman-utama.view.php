@@ -22,7 +22,7 @@
 				<?php if (!$_SESSION['login_client']): ?>
 					<a class="detail-donasi" href="?hal=login"><button class="btn btn-info" onclick="">Donasi!</button></a>
 				<?php else: ?>
-					<a class="detail-donasi" href="?hal=donasi&rumah=<?=$kms['id_kms']?>"><button class="btn btn-info" onclick="">Donasi!</button></a>
+					<a class="detail-donasi" href="?hal=donasi&rumah='<?=$data['id_kms']?>'"><button class="btn btn-info" onclick="">Donasi!</button></a>
 				<?php endif; ?>
 				</div>
 			</div>

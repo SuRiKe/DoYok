@@ -1,7 +1,7 @@
 <div class="daftar-login-background">
 	<div class="container">
 		<form method="post">
-			<div class="col-md-6 col-md-offset-3">
+			<div class="col-sm-12 col-xs-12 col-md-6 col-md-offset-3">
 				<div class="daftar-login">
 					<h3><center>Dimulai Dengan Kesederhanaan!</center></h3>
 					<?php echo isset($msg['daftar-login']) ? $msg['daftar-login'] : '';?>
@@ -18,9 +18,9 @@
 						<small class="text-muted"><?php echo isset($error['konfirm-password']) ? $error['konfirm-password'] : '';?></small>
 					</fieldset>
 					<button type="submit" class="btn btn-primary form-control" name="daftar-login">DAFTAR</button>
-					<div class="col-md-5 garis-header"></div>
-					<div class="col-md-2 kata-header"><p><span>ATAU</span></p></div>
-					<div class="col-md-5 garis-header"></div>
+					<div class="col-md-5 col-sm-5 garis-header"></div>
+					<div class="col-md-2 col-sm-2 kata-header"><p><span>ATAU</span></p></div>
+					<div class="col-md-5 col-sm-5 garis-header"></div>
 					<a href="facebook.com" class="form-control btn btn-facebook"><i class="fa fa-facebook"></i> Masuk dengan Facebook</a>
 					<a href="google.com" class="form-control btn btn-google"><i class="fa fa-google-plus"></i> Masuk dengan Google</a>
 				</div>
