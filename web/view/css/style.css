@@ -117,6 +117,11 @@ img {
 	background: white;
 	color: #428BCA;
 }*/
+.edit-profile{
+	background-color: white;
+	border-radius: 10px;
+	padding: 25px;
+}
 .detail-donasi {
 	width: 100%;
 	position: inherit;
