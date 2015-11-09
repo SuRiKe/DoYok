@@ -109,6 +109,9 @@ img {
 	color: #428BCA;
 	border: 2px solid #428BCA;
 }
+.tab-content p{
+	text-indent: 50px;
+}
 
 /*.detail-donasi button:hover {
 	background: white;
