@@ -1,5 +1,4 @@
 <?php use app\module\Fungsi as Fung; ?>
-<?php $_SESSION['login_client'] = "suci"; ?>
 <div style="margin-top:150px;margin-bottom:100px;">
 <div id="content" class="container">
 	<?php foreach ($rumah as $kms): ?>
