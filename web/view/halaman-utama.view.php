@@ -9,6 +9,12 @@
 </div>
 <div class="clearfix"></div>
 <div class="container" id="data-rumah">
+	<center>
+	<h1 class="text-center"><b><span class="kata-kedua">Mari Bantu Sesama</span></b></h1>
+	<h4>Menyisihkan sedikit harta kita untuk hal baik termasuk amal ibadah</h4>
+	<br>
+	<hr class="hr-biru">
+	</center>
 	<div class="row">
 		<?php foreach ($rumah as $data): ?>
 			<?php 
@@ -46,5 +52,20 @@
 				</div>
 			</div>
 		<?php endforeach ?>
+	</div>
+</div>
+<div class="banner">
+	<div class="jumbotron banner">
+		<div class="judul-utama-kata">
+			<center>
+				<h1>Partisipasi Masyarakat Sangat Dibutuhkan</h1>
+				<p>Ingin ikut andil dalam mensejahterakan Masyarakat sekitar? Mulailah dari sekarang!</p>
+			<?php if ($_SESSION['login_client']==false): ?>
+				<a href="?hal=masuk" class="btn btn-primary">Lapor Sekarang</a>
+			<?php else: ?>
+				<a href="?hal=lapor" class="btn btn-primary">Lapor Sekarang</a>
+			<?php endif; ?>
+			</center>
+		</div>
 	</div>
 </div>

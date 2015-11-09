@@ -169,7 +169,7 @@ img {
 	margin-left: 20px;
 }
 
-.judul-utama-kata {
+.judul-utama .judul-utama-kata {
 	margin-top: 25vh;
 	background-color: rgba(255,255,255,0.5);
 	width: 100%;
@@ -391,6 +391,38 @@ img {
 	background: #741212;
 }
 
+/* BANNER BERANDA */
+.banner {
+	background: url(../../img/breeze.png) fixed;
+	height: 80vh;
+}
+.banner .judul-utama-kata {
+	background: transparent;
+	padding-top: 15vh;
+}
+.banner .judul-utama-kata h1 {
+	color: white;
+}
+.banner .judul-utama-kata a {
+	padding: 25px;
+	font-size: 25px;
+	transition: 0.5s all;
+}
+
+/* LAPOR */
+#judul {
+	font-size: 18px;
+	text-transform: capitalize;
+}
+
+/* LAPOR - ESTIMASI */
+.estimasi h1 {
+	float: right;
+}
+.estimasi p {
+	float: left;
+}
+
 @media (max-width: 1200px){
 	.kiri .asdf{
 		float: right;
@@ -432,6 +464,11 @@ img {
 
 	.navbar-header {
 		padding-bottom: 15px;
+	}
+	.daftar-login {
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
 	}
 }
 @media (max-width: 500px){
