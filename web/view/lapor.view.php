@@ -4,7 +4,7 @@
 		<hr>
 		<?php echo isset($msg['tambah_kms']) ? $msg['tambah_kms'] : '';?>
 		<form method="post" enctype="multipart/form-data">
-			<div class="col-md-5 col-md-offset-1">
+			<div class="col-md-5 col-sm-6 col-md-offset-1">
 			  <fieldset class="form-group">
 				<label for="nama">Nama</label>
 				<input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" autofocus required>
@@ -18,7 +18,7 @@
 			  <fieldset class="form-group">
 				<label for="foto">Gambar Rumah</label><br />
 				<div>
-				<img id="image" src="img/anon.png"  width="200px" height="200px" /><br />
+				<center><img id="image" src="img/rumah.png"  width="200px" height="200px" /><br /></center>
 					<input onchange="readURL(this);" type="file" name="foto" id="foto" accept="image/*">
 				</div>
 				<small class="text-muted"><?php echo isset($error['foto']) ? $error['foto'] : '';?></small>
@@ -28,28 +28,40 @@
 				<input type="text" class="form-control" id="no_kk" name="no_kk" placeholder="No KK" required>
 				<small class="text-muted"><?php echo isset($error['no_kk']) ? $error['no_kk'] : '';?></small>
 			  </fieldset>
+			</div>
+			<div class="col-md-5 col-sm-6">
 			  <fieldset class="form-group">
-				<label for="daerah">Daerah</label>
+				<label for="provinsi">Provinsi</label>
 				<select class="form-control" id="daerah" name="id_daerah">
-						<option value="none">-- Daerah --</option>
-					<?php foreach($daerah as $data):?>
-						<option value="<?=$data['id_daerah']?>"><?=$data['daerah'];?></option>
-					<?php endforeach;?>
+						<option value="none">-- Provinsi --</option>
+						<option value="bali">Bali</option>
+						<option value="kalsel">Kalimantan Selatan</option>
+						<option value="sumut">Sumatera Utara</option>
 				</select>
 				<small class="text-muted"><?php echo isset($error['id_daerah']) ? $error['id_daerah'] : '';?></small>
 			  </fieldset>
-			</div>
-			<div class="col-md-5">
+			  <fieldset class="form-group">
+				<label for="provinsi">Kabupaten / Kota</label>
+				<select class="form-control" id="daerah" name="id_daerah">
+						<option value="none">-- Kabupaten / Kota --</option>
+						<option value="bali">Bali</option>
+						<option value="kalsel">Kalimantan Selatan</option>
+						<option value="sumut">Sumatera Utara</option>
+				</select>
+				<small class="text-muted"><?php echo isset($error['id_daerah']) ? $error['id_daerah'] : '';?></small>
+			  </fieldset>
 			  <fieldset class="form-group">
 				<label for="alamat">Alamat</label>
 				<input type="text" class="form-control" id="alamat" name="alamat">
 				<small class="text-muted"><?php echo isset($error['alamat']) ? $error['alamat'] : '';?></small>
 			  </fieldset>
-			  <fieldset class="form-group">
+			  <fieldset class="input-group">
 				<label for="luas_tanah">Luas Tanah</label>
 				<input type="text" class="form-control" id="luas_tanah" name="luas_tanah">
 				<small class="text-muted"><?php echo isset($error['luas_tanah']) ? $error['luas_tanah'] : '';?></small>
 			  </fieldset>
+			</div>
+			<div class="col-md-10 col-md-offset-1 col-sm-12">
 			  <fieldset class="form-group">
 				<label for="diskripsi">Diskripsi</label>
 				<textarea class="form-control" id="diskripsi" name="diskripsi" rows="18"></textarea>
