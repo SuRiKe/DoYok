@@ -4,7 +4,7 @@ class DB{
 	
 	public static function connect(){
 		$user = 'root';
-		$pass = 'asfasfasfaf';
+		$pass = '';
 		$dbname = 'db_doyok';
 		$host = 'localhost';
 		

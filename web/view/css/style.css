@@ -19,35 +19,8 @@ a:hover {
 	margin: 0 auto 20px;
 	padding-bottom: 50px;
 }
-.thumb .thumbnail{
-	height: 450px;
-}
-.thumb img{
-	height: 180px;
-}
-.thumb strong.title{
-	background-color: red;
-	height: 40px;
-}
-.thumb p{
-	height: 80px;
-	margin-bottom: 20px;
-}
-.thumb .progress{
-	height: 8px;
-}
-.thumb .bawah-progress{
-	margin-top: -10px;
-	font-size: 1.2rem;
-}
-.bawah-progress h6{
-	margin-bottom: 2px;
-}
-.thumb button{
-	height: 36px;
-	margin-left: 10px;
-	margin-top: -53px;
-}
+
+
 img {
 	max-width: 100%;
 }
@@ -80,53 +53,10 @@ img {
 	padding: 25px;
 	font-weight: bold;
 }
-.thumbnail {
-	padding: 20px;
-	margin: 15px;
-	background: #ECECEC;
-	border: none;
-}
-.thumbnail:hover {
-	background: #333;
-	color: white;
-}
-.thumbnail:hover p, .thumbnail:hover strong,.thumbnail:hover label{
-	color: white;
-}.thumbnail:hover img {
-	filter: sepia(70%);
-}
-.detail-donasi button {
-	width: 150px;
-	border-radius: 0;
-	color: white;
-	font-weight: bold;
-	background: #428BCA;
-	border: 2px solid white;
-	transition: 0.5s all;
-}
-.thumb a:hover + .detail-donasi button {
-	background: white;
-	color: #428BCA;
-	border: 2px solid #428BCA;
-}
-.tab-content p{
-	text-indent: 50px;
-}
-
-/*.detail-donasi button:hover {
-	background: white;
-	color: #428BCA;
-}*/
 .edit-profile{
 	background-color: white;
 	border-radius: 10px;
 	padding: 25px;
-}
-.detail-donasi {
-	width: 100%;
-	position: inherit;
-	transition: 1s linear;
-    margin: 0 110px;
 }
 .about{
 	padding-top:10px;
@@ -153,43 +83,15 @@ img {
 	margin: 0;
 }
 
-@media (max-width: 800px){
-	.tentang{
-		width: 90%;
-	}
-	.asdf{
-		display: none;
-	}
-	.lebih *{
-		margin: 0 auto;
-		width: 95%;
-	}
-	.tentang-tim{
-		display: none;
-	}
+.gallery img{
+	width: 100%;
 }
-
-/*.gallery img{
-	filter: grayscale(0%);
-	transition: filter 2s;
-}
-.gallery img:hover{
-	filter: grayscale(100%);
-	transition: filter 2s;
-}*/
 .team{
 	padding: 0 150px;
 }
 .team img{
 	width: 50px;
 	height: 50%;
-}
-.rumah{
-	padding-left: 25%;
-	float: left;
-}
-.rumah a{
-	margin: 0 5px;
 }
 
 .navbar>.container .navbar-brand {
@@ -289,6 +191,77 @@ img {
 	height: 30px;
 	background: rgba(86, 98, 249, 0.1);
 }
+
+/* thumbnail halaman utama*/
+.thumb .thumbnail{
+	height: 450px;
+}
+.thumb img{
+	height: 180px;
+}
+.thumb strong.title{
+	background-color: red;
+	height: 40px;
+}
+.thumb p{
+	height: 80px;
+	margin-bottom: 20px;
+}
+.thumb .progress{
+	height: 8px;
+}
+.thumb .bawah-progress{
+	margin-top: -10px;
+	font-size: 1.2rem;
+}
+.bawah-progress{
+	text-align: center;
+}
+.bawah-progress h6{
+	margin-bottom: 2px;
+}
+.thumb button{
+	height: 36px;
+	margin-left: 10px;
+	margin-top: -53px;
+}
+.thumbnail {
+	padding: 20px;
+	margin: 15px;
+	background: #ECECEC;
+	border: none;
+}
+.thumbnail:hover {
+	background: #333;
+	color: white;
+}
+.thumbnail:hover p, .thumbnail:hover strong,.thumbnail:hover label{
+	color: white;
+}.thumbnail:hover img {
+	filter: sepia(70%);
+}
+.detail-donasi {
+	width: 100%;
+	position: inherit;
+	transition: 1s linear;
+    margin: 0 110px;
+}
+.detail-donasi button {
+	width: 150px;
+	border-radius: 0;
+	color: white;
+	font-weight: bold;
+	background: #428BCA;
+	border: 2px solid white;
+	transition: 0.5s all;
+}
+.thumb a:hover + .detail-donasi button {
+	background: white;
+	color: #428BCA;
+	border: 2px solid #428BCA;
+}
+
+/*detail*/
 .detail {
 	text-align: justify;
 }
@@ -304,6 +277,42 @@ img {
 	line-height: 1.5em;
     text-indent: 50px;
 }
+.progress-bar{
+	padding-top: 6px;
+}
+.tab-detail{
+	margin: 25px auto;
+}
+.tab-content, .gallery ul{
+	padding-left: 50px;
+}
+.tab-content p{
+	text-indent: 35px;
+}
+.rumah{
+	padding-left: 20%;
+	float: left;
+}
+.rumah a{
+	margin: 0 5px;
+}
+.orang a{
+	height:150px;
+}
+.rounded-image {
+	border-radius: 50%;
+	border: 3px solid black;
+}
+.icon img {
+	width: 100px;
+	height: 90px;
+}
+.icon p {
+	font-size: 20px;
+	text-align: center;
+}
+
+/*About*/
 .kanan{
 	text-align: left;
 	float: right;
@@ -332,42 +341,6 @@ img {
 	margin-right: -26%;
 	border-left: 1px solid #333;
 }
-.tab-content, .gallery ul{
-	padding-left: 50px;
-}
-@media (max-width: 1200px){
-	.kiri .asdf{
-		float: right;
-		margin-right: -26.5%;
-	}
-}
-
-@media (max-width: 768px) {
-	.kanan, .kiri, .asdf{
-		text-align: center;
-		border: none;
-		padding: 0px;
-	}
-	.col-sm-6{
-		width: 100%;
-	}
-
-	.navbar-header {
-		padding-bottom: 15px;
-	}
-}
-.rounded-image {
-	border-radius: 50%;
-	border: 3px solid black;
-}
-.icon img {
-	width: 100px;
-	height: 90px;
-}
-.icon p {
-	font-size: 20px;
-	text-align: center;
-}
 
 /* daftar-login */
 .daftar-login {
@@ -392,6 +365,8 @@ img {
 	width: 100%;
 	font-size: 18px;
 }
+
+
 /* SOCIAL LOGIN */
 .btn-facebook, .btn-google {
 	height:50px; 
@@ -415,11 +390,58 @@ img {
 .btn-google:hover {
 	background: #741212;
 }
+
+@media (max-width: 1200px){
+	.kiri .asdf{
+		float: right;
+		margin-right: -26.5%;
+	}
+	.rumah{
+		padding-left: 39%;
+	}
+}
+
+@media (max-width: 800px){
+	.tentang{
+		width: 90%;
+	}
+	.asdf{
+		display: none;
+	}
+	.lebih *{
+		margin: 0 auto;
+		width: 95%;
+	}
+	.tentang-tim{
+		display: none;
+	}
+	.rumah{
+		padding-left: 35%;
+	}
+}
+
+@media (max-width: 768px) {
+	.kanan, .kiri, .asdf{
+		text-align: center;
+		border: none;
+		padding: 0px;
+	}
+	.col-sm-6{
+		width: 100%;
+	}
+
+	.navbar-header {
+		padding-bottom: 15px;
+	}
+}
 @media (max-width: 500px){
 	.col-xs-6{
 		width: 100%;
 	}
 	.judul-utama {
 		height: 50vh;
+	}
+	.rumah{
+		padding-left: 0;
 	}
 }

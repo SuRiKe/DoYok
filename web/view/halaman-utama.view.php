@@ -32,9 +32,9 @@
 						</div>
 						<div class="bawah-progress">
 							<div class="col-md-12">
-								<div class="col-md-4"><h6><?=$persentase?>% </h6><label>Terkumpul</label></div>
-								<div class="col-md-5"><h6>Rp. <?=Fung::uang($data['dana']);?></h6><label>Diperlukan</label></div>
-								<div class="col-md-3"><h6><?=$jumlah_donatur?> </h6><label>Orang</label></div>
+								<div class="col-md-3 col-sm-3"><h6><?=$persentase?>% </h6><label>Terkumpul</label></div>
+								<div class="col-md-6 col-sm-6"><h6>Rp. <?=Fung::uang($data['dana']);?></h6><label>Diperlukan</label></div>
+								<div class="col-md-3 col-sm-3"><h6><?=$jumlah_donatur?> </h6><label>Orang</label></div>
 							</div>
 						</div>
 					</a>
