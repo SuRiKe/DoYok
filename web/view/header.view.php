@@ -35,7 +35,6 @@
 	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    <div>
 	      <ul class="nav navbar-nav navbar-right">
-        <?php if($_SESSION['login_client'] = true) ?>
         <?php foreach($menu as $menus):?>
 				<?php if($menus == 'keluar'):?>
 					<li><a href="" data-toggle="modal" data-target="#logout"><?=$menus?></a></li>

@@ -23,7 +23,8 @@ class Rumah{
 		tbl_rumah inner join tbl_lapor on tbl_rumah.id_rumah = tbl_lapor.id_rumah
 		inner join tbl_user on tbl_lapor.id_user = tbl_user.id_user
 		inner join tbl_dana on tbl_dana.id_rumah = tbl_rumah.id_rumah
-		where valid = 1 order by tbl_lapor.tgl_lapor desc limit $limit";
+		where valid = 1 order by tgl_lapor desc limit $limit";
+
 		$res = Fung::query($query,$_conn);
 
 		return $res;

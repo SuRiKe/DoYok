@@ -49,7 +49,7 @@
 				<?php if ($_SESSION['login_client']==false): ?>
 					<a href="?hal=login" class="btn btn-info">Beri Donasi!</a>
 				<?php else: ?>
-					<a href="?hal=donasi&rumah=<?=$kms['id_kms']?>" class="btn btn-info">Beri Donasi!</a>
+					<a href="?hal=donasi&rumah=<?=$kms['id_rumah']?>" class="btn btn-info">Beri Donasi!</a>
 				<?php endif; ?>
 			</div>
 			<div class="clearfix"></div><br>
