@@ -38,7 +38,7 @@
 							</div>
 						</div>
 					</a>
-				<?php if ($_SESSION['login_client']!=true): ?>
+				<?php if ($_SESSION['login_client']==false): ?>
 					<a class="detail-donasi" href="?hal=masuk"><button class="btn btn-info" onclick="">Donasi!</button></a>
 				<?php else: ?>
 					<a class="detail-donasi" href="?hal=donasi&rumah=<?=$data['id_rumah']?>"><button class="btn btn-info" onclick="">Donasi!</button></a>
