@@ -26,6 +26,7 @@ CREATE TABLE `tbl_dana` (
   `id_dana` char(5) NOT NULL,
   `dana_diperlukan` double DEFAULT NULL,
   `dana_terkumpul` double DEFAULT NULL,
+  `id_rumah` char(5) DEFAULT NULL,
   PRIMARY KEY (`id_dana`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -36,6 +37,7 @@ CREATE TABLE `tbl_dana` (
 
 LOCK TABLES `tbl_dana` WRITE;
 /*!40000 ALTER TABLE `tbl_dana` DISABLE KEYS */;
+INSERT INTO `tbl_dana` VALUES ('D0001',20000000,0,'R0001'),('D0002',25000000,0,'R0002');
 /*!40000 ALTER TABLE `tbl_dana` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,7 +64,6 @@ CREATE TABLE `tbl_donasi` (
 
 LOCK TABLES `tbl_donasi` WRITE;
 /*!40000 ALTER TABLE `tbl_donasi` DISABLE KEYS */;
-INSERT INTO `tbl_donasi` VALUES ('D0001','U0002','K0002','0000-00-00',NULL),('D0002','U0003','K0001','0000-00-00',NULL),('D0003','U0005','K0002','0000-00-00',NULL),('D0004','U0001','K0001','0000-00-00',NULL),('D0005','U0005','K0002','0000-00-00',NULL),('D0006','U0006','K0004','0000-00-00',NULL),('D0007','U0006','K0004','0000-00-00',NULL),('D0008','U0001','K0001','0000-00-00',NULL),('D0009','U0001','K0002','0000-00-00',NULL),('D0010','U0001','K0001','0000-00-00',NULL),('D0011','U0001','K0006','0000-00-00',NULL),('D0012','U0007','K0006','0000-00-00',NULL);
 /*!40000 ALTER TABLE `tbl_donasi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,6 +163,7 @@ CREATE TABLE `tbl_lapor` (
 
 LOCK TABLES `tbl_lapor` WRITE;
 /*!40000 ALTER TABLE `tbl_lapor` DISABLE KEYS */;
+INSERT INTO `tbl_lapor` VALUES ('L0001','R0001','U0001','2014-12-23'),('L0002','R0002','U0001','2014-12-25');
 /*!40000 ALTER TABLE `tbl_lapor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -201,17 +203,17 @@ CREATE TABLE `tbl_rumah` (
   `jumlah_anggota_keluarga` int(2) NOT NULL,
   `foto` varchar(150) NOT NULL,
   `no_kk` char(35) NOT NULL,
-  `id_daerah` char(5) NOT NULL,
+  `id_provinsi` char(5) DEFAULT NULL,
   `alamat` text NOT NULL,
   `diskripsi` text,
   `luas_tanah` char(1) DEFAULT NULL,
   `status` tinyint(1) DEFAULT '0',
-  `id_design` char(5) DEFAULT NULL,
   `valid` tinyint(1) DEFAULT '0',
   `nama_rt` varchar(35) NOT NULL,
   `nama_kades` varchar(35) NOT NULL,
   `no_hp_rt` char(12) NOT NULL,
   `no_hp_kades` char(12) NOT NULL,
+  `id_kota` char(5) DEFAULT NULL,
   PRIMARY KEY (`id_rumah`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -222,6 +224,7 @@ CREATE TABLE `tbl_rumah` (
 
 LOCK TABLES `tbl_rumah` WRITE;
 /*!40000 ALTER TABLE `tbl_rumah` DISABLE KEYS */;
+INSERT INTO `tbl_rumah` VALUES ('R0001','Made Biasa',3,'rumah runtuh.jpg','1234567890','P0001','JL.Kanan Kiri no. 20','Rumah keluarga pak Made Biasa ini memerlukan donasi untuk memperbaiki rumahnya.','1',0,1,'Wayan Suardana','Putu Locong','085123847382','081984738293','K0002'),('R0002','Putu Adnyana',2,'rumah runtuh.jpg','1234567890','P0001','JL Khayalan Semata no.30','Rumah pak Putu ini, sudah hancur sekian 5 tahun yg lalu, jadi dia sangat membutuhkan bantuan','3',0,1,'Wayan Hanahana','Putu Subagia','087829182918','081928389232','K0001');
 /*!40000 ALTER TABLE `tbl_rumah` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -256,7 +259,7 @@ CREATE TABLE `tbl_user` (
 
 LOCK TABLES `tbl_user` WRITE;
 /*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
-INSERT INTO `tbl_user` VALUES ('U0001','','keramas','$2y$10$i4uen023b1oUhoGgMRUu4Oq6NLmjlkjHNuFWz4bKG5e3qmeb3TQlK','','keramaswiguna@gmail.com','',NULL,NULL,NULL,NULL,'1','c7b9fdb01f74d02d97f6ab2bc836b211');
+INSERT INTO `tbl_user` VALUES ('U0001','Keramas Wiguna','keramas','$2y$10$i4uen023b1oUhoGgMRUu4Oq6NLmjlkjHNuFWz4bKG5e3qmeb3TQlK','','keramaswiguna@gmail.com','',NULL,NULL,NULL,NULL,'1','c7b9fdb01f74d02d97f6ab2bc836b211');
 /*!40000 ALTER TABLE `tbl_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -298,4 +301,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-09  5:20:11
+-- Dump completed on 2015-11-09 15:58:41

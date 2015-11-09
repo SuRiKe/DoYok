@@ -35,13 +35,13 @@
 	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    <div>
 	      <ul class="nav navbar-nav navbar-right">
-			<?php foreach($menu as $menus):?>
+        <?php foreach($menu as $menus):?>
 				<?php if($menus == 'keluar'):?>
 					<li><a href="" data-toggle="modal" data-target="#logout"><?=$menus?></a></li>
 				<?php else:?>
 					<li><a href="?hal=<?=$menus?>"><?=$menus?></a></li>
 				<?php endif;?>
-			<?php endforeach;?>
+			  <?php endforeach;?>
 	      </ul>
 	    </div>
 	  </div>
