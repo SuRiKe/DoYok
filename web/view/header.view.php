@@ -37,7 +37,7 @@
 	      <ul class="nav navbar-nav navbar-right">
         <?php foreach($menu as $menus):?>
 				<?php if($menus == 'keluar'):?>
-					<li><a href="" data-toggle="modal" data-target="#logout"><?=$menus?></a></li>
+					<li><a href="" data-toggle="modal" data-target="#logout" class="tombol-keluar"><?=$menus?></a></li>
 				<?php else:?>
 					<li><a href="?hal=<?=$menus?>"><?=$menus?></a></li>
 				<?php endif;?>

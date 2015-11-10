@@ -24,8 +24,8 @@
 		symbol: 'Rp.',
 		positiveFormat: '%s%n',
 		negativeFormat: '(%s%n)',
-		decimalSymbol: '.',
-		digitGroupSymbol: ',',
+		decimalSymbol: ',',
+		digitGroupSymbol: '.',
 		groupDigits: true
 	};
 
