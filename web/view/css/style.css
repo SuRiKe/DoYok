@@ -262,6 +262,10 @@ img {
 }
 
 /*detail*/
+#data-rumah{
+	margin-bottom: 100px;
+	margin-top: 50px;
+}
 .detail {
 	text-align: justify;
 }

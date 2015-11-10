@@ -8,14 +8,32 @@ class Rumah{
 		
 		return $res;
 	}
+
+	public static function autoIdDana($_conn){
+		$res = Fung::autoId("tbl_dana","id_dana",5,"D",$_conn);
+		
+		return $res;
+	}
 	
 	public static function tambah($data,$_conn){
 		$kolom = array('id_rumah','nama','jumlah_anggota_keluarga','foto',
-			'no_kk','id_provinsi','alamat','diskripsi','luas_tanah','status',
-			'valid','nama_rt','nama_kades','no_hp_rt','no_hp_kades','id_kota');
+			'no_kk','id_provinsi','alamat','diskripsi','luas_tanah',
+			'nama_rt','nama_kades','no_hp_rt','no_hp_kades','id_kota');
 		$res = Fung::insert('tbl_rumah',$data,$kolom,$_conn);
 		
 		return $res;
+	}
+
+	public static function lapor($data,$_conn){
+		$kolom = array('id_lapor','id_rumah','id_user','tgl_lapor');
+		$res = Fung::insert('tbl_lapor',$data,$kolom,$_conn);
+		
+		return $res;
+	}
+
+	public static function dana($data,$_conn){
+		$kolom = array('id_dana','dana_diperlukan','dana_terkumpul','id_rumah');
+		$res = Fung::insert('tbl_dana',$data,$kolom,$_conn);
 	}
 	
 	public static function tampil($limit,$_conn){

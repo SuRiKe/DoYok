@@ -16,7 +16,7 @@
 					</fieldset>
 					<!-- <fieldset class="form-group">
 						<input type="konfirm-password" class="form-control" name="konfirm-password" placeholder="Masukkan Password Sekali Lagi" required>
-						<small class="text-muted"><?php echo isset($error['konfirm-password']) ? $error['konfirm-password'] : '';?></small>
+						<small class="text-muted"><?php //echo isset($error['konfirm-password']) ? $error['konfirm-password'] : '';?></small>
 					</fieldset> -->
 					<button type="submit" class="btn btn-primary form-control" name="daftar-login">DAFTAR</button>
 					<div class="col-md-5 col-sm-5 garis-header"></div>
