@@ -37,8 +37,13 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="view/js/bootstrap.min.js"></script>
     <script>
-    	function newDoc() {
-    		location.assign("donasi.php");
+    	function checkRetype(){
+    		var pas = $("#password").val();
+    		var kfr = $("#konfirm-password").val();
+    		if (pas != kfr)
+    			$("#retype").html("Password Tidak Benar");
+    		else
+    			$("#retype").html("");
     	}
     </script>
     <script type='text/javascript'>

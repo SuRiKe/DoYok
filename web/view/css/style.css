@@ -93,7 +93,10 @@ img {
 	width: 50px;
 	height: 50%;
 }
-
+/* MENU BAR */
+.navbar {
+	border: none;
+}
 .navbar>.container .navbar-brand {
     height: 50px;
 	padding: 10px;
@@ -124,6 +127,10 @@ img {
 	border-color: transparent;
 	background-color: rgb(65, 131, 215);
 }
+.tombol-keluar {
+	background: #C75050;
+	color: white;
+}
 
 .credit {
 	color: white;	
@@ -151,7 +158,7 @@ img {
 }
 .login-form {
 	margin-top: 180px;
-	margin-bottom: 150px;
+	margin-bottom: 20px;
 }
 .buttoninput img {
 	border-radius: 50%;
@@ -239,26 +246,6 @@ img {
 	color: white;
 }.thumbnail:hover img {
 	filter: sepia(70%);
-}
-.detail-donasi {
-	width: 100%;
-	position: inherit;
-	transition: 1s linear;
-    margin: 0 110px;
-}
-.detail-donasi button {
-	width: 150px;
-	border-radius: 0;
-	color: white;
-	font-weight: bold;
-	background: #428BCA;
-	border: 2px solid white;
-	transition: 0.5s all;
-}
-.thumb a:hover + .detail-donasi button {
-	background: white;
-	color: #428BCA;
-	border: 2px solid #428BCA;
 }
 
 /*detail*/
@@ -481,4 +468,26 @@ img {
 	.rumah{
 		padding-left: 0;
 	}
+}
+
+/* DONASI */
+.detail-donasi {
+	width: 100%;
+	position: inherit;
+	transition: 1s linear;
+    margin: 0 110px;
+}
+.detail-donasi button {
+	width: 150px;
+	border-radius: 0;
+	color: white;
+	font-weight: bold;
+	background: #428BCA;
+	border: 2px solid white;
+	transition: 0.5s all;
+}
+.thumb a:hover + .detail-donasi button {
+	background: white;
+	color: #428BCA;
+	border: 2px solid #428BCA;
 }
