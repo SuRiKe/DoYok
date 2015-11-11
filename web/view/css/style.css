@@ -243,6 +243,25 @@ img {
 	margin-bottom: 100px;
 }
 
+/*Halama Donasi*/
+.proses-donasi{
+	margin: 50px auto;
+}
+.proses-donasi .ka{
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+.proses-donasi .ki{
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+.proses-donasi .text-center{
+	background-color:  rgb(65, 131, 215);
+	padding-top: 15px;
+	height: 50px;
+	border: 1px solid white;
+}
+
 /*profil user*/
 .edit-profile{
 	background-color: white;
