@@ -1,12 +1,16 @@
 <?php 
+	require 'module/rumah.php';
 	require 'module/donasi.php';
 	require 'module/db.php';
 
 	use app\module\Donasi;
+	use app\module\Rumah;
 	use app\module\DB;
 	use app\module\Fungsi as Fung;
 
+	$id = $_GET['rumah'];
 	$conn = DB::connect();
+	$keperluan = Rumah::keperluan($id,$conn);
 
 	if(isset($_POST['donasi'])){
 		$id_donasi = Donasi::autoId($conn);

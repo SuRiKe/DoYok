@@ -5,7 +5,7 @@
 	
 	//memulai session
 	session_start();
-	error_reporting(0);
+	// error_reporting(0);
 	
 	$menu = Fung::menuClient($_SESSION['login_client']);
 

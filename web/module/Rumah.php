@@ -73,6 +73,13 @@ class Rumah{
 		
 		return true;
 	}
+
+	public static function keperluan($id_rumah,$_conn){
+		$query = "SELECT * from tbl_keperluan where id_rumah = '$id_rumah'";
+		$res = Fung::query($query,$_conn);
+
+		return $res;
+	}
 	
 }
 ?>
