@@ -11,13 +11,21 @@
 						<small class="text-muted"><?php echo isset($error['email']) ? $error['email'] : '';?></small>
 					</fieldset>
 					<fieldset class="form-group">
-						<input type="password" class="form-control" name="password" placeholder="Password Anda" required>
+						<input type="password" id="password" class="form-control" name="password" placeholder="Password Anda" required>
 						<small class="text-muted"><?php echo isset($error['password']) ? $error['password'] : '';?></small>
 					</fieldset>
+<<<<<<< HEAD
 					<!-- <fieldset class="form-group">
 						<input type="konfirm-password" class="form-control" name="konfirm-password" placeholder="Masukkan Password Sekali Lagi" required>
 						<small class="text-muted"><?php //echo isset($error['konfirm-password']) ? $error['konfirm-password'] : '';?></small>
 					</fieldset> -->
+=======
+					<fieldset class="form-group">
+						<input type="password" id="konfirm-password" onkeyup="checkRetype();" class="form-control" name="konfirm-password" placeholder="Masukkan Password Sekali Lagi" required>
+						<small id="retype"></small>
+						<small class="text-muted"><?php echo isset($error['konfirm-password']) ? $error['konfirm-password'] : '';?></small>
+					</fieldset>
+>>>>>>> cd7c97545f5a65b5c1e15b170b190393be5f4600
 					<button type="submit" class="btn btn-primary form-control" name="daftar-login">DAFTAR</button>
 					<div class="col-md-5 col-sm-5 garis-header"></div>
 					<div class="col-md-2 col-sm-2 kata-header"><p><span>ATAU</span></p></div>

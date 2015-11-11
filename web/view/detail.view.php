@@ -28,7 +28,7 @@
 				<div class="rumah">
 					<a href="?hal=home#data-rumah" class="btn btn-info">Kembali</a>
 					<?php if ($_SESSION['login_client']==false): ?>
-						<a href="?hal=login" class="btn btn-info">Beri Donasi!</a>
+						<a href="?hal=masuk" class="btn btn-info">Beri Donasi!</a>
 					<?php else: ?>
 						<a href="?hal=donasi&rumah=<?=$kms['id_rumah']?>" class="btn btn-info">Beri Donasi!</a>
 					<?php endif; ?>
@@ -37,17 +37,25 @@
 			<div class="clearfix"></div>
 			<hr style="border-top:1px solid #333;" />
 			<div class="row">
-				<div class="col-md-6 col-sm-6 orang">
-					<a href="#" class="icon thumbnail">
-						<center><img src="img/thumb.png" class="rounded-image icon"></center>
-						<p>Kontraktor</p>
-					</a>
+				<div class="col-md-12 col-sm-12 orang">
+					<h3>Dia yang Peduli</h3>
+					<div class="col-md-6">
+						<center>
+							<img src="img/thumb.png" class="icon">
+							<h4>Nama Pelapor</h4>
+						</center>
+					</div>
+					<div class="col-md-6"></div>
 				</div>
-				<div class="col-md-6 col-sm-6 orang">
-					<a href="#" class="icon thumbnail">
-						<center><img src="img/thumb.png" class="rounded-image icon"></center>
-						<p>Pelapor</p>
-					</a>
+				<div class="col-md-12 col-sm-12 orang">
+					<h3>Dia yang Membantu</h3>
+					<div class="col-md-6">
+						<center>
+							<img src="img/thumb.png" class="icon">
+							<h4>Nama Kontraktor</h4>
+						</center>
+					</div>
+					<div class="col-md-6"></div>
 				</div>
 			</div>
 		</div>

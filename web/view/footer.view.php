@@ -6,9 +6,9 @@
 			<center>
 			<h3>Partner <span class="kata-kedua">Kami</span></h3>
 			<hr class="hr-putih">
-			<div class="col-md-4 col-sm-6 col-xs-12"><img src="img/logo1.jpg" alt="" class="img-circle"></div>
-			<div class="col-md-4 col-sm-6 col-xs-12"><img src="img/logo1.jpg" alt="" class="img-circle"></div>
-			<div class="col-md-4 col-sm-12 col-xs-12"><img src="img/logo1.jpg" alt="" class="img-circle"></div>
+			<div class="col-md-4 col-sm-6 col-xs-12"><img src="img/logo1.jpg" alt="" class="img-responsive"></div>
+			<div class="col-md-4 col-sm-6 col-xs-12"><img src="img/logo1.jpg" alt="" class="img-responsive"></div>
+			<div class="col-md-4 col-sm-12 col-xs-12"><img src="img/logo1.jpg" alt="" class="img-responsive"></div>
 			</center>
 		</div>
 		<div class="col-lg-offset-2 col-lg-4 partner">
@@ -37,8 +37,13 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="view/js/bootstrap.min.js"></script>
     <script>
-    	function newDoc() {
-    		location.assign("donasi.php");
+    	function checkRetype(){
+    		var pas = $("#password").val();
+    		var kfr = $("#konfirm-password").val();
+    		if (pas != kfr)
+    			$("#retype").html("Password Tidak Benar");
+    		else
+    			$("#retype").html("");
     	}
     </script>
     <script type='text/javascript'>

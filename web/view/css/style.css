@@ -53,35 +53,6 @@ img {
 	padding: 25px;
 	font-weight: bold;
 }
-.edit-profile{
-	background-color: white;
-	border-radius: 10px;
-	padding: 25px;
-}
-.about{
-	padding-top:10px;
-	background: url(../../img/hancur.jpg) center 100% fixed no-repeat;
-}
-.about h1, .about h2, .about p{
-	color: ;
-}
-.tentang{
-	background-color: rgba(250,250,250,0.5);
-	margin: 80px auto;
-	padding: 10px;
-	border-radius: 10px;
-}
-.tentang-tim{
-	background-color: rgba(250,250,250,0.5);
-	padding: 10px;
-	border-radius: 10px;
-}
-.lebih{
-	background-color:  #E4F1FE;
-	padding-top: 25px;
-	padding-bottom: 50px;
-	margin: 0;
-}
 
 .gallery img{
 	width: 100%;
@@ -93,7 +64,10 @@ img {
 	width: 50px;
 	height: 50%;
 }
-
+/* MENU BAR */
+.navbar {
+	border: none;
+}
 .navbar>.container .navbar-brand {
     height: 50px;
 	padding: 10px;
@@ -124,6 +98,10 @@ img {
 	border-color: transparent;
 	background-color: rgb(65, 131, 215);
 }
+.tombol-keluar {
+	background: #C75050;
+	color: white;
+}
 
 .credit {
 	color: white;	
@@ -151,7 +129,7 @@ img {
 }
 .login-form {
 	margin-top: 180px;
-	margin-bottom: 150px;
+	margin-bottom: 20px;
 }
 .buttoninput img {
 	border-radius: 50%;
@@ -260,6 +238,51 @@ img {
 	color: #428BCA;
 	border: 2px solid #428BCA;
 }
+#data-rumah{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+/*profil user*/
+.edit-profile{
+	background-color: white;
+	border-radius: 10px;
+}
+.profile{
+	border-radius: 10px;
+	background-color: #6E1B44;
+	height: 100vh;
+}
+ul.profile{
+	padding: 15px;
+	list-style: none;
+}
+.profile li{
+	background-color: #156E06;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	margin:0 -15px;
+	transition:padding 0.3s;
+}
+.profile li:hover{
+	background-color: #EB233B;
+	padding-left: 35px;
+	transition: padding 0.3s;
+}
+.profile li:hover{
+	padding-left: 35px;
+	transition: padding 0.3s;
+}
+.profile a{
+	text-decoration: none;
+}
+.profile img{
+	border-radius: 5px;
+	width: 250px;
+	height: 250px;
+	margin-bottom: 6%;
+}
 
 /*detail*/
 #data-rumah{
@@ -300,8 +323,15 @@ img {
 .rumah a{
 	margin: 0 5px;
 }
-.orang a{
-	height:150px;
+.orang{
+	height:200px;
+}
+.orang img{
+	max-width: 100%;
+	max-height: 100%;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
 }
 .rounded-image {
 	border-radius: 50%;
@@ -317,6 +347,30 @@ img {
 }
 
 /*About*/
+.about{
+	padding-top:10px;
+	background: url(../../img/hancur.jpg) center 100% fixed no-repeat;
+}
+.about h1, .about h2, .about p{
+	color: ;
+}
+.tentang{
+	background-color: rgba(250,250,250,0.5);
+	margin: 80px auto;
+	padding: 10px;
+	border-radius: 10px;
+}
+.tentang-tim{
+	background-color: rgba(250,250,250,0.5);
+	padding: 10px;
+	border-radius: 10px;
+}
+.lebih{
+	background-color:  #E4F1FE;
+	padding-top: 25px;
+	padding-bottom: 50px;
+	margin: 0;
+}
 .kanan{
 	text-align: left;
 	float: right;
@@ -485,4 +539,26 @@ img {
 	.rumah{
 		padding-left: 0;
 	}
+}
+
+/* DONASI */
+.detail-donasi {
+	width: 100%;
+	position: inherit;
+	transition: 1s linear;
+    margin: 0 110px;
+}
+.detail-donasi button {
+	width: 150px;
+	border-radius: 0;
+	color: white;
+	font-weight: bold;
+	background: #428BCA;
+	border: 2px solid white;
+	transition: 0.5s all;
+}
+.thumb a:hover + .detail-donasi button {
+	background: white;
+	color: #428BCA;
+	border: 2px solid #428BCA;
 }
