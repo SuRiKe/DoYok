@@ -17,8 +17,13 @@
    </head>
 <body>
 <div class="container">
-<div class="col-md-8 col-md-offset-2 login-form">
+<div class="col-md-8 col-md-offset-2">
 	<h1><center>Donasi Anda</center></h1>
+	<div class="col-md-12 proses-donasi">
+		<a href="donasi.view.php"><div class="col-md-4 text-center ki">Pilihan Donasi</div></a>
+		<a href="bayar.view.php"><div class="col-md-4 text-center">Detail Donasi</div></a>
+		<a href="konfirmasi.view.php"><div class="col-md-4 text-center ka">Konfirmasi Donasi</div></a>
+	</div>
 	<hr>
 	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 	  <div class="panel panel-default">
