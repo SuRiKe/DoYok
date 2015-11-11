@@ -10,7 +10,6 @@
 	$id = $_GET['rumah'];
 	$conn = DB::connect();
 	$rumah = Rumah::tampilRumah($id,$conn);
-	$persentase = Rumah::persentase($id,$conn);
 
 	require 'view/detail.view.php';
  ?>

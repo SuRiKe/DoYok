@@ -25,6 +25,17 @@ class Donasi{
 		
 		return $after ? true : false;
 	}
+
+	public static function jumlahDonatur($id_rumah,$_conn){
+		$query = "SELECT count(id_donasi) as jumlah from tbl_donasi where id_rumah = '$id_rumah' group by id_rumah";
+		$res = Fung::query($query,$_conn);
+
+		foreach ($res as $data) {
+			$jumlah = $data['jumlah'];
+		}
+
+		return $jumlah;
+	}
 	
 	public static function hapus($id_donasi,$_conn){
 		$query = "delete from tbl_donasi where id_donasi = :id";

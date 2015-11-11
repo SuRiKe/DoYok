@@ -1,8 +1,12 @@
-<?php use app\module\Fungsi as Fung; ?>
+<?php 
+	use app\module\Fungsi as Fung; 
+	use app\module\Rumah;
+?>
 <div style="margin-top:150px;margin-bottom:100px;">
 <div id="content" class="container">
-	<?php foreach ($rumah as $kms): ?>
-	<?php echo isset($msg['donasi']) ? $msg['donasi'] : '';?>
+	<?php foreach ($rumah as $kms): 
+		$persentase = Rumah::persentase($kms['id_rumah'],$conn);
+	?>
 	<h1 class="text-center"><span class="kata-kedua">Rumah</span> <?=$kms['nama']?></h1>
 	<hr class="hr-biru">
 	<div class="row">
@@ -14,14 +18,14 @@
 		<div class="col-lg-4 col-md-12">
 			<div class="col-lg-12 sidebar-detail">
 				<div>
-					<h4><strong>Dana Terkumpul Rp. <?=Fung::uang($kms['terkumpul']);?></strong></h4>
-					<big>Dari total dibutuhkan Rp. <?=Fung::uang($kms['dana']);?></big>
+					<h4><strong>Dana Terkumpul Rp. <?=Fung::uang($persentase['terkumpul']);?></strong></h4>
+					<big>Dari total dibutuhkan Rp. <?=Fung::uang($persentase['dana']);?></big>
 				</div>
 				<br/>
 				<hr class="hr-biru" style="padding-bottom: 0px;" />
 				<div class="progress">
-					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?=$persentase?>" aria-valuemin="0" aria-valuemax="100" style="width:<?=$persentase?>%;">
-						<?=$persentase;?>% Dana Terkumpul
+					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?=$persentase['hasil']?>" aria-valuemin="0" aria-valuemax="100" style="width:<?=$persentase['hasil']?>%;">
+						<?=$persentase['hasil'];?>% Dana Terkumpul
 					</div>	
 				</div>
 				<br/><center>
