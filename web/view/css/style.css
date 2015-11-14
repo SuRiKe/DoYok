@@ -385,6 +385,24 @@ ul.profile{
 	font-size: 20px;
 	text-align: center;
 }
+#perkembangan .asdf{
+	width: 45%;
+}
+#perkembangan .kiri .asdf{
+	margin-left: -50px;
+	margin-right: -65px;
+}
+#perkembangan .kanan .asdf{
+	margin-right: -50px;
+	margin-left: -65px;
+}
+#perkembangan small{
+	position: relative;
+	top: 8px;
+	background-color: #A3F18B;
+	padding: 5px;
+	border-radius: 5px;
+}
 
 /*About*/
 .about{
