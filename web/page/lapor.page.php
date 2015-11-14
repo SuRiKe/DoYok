@@ -1,4 +1,4 @@
-<?php //
+<?php 
 	require 'module/daerah.php';
 	require 'module/rumah.php';
 	require 'module/db.php';
@@ -38,14 +38,17 @@
 					'id_provinsi'=>$id_provinsi,
 					'alamat'=>$alamat,
 					'diskripsi'=>$diskripsi,
-					'luas_tanah'=>$luas_tanah
+					'luas_tanah'=>$luas_tanah,
 					'id_kota'=>$id_kota,
 					'nama_rt'=>$nama_rt,
 					'nama_kades'=>$nama_kades,
 					'no_hp_rt'=>$no_hp_rt,
 					'no_hp_kades'=>$no_hp_kades,
 					'id_user'=>$id_user,
-					'tgl_lapor'=>$tgl_lapor),$conn);
+					'tgl_lapor'=>$tgl_lapor,
+					'valid'=>1,
+					'dana_diperlukkan'=>5000000,
+					'dana_terkumpul'=>0),$conn);
 			if($insert){
 				$msg['tambah_kms'] = '
 					<div class="alert alert-success" role="alert">

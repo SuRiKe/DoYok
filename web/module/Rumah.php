@@ -12,7 +12,7 @@ class Rumah{
 	public static function tambah($data,$_conn){
 		$kolom = array('id_rumah','nama','jumlah_anggota_keluarga','foto',
 			'no_kk','id_provinsi','id_kota','alamat','diskripsi','luas_tanah',
-			'nama_rt','nama_kades','no_hp_rt','no_hp_kades','id_user','tgl_lapor');
+			'nama_rt','nama_kades','no_hp_rt','no_hp_kades','id_user','tgl_lapor','valid','dana_diperlukkan','dana_terkumpul');
 		$res = Fung::insert('tbl_rumah',$data,$kolom,$_conn);
 		
 		return $res;
