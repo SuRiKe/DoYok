@@ -302,11 +302,12 @@ ul.profile{
 	padding-top: 15px;
 	padding-left: 25px;
 	background: white;
-	transition:padding 0.3s;
+	transition:padding 0.3s, color 0.3s;
 }
 .profile li:hover{
 	background-color: #5E7FA5;
 	padding-left: 40px;
+	color: white;
 }
 
 /*detail*/

@@ -37,9 +37,10 @@
     	function checkRetype(){
     		var pas = $("#password").val();
     		var kfr = $("#konfirm-password").val();
-    		if (pas != kfr)
+    		if (pas != kfr) {
     			$("#retype").html("Password Tidak Benar");
-    		else
+    			$("#retype").attr("style","color:red;");
+    		} else
     			$("#retype").html("");
     	}
     	function luasTanah(){
