@@ -72,7 +72,7 @@
 						<input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" autofocus>
 					</div>
 					<div class="form-group">
-						<label for="email">Email</label>
+						<label for="email">Emai</label>
 						<input type="email" class="form-control" name="email" placeholder="Email">
 					</div>
 					<div class="form-group">
