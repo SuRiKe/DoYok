@@ -130,8 +130,33 @@
 					</div>
 				</div>
 				<div id="perkembangan" class="tab-pane fade">
-					<h3>Perkembangan</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium dolorum enim nulla aspernatur debitis sint eveniet sapiente voluptatem dolores, rerum, sunt magni reprehenderit delectus. Saepe minima dolorem impedit ratione.</p>
+					<div class="col-md-12">
+					<h1 class="text-center" style="padding-bottom:35px;">Perkembangan</h1>
+					<div class="col-md-12">
+						<div class="col-md-6 kiri col-sm-6">
+							<span class="asdf"> </span>
+							<small>30 Oktober 2015</small>
+							<h2>Mulai Pembangunan</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, consequatur harum deleniti, aspernatur voluptatum ullam. Vitae, sequi, nobis. Repellendus ipsum iusto fugit quibusdam aspernatur maiores, quis fuga maxime illum cumque.</p>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="col-md-6 col-sm-6 kanan">
+							<span class="asdf"> </span>
+							<small>3 November 2015</small>
+							<h2>Proses Pembangaunan</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ex, nisi mollitia suscipit iusto beatae architecto ratione optio velit sunt reprehenderit natus esse illum? Provident at minus atque ut doloribus?</p>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="col-md-6 col-sm-6 kiri">
+							<span class="asdf"> </span>
+							<small>15 Novembar 2015</small>
+							<h2>Pembangunan Selesai</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur vel consequuntur voluptatibus distinctio nobis, incidunt aliquam harum ducimus rerum vero temporibus ea aperiam, molestias quo, iure provident dolores molestiae quos.</p>
+						</div>
+					</div>
+				</div>
 				</div>
 			</div>
 		</div>
