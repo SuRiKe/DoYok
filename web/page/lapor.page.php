@@ -1,4 +1,4 @@
-<?php
+<?php //
 	require 'module/daerah.php';
 	require 'module/rumah.php';
 	require 'module/db.php';

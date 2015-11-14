@@ -7,3 +7,11 @@ function readURL(input) {
 		reader.readAsDataURL(input.files[0]);
 	}
 }
+$( document ).ready(function() {
+    $(".harga").formatCurrency();
+	
+	$(".jumlah").keyup(function(){
+		var total = $(".hargax").val() * $(this).val();
+		$(".total").val(total).formatCurrency();
+	});
+});

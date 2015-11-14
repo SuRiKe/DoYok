@@ -43,23 +43,25 @@
 			<div class="row">
 				<div class="col-md-12 col-sm-12 orang">
 					<h3>Dia yang Peduli</h3>
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<center>
 							<img src="img/thumb.png" class="icon">
-							<h4>Nama Pelapor</h4>
 						</center>
 					</div>
-					<div class="col-md-6"></div>
+					<div class="col-md-8">
+						<h4>Nama Pelapor</h4>
+					</div>
 				</div>
 				<div class="col-md-12 col-sm-12 orang">
 					<h3>Dia yang Membantu</h3>
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<center>
 							<img src="img/thumb.png" class="icon">
-							<h4>Nama Kontraktor</h4>
 						</center>
 					</div>
-					<div class="col-md-6"></div>
+					<div class="col-md-8">
+						<h4>Nama Kontraktor</h4>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -77,7 +79,25 @@
 				</div>
 				<div id="keperluan" class="tab-pane fade">
 					<h3>Keperluan</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium dolorum enim nulla aspernatur debitis sint eveniet sapiente voluptatem dolores, rerum, sunt magni reprehenderit delectus. Saepe minima dolorem impedit ratione.</p>
+					<div class="row keperluan">
+						<div class="col-md-1 judul">No.</div>
+						<div class="col-md-3 judul">Nama Bahan</div>
+						<div class="col-md-3 judul">Harga Satuan</div>
+						<div class="col-md-2 judul">Jumlah</div>
+						<div class="col-md-3 judul">Total</div>
+
+						<div class="col-md-1">1</div>
+						<div class="col-md-3">Semen</div>
+						<div class="col-md-3">30000</div>
+						<div class="col-md-2">5</div>
+						<div class="col-md-3">150000</div>
+
+						<div class="col-md-1">2</div>
+						<div class="col-md-3">Pasir</div>
+						<div class="col-md-3">35000</div>
+						<div class="col-md-2">2</div>
+						<div class="col-md-3">70000</div>
+					</div>
 				</div>
 				<div id="perkembangan" class="tab-pane fade">
 					<h3>Perkembangan</h3>

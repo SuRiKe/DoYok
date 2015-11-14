@@ -266,41 +266,26 @@ img {
 .edit-profile{
 	background-color: white;
 	border-radius: 10px;
+	padding-top: 25px;
+	margin-bottom: 50px;
 }
-.profile{
-	border-radius: 10px;
-	background-color: #6E1B44;
-	height: 100vh;
-}
-ul.profile{
+.profile img {
 	padding: 15px;
-	list-style: none;
+	background: white;
+	border-radius: 0px;
+	border: 1px solid #ccc;
 }
-.profile li{
-	background-color: #156E06;
-	padding-top: 10px;
-	padding-left: 20px;
-	padding-bottom: 10px;
-	margin:0 -15px;
-	transition:padding 0.3s;
+.profile .nav {
+	background: white;
+	margin-top: 20px;
+	padding-bottom: 20px;
 }
-.profile li:hover{
-	background-color: #EB233B;
-	padding-left: 35px;
-	transition: padding 0.3s;
+.profile a {
+	color: #333;
+	font-weight: bold;
 }
-.profile li:hover{
-	padding-left: 35px;
-	transition: padding 0.3s;
-}
-.profile a{
-	text-decoration: none;
-}
-.profile img{
-	border-radius: 5px;
-	width: 250px;
-	height: 250px;
-	margin-bottom: 6%;
+.profile .active {
+	background: #878AC6;
 }
 
 /*detail*/
@@ -335,6 +320,19 @@ ul.profile{
 .tab-content p{
 	text-indent: 35px;
 }
+.tab-content .keperluan{
+	border: 1px solid black;
+	border-bottom: none;
+	border-right: none;
+	text-align: center;
+}
+.tab-content .judul{
+	font-weight: 700;
+}
+.tab-content .keperluan div{	
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
 .rumah{
 	padding-left: 20%;
 	float: left;
@@ -343,13 +341,13 @@ ul.profile{
 	margin: 0 5px;
 }
 .orang{
-	height:200px;
+	height:auto;
 }
 .orang img{
 	max-width: 100%;
 	max-height: 100%;
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 75px;
 	border-radius: 50%;
 }
 .rounded-image {
