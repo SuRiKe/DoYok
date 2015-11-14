@@ -42,25 +42,49 @@
 			<hr style="border-top:1px solid #333;" />
 			<div class="row">
 				<div class="col-md-12 col-sm-12 orang">
-					<h3>Dia yang Peduli</h3>
 					<div class="col-md-4">
 						<center>
-							<img src="img/thumb.png" class="icon">
+							<img src="img/thumb.png" class="icon rounded-image">
 						</center>
 					</div>
 					<div class="col-md-8">
+						<h5>Dia yang Peduli</h5>
 						<h4>Nama Pelapor</h4>
 					</div>
 				</div>
-				<div class="col-md-12 col-sm-12 orang">
-					<h3>Dia yang Membantu</h3>
+				<div class="col-md-12 col-sm-12 orang" style="margin-bottom:-10px;">
 					<div class="col-md-4">
 						<center>
-							<img src="img/thumb.png" class="icon">
+							<img src="img/thumb.png" class="icon rounded-image">
 						</center>
 					</div>
 					<div class="col-md-8">
+						<h5>Kontraktor</h5>
 						<h4>Nama Kontraktor</h4>
+					</div>
+				</div>
+				<div class="col-md-12 col-sm-12 orang">
+					<div class="col-md-4">
+						<center>
+							<img src="img/thumb.png" class="icon rounded-image bawahin">
+						</center>
+					</div>
+					<div class="col-md-8">
+						<h5>Kepala Desa</h5>
+						<h4>Nama Kepala Desa</h4>
+						<h4>Telp Kepala Desa</h4>
+					</div>
+				</div>
+				<div class="col-md-12 col-sm-12 orang">
+					<div class="col-md-4">
+						<center>
+							<img src="img/thumb.png" class="icon rounded-image bawahin">
+						</center>
+					</div>
+					<div class="col-md-8">
+						<h5>Kepala RT</h5>
+						<h4>Nama Kepala RT</h4>
+						<h4>Telp Kepala RT</h4>
 					</div>
 				</div>
 			</div>
