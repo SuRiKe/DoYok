@@ -42,6 +42,12 @@
     		else
     			$("#retype").html("");
     	}
+    	function luasTanah(){
+    		var p = $("#panjang_tanah").val();
+    		var l = $("#lebar_tanah").val();
+    		var Luas = p * l;
+    		$("#luas_tanah").val(Luas);
+    	}
     </script>
     <script type='text/javascript'>
 		//<![CDATA[

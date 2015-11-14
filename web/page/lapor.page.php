@@ -38,7 +38,7 @@
 					'id_provinsi'=>$id_provinsi,
 					'alamat'=>$alamat,
 					'diskripsi'=>$diskripsi,
-					'luas_tanah'=>$luas_tanah
+					'luas_tanah'=>$luas_tanah,
 					'id_kota'=>$id_kota,
 					'nama_rt'=>$nama_rt,
 					'nama_kades'=>$nama_kades,
