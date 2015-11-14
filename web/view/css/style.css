@@ -278,6 +278,7 @@ img {
 	background: white;
 	border-radius: 0px;
 	border: 1px solid #ccc;
+	margin-bottom: 15px;
 }
 .profile .nav {
 	background: white;
@@ -290,6 +291,24 @@ img {
 }
 .profile .active {
 	background: #878AC6;
+}
+ul.profile{
+	padding: 14px;
+	list-style: none;
+	background-color: aqua;
+}
+.profile li{
+	height: 50px;
+	margin: 0 -14px;
+	padding-top: 15px;
+	background-color: #3C7324;
+	padding-left: 25px;
+	transition:padding 0.3s;
+}
+.profile li:hover{
+	background-color: #5E7FA5;
+	padding-left: 40px;
+	transition:padding 0.3s;
 }
 
 /*detail*/

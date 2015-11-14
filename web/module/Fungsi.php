@@ -61,7 +61,7 @@ class Fungsi{
 	
 	public static function menuClient($login){
 		if($login == true){
-			$data = array('beranda','tentang','lapor','keluar');
+			$data = array('beranda','tentang','lapor','profil','keluar');
 		}else{
 			$data = array('beranda','daftar','masuk','tentang');
 		}
