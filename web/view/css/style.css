@@ -331,6 +331,19 @@ ul.profile{
 .tab-content p{
 	text-indent: 35px;
 }
+.tab-content .keperluan{
+	border: 1px solid black;
+	border-bottom: none;
+	border-right: none;
+	text-align: center;
+}
+.tab-content .judul{
+	font-weight: 700;
+}
+.tab-content .keperluan div{	
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
 .rumah{
 	padding-left: 20%;
 	float: left;
@@ -339,13 +352,13 @@ ul.profile{
 	margin: 0 5px;
 }
 .orang{
-	height:200px;
+	height:auto;
 }
 .orang img{
 	max-width: 100%;
 	max-height: 100%;
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 75px;
 	border-radius: 50%;
 }
 .rounded-image {

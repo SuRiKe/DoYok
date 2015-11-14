@@ -148,15 +148,7 @@
 	</div>
 </div>
 </div>
-<script>
-$( document ).ready(function() {
-    $(".harga").formatCurrency();
-	
-	$(".jumlah").keyup(function(){
-		var total = $(".hargax").val() * $(this).val();
-		$(".total").val(total).formatCurrency();
-	});
-});
+<script src="js/fungsi.js">
 </script>
 </body>
 </html>
