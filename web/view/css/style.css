@@ -156,7 +156,7 @@ img {
 	margin-left: 0;
 }
 .judul-utama {
-	background: url('../../img/umah-benyah/rumah-runtuh.jpg') no-repeat;
+	background: url('../../img/ppt/DSC_0123.jpg') no-repeat;
 	background-attachment: fixed;
 	background-size: 100%;
 	height: 100vh;
@@ -241,6 +241,10 @@ img {
 #data-rumah{
 	margin-top: 100px;
 	margin-bottom: 100px;
+}
+.selengkapnya {
+	float: right;
+	padding: 10px;
 }
 
 /*Halama Donasi*/
