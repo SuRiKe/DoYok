@@ -1,5 +1,7 @@
-<body>
-	<div class="container" style="padding:25px 0;">
+<style>
+	body{background-color: #5E7FA5;}
+</style>
+<div class="container" style="padding:90px 0;">
 	<div class="col-md-4">
 		<ul class="col-md-11 profile">
 			<center><img src="img/anon.png" alt="foto profil"></center>
@@ -10,9 +12,9 @@
 			<a href="#"><li>Dholor</li></a>
 		</ul>
 	</div>
-	<div class="col-md-9 edit-profile">
+	<div class="col-md-8 edit-profile">
 		<form action="" method="post" enctype="multipart/form-data">
-			<fieldset><legend>Profil Anda</legend>
+			<legend>Profil Anda</legend>
 				<div class="col-md-6">
 					<div class="form-group">
 						<label for="foto">Foto Profil</label><br />
@@ -79,4 +81,3 @@
 		</form>
 	</div>
 </div>
-</body>
