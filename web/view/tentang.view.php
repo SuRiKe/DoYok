@@ -2,7 +2,7 @@
 	<div class="container tentang">
 		<div class="row">
 			<img class="col-md-1">
-			<img class="col-md-5" src="img/doyok-malam.png" style="margin-top:25px;">
+			<img class="col-md-5" id="logo" src="img/doyok-pagi.png" style="margin-top:25px;">
 			<div class="col-md-6">
 				<h1>D oYo K</h1>
 				<p>

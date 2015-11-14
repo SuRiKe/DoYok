@@ -266,41 +266,26 @@ img {
 .edit-profile{
 	background-color: white;
 	border-radius: 10px;
+	padding-top: 25px;
+	margin-bottom: 50px;
 }
-.profile{
-	border-radius: 10px;
-	background-color: #6E1B44;
-	height: 100vh;
-}
-ul.profile{
+.profile img {
 	padding: 15px;
-	list-style: none;
+	background: white;
+	border-radius: 0px;
+	border: 1px solid #ccc;
 }
-.profile li{
-	background-color: #156E06;
-	padding-top: 10px;
-	padding-left: 20px;
-	padding-bottom: 10px;
-	margin:0 -15px;
-	transition:padding 0.3s;
+.profile .nav {
+	background: white;
+	margin-top: 20px;
+	padding-bottom: 20px;
 }
-.profile li:hover{
-	background-color: #EB233B;
-	padding-left: 35px;
-	transition: padding 0.3s;
+.profile a {
+	color: #333;
+	font-weight: bold;
 }
-.profile li:hover{
-	padding-left: 35px;
-	transition: padding 0.3s;
-}
-.profile a{
-	text-decoration: none;
-}
-.profile img{
-	border-radius: 5px;
-	width: 250px;
-	height: 250px;
-	margin-bottom: 6%;
+.profile .active {
+	background: #878AC6;
 }
 
 /*detail*/
