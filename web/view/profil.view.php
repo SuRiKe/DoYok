@@ -1,4 +1,5 @@
-<div class="container" style="padding:25px 0;">
+<body>
+	<div class="container" style="padding:25px 0;">
 	<div class="col-md-4">
 		<ul class="col-md-11 profile">
 			<center><img src="img/anon.png" alt="foto profil"></center>
@@ -61,3 +62,4 @@
 		</form>
 	</div>
 </div>
+</body>
