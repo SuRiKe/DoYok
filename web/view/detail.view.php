@@ -42,25 +42,49 @@
 			<hr style="border-top:1px solid #333;" />
 			<div class="row">
 				<div class="col-md-12 col-sm-12 orang">
-					<h3>Dia yang Peduli</h3>
 					<div class="col-md-4">
 						<center>
-							<img src="img/thumb.png" class="icon">
+							<img src="img/thumb.png" class="icon rounded-image">
 						</center>
 					</div>
 					<div class="col-md-8">
+						<h5>Dia yang Peduli</h5>
 						<h4>Nama Pelapor</h4>
 					</div>
 				</div>
-				<div class="col-md-12 col-sm-12 orang">
-					<h3>Dia yang Membantu</h3>
+				<div class="col-md-12 col-sm-12 orang" style="margin-bottom:-10px;">
 					<div class="col-md-4">
 						<center>
-							<img src="img/thumb.png" class="icon">
+							<img src="img/thumb.png" class="icon rounded-image">
 						</center>
 					</div>
 					<div class="col-md-8">
+						<h5>Kontraktor</h5>
 						<h4>Nama Kontraktor</h4>
+					</div>
+				</div>
+				<div class="col-md-12 col-sm-12 orang">
+					<div class="col-md-4">
+						<center>
+							<img src="img/thumb.png" class="icon rounded-image bawahin">
+						</center>
+					</div>
+					<div class="col-md-8">
+						<h5>Kepala Desa</h5>
+						<h4>Nama Kepala Desa</h4>
+						<h4>Telp Kepala Desa</h4>
+					</div>
+				</div>
+				<div class="col-md-12 col-sm-12 orang">
+					<div class="col-md-4">
+						<center>
+							<img src="img/thumb.png" class="icon rounded-image bawahin">
+						</center>
+					</div>
+					<div class="col-md-8">
+						<h5>Kepala RT</h5>
+						<h4>Nama Kepala RT</h4>
+						<h4>Telp Kepala RT</h4>
 					</div>
 				</div>
 			</div>
@@ -79,24 +103,30 @@
 				</div>
 				<div id="keperluan" class="tab-pane fade">
 					<h3>Keperluan</h3>
-					<div class="row keperluan">
-						<div class="col-md-1 judul">No.</div>
-						<div class="col-md-3 judul">Nama Bahan</div>
-						<div class="col-md-3 judul">Harga Satuan</div>
-						<div class="col-md-2 judul">Jumlah</div>
-						<div class="col-md-3 judul">Total</div>
-
-						<div class="col-md-1">1</div>
-						<div class="col-md-3">Semen</div>
-						<div class="col-md-3">30000</div>
-						<div class="col-md-2">5</div>
-						<div class="col-md-3">150000</div>
-
-						<div class="col-md-1">2</div>
-						<div class="col-md-3">Pasir</div>
-						<div class="col-md-3">35000</div>
-						<div class="col-md-2">2</div>
-						<div class="col-md-3">70000</div>
+					<div class="panel panel-default">
+					  <table class="table">
+					    <tr>
+					    	<th>No.</th>
+					    	<th>Nama Bahan</th>
+					    	<th>Harga Satuan</th>
+					    	<th>Jumlah</th>
+					    	<th>Total</th>
+					    </tr>
+					    <tr>
+					    	<td>1</td>
+							<td>Semen</td>
+							<td>30000</td>
+							<td>5</td>
+							<td>150000</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Pasir</td>
+							<td>35000</td>
+							<td>2</td>
+							<td>70000</td>
+					    </tr>
+					  </table>
 					</div>
 				</div>
 				<div id="perkembangan" class="tab-pane fade">
