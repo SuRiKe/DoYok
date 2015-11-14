@@ -11,18 +11,17 @@ class Rumah{
 	
 	public static function tambah($data,$_conn){
 		$kolom = array('id_rumah','nama','jumlah_anggota_keluarga','foto',
-			'no_kk','id_provinsi','alamat','diskripsi','luas_tanah','status',
-			'valid','nama_rt','nama_kades','no_hp_rt','no_hp_kades','id_kota');
+			'no_kk','id_provinsi','id_kota','alamat','diskripsi','luas_tanah',
+			'nama_rt','nama_kades','no_hp_rt','no_hp_kades','id_user','tgl_lapor');
 		$res = Fung::insert('tbl_rumah',$data,$kolom,$_conn);
 		
 		return $res;
 	}
 	
 	public static function tampil($limit,$_conn){
-		$query = "SELECT tbl_rumah.*, tbl_lapor.tgl_lapor, tbl_user.nama as pelapor, tbl_dana.dana_terkumpul as terkumpul, tbl_dana.dana_diperlukan as dana from 
-		tbl_rumah inner join tbl_lapor on tbl_rumah.id_rumah = tbl_lapor.id_rumah
-		inner join tbl_user on tbl_lapor.id_user = tbl_user.id_user
-		inner join tbl_dana on tbl_dana.id_rumah = tbl_rumah.id_rumah
+		$query = "SELECT tbl_rumah.*, tbl_provinsi.provinsi, tbl_kabkota.kabkota from 
+		tbl_rumah inner join tbl_provinsi on tbl_rumah.id_provinsi = tbl_provinsi.id_provinsi
+		inner join tbl_kabkota on tbl_kabkota.id_kota = tbl_kabkota.id_kota
 		where valid = 1 order by tgl_lapor desc limit $limit";
 
 		$res = Fung::query($query,$_conn);
@@ -31,10 +30,9 @@ class Rumah{
 	}
 
 	public static function tampilRumah($id_rumah,$_conn){
-		$query = "SELECT tbl_rumah.*, tbl_lapor.tgl_lapor, tbl_user.nama as pelapor, tbl_dana.dana_terkumpul as terkumpul, tbl_dana.dana_diperlukan as dana from 
-		tbl_rumah inner join tbl_lapor on tbl_rumah.id_rumah = tbl_lapor.id_rumah
-		inner join tbl_user on tbl_lapor.id_user = tbl_user.id_user 
-		inner join tbl_dana on tbl_dana.id_rumah = tbl_rumah.id_rumah
+		$query = "SELECT tbl_rumah.*, tbl_provinsi.provinsi, tbl_kabkota.kabkota from 
+		tbl_rumah inner join tbl_provinsi on tbl_rumah.id_provinsi = tbl_provinsi	.id_provinsi
+		inner join tbl_kabkota on tbl_kabkota.id_kota = tbl_kabkota.id_kota
 		where valid = 1 and tbl_rumah.id_rumah = $id_rumah";
 		$res = Fung::query($query,$_conn);
 
@@ -42,7 +40,7 @@ class Rumah{
 	}
 
 	public static function persentase($id_rumah,$_conn){
-		$query = "SELECT dana_diperlukan as dana ,dana_terkumpul as terkumpul FROM tbl_dana where id_rumah = $id_rumah";
+		$query = "SELECT dana_diperlukkan as dana ,dana_terkumpul as terkumpul FROM tbl_rumah where id_rumah = '$id_rumah'";
 		$res = Fung::query($query,$_conn);
 		foreach ($res as $data) {
 			$terkumpul = $data['terkumpul'];
@@ -55,7 +53,11 @@ class Rumah{
 		}else{
 			$hasil = round($persentase,2);
 		}
-		return $hasil;
+		$result = array(
+			'hasil'=>$hasil,
+			'dana'=>$dana,
+			'terkumpul'=>$terkumpul);
+		return $result;
 	}
 
 	public static function hapus($id_rumah,$_conn){
@@ -70,6 +72,13 @@ class Rumah{
 		$res = Fung::eksekusi($query,array('id'=>$id_rumah),$_conn);
 		
 		return true;
+	}
+
+	public static function keperluan($id_rumah,$_conn){
+		$query = "SELECT * from tbl_keperluan where id_rumah = '$id_rumah'";
+		$res = Fung::query($query,$_conn);
+
+		return $res;
 	}
 	
 }
