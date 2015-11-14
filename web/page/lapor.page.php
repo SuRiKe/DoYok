@@ -10,7 +10,7 @@
 	
 	$conn = DB::connect();
 	
-	if(isset($_POST['tambah_kms'])){
+	if(isset($_POST['tambah_rumah'])){
 		$d_field = array('nama','jumlah_anggota_keluarga','no_kk','id_provinsi','id_kota','alamat','diskripsi','luas_tanah','nama_rt','nama_kades','no_hp_rt','no_hp_kades');
 		$id_user = $_SESSION['id_user'];
 		$id_rumah = Rumah::autoId($conn);
@@ -38,14 +38,15 @@
 					'id_provinsi'=>$id_provinsi,
 					'alamat'=>$alamat,
 					'diskripsi'=>$diskripsi,
-					'luas_tanah'=>$luas_tanah),$conn);
-			$lapor = Rumah::lapor(
-				array(
-					'id_lapor'=>$id_lapor,
-					'id_rumah'=>$id_rumah,
+					'luas_tanah'=>$luas_tanah
+					'id_kota'=>$id_kota,
+					'nama_rt'=>$nama_rt,
+					'nama_kades'=>$nama_kades,
+					'no_hp_rt'=>$no_hp_rt,
+					'no_hp_kades'=>$no_hp_kades,
 					'id_user'=>$id_user,
 					'tgl_lapor'=>$tgl_lapor),$conn);
-			if($insert && $lapor){
+			if($insert){
 				$msg['tambah_kms'] = '
 					<div class="alert alert-success" role="alert">
 						<strong>Sukses!</strong> Data sudah dimasukkan ke Database

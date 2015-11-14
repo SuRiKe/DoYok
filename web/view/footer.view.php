@@ -30,7 +30,6 @@
 	</div>
 </div>
 <!-- Container -->
-    <script src="view/js/jquery-2.1.3.min.js"></script>
     <script src="view/js/fungsi.js"></script>
     <script src="view/js/jquery.formatCurrency-1.4.0.js"></script>
     <script src="view/js/bootstrap.min.js"></script>
