@@ -14,4 +14,6 @@ $( document ).ready(function() {
 		var total = $(".hargax").val() * $(this).val();
 		$(".total").val(total).formatCurrency();
 	});
+	
+	$('[data-toggle="tooltip"]').tooltip();
 });
